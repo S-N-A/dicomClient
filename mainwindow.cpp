@@ -45,23 +45,6 @@ void MainWindow::on_loadDicomButton_clicked()
     scene->addPixmap(QPixmap::fromImage(*imageQt));
     ui->dicomGraphicsView->setScene(scene);
 
-    gdcm::Reader reader;
-    reader.SetFileName(fileName.toStdString().c_str());
-    gdcm::File file = reader.GetFile();
-    gdcm::DataSet ds = file.GetDataSet();
-    std::stringstream str_stream;
-    qDebug() << str_stream.rdbuf();
-    qDebug() << str_stream.str().c_str();
-
-
-//    gdcm::Reader reader;
-//    reader.SetFileName(fileName.toStdString().c_str());
-//    gdcm::File &file = reader.GetFile();
-
-//    gdcm::DataSet &ds = file.GetDataSet();
-//    std::ofstream outFile("/tmp/test", std::ofstream::binary);
-
-
 }
 
 /*
@@ -86,9 +69,10 @@ bool MainWindow::ConvertToFormat_RGB888(gdcm::Image const & gimage, char *buffer
         {
         return false;
         }
-      unsigned char *ubuffer = (unsigned char*)buffer;
+      unsigned char *ubuffer = reinterpret_cast<unsigned char*>(buffer);
       // QImage::Format_RGB888  13  The image is stored using a 24-bit RGB format (8-8-8).
-      imageQt = new QImage((unsigned char *)ubuffer, dimX, dimY, 3*dimX, QImage::Format_RGB888);
+      imageQt = new QImage(reinterpret_cast<unsigned char*>(ubuffer), static_cast<int>(dimX), static_cast<int>(dimY),
+                           static_cast<int>(3*dimX), QImage::Format_RGB888);
       }
     else if( gimage.GetPhotometricInterpretation() == gdcm::PhotometricInterpretation::MONOCHROME2 )
       {
@@ -104,12 +88,12 @@ bool MainWindow::ConvertToFormat_RGB888(gdcm::Image const & gimage, char *buffer
           *pubuffer++ = *buffer++;
           }
 
-        imageQt = new QImage(ubuffer, dimX, dimY, QImage::Format_RGB888);
+        imageQt = new QImage(ubuffer, static_cast<int>(dimX), static_cast<int>(dimY), QImage::Format_RGB888);
         }
       else if( gimage.GetPixelFormat() == gdcm::PixelFormat::INT16 )
         {
         // We need to copy each individual 16bits into R / G and B (truncate value)
-        short *buffer16 = (short*)buffer;
+        short *buffer16 = reinterpret_cast<short*>(buffer);
         unsigned char *ubuffer = new unsigned char[dimX*dimY*3];
         unsigned char *pubuffer = ubuffer;
         for(unsigned int i = 0; i < dimX*dimY; i++)
@@ -119,13 +103,13 @@ bool MainWindow::ConvertToFormat_RGB888(gdcm::Image const & gimage, char *buffer
           // *pubuffer++ = *buffer16;
           // *pubuffer++ = *buffer16;
           // instead do it right:
-          *pubuffer++ = (unsigned char)std::min(255, (32768 + *buffer16) / 255);
-          *pubuffer++ = (unsigned char)std::min(255, (32768 + *buffer16) / 255);
-          *pubuffer++ = (unsigned char)std::min(255, (32768 + *buffer16) / 255);
+          *pubuffer++ = static_cast<unsigned char>(std::min(255, (32768 + *buffer16) / 255));
+          *pubuffer++ = static_cast<unsigned char>(std::min(255, (32768 + *buffer16) / 255));
+          *pubuffer++ = static_cast<unsigned char>(std::min(255, (32768 + *buffer16) / 255));
           buffer16++;
           }
 
-        imageQt = new QImage(ubuffer, dimX, dimY, QImage::Format_RGB888);
+        imageQt = new QImage(ubuffer, static_cast<int>(dimX), static_cast<int>(dimY), QImage::Format_RGB888);
         }
       else
         {

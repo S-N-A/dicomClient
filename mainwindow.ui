@@ -37,7 +37,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="dicomGraphicsView">
+   <widget class="SceneZoom" name="dicomGraphicsView">
     <property name="geometry">
      <rect>
       <x>780</x>
@@ -64,6 +64,13 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>SceneZoom</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">scenezoom.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

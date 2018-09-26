@@ -26,12 +26,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     dicomtree.cpp \
-    dicomtreeitem.cpp
+    dicomtreeitem.cpp \
+    scenezoom.cpp
 
 HEADERS += \
         mainwindow.h \
     dicomtree.h \
-    dicomtreeitem.h
+    dicomtreeitem.h \
+    scenezoom.h
 
 FORMS += \
         mainwindow.ui
