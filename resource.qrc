@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="viewerIcon">icons/viewer-icon.png</file>
+        <file>icons/kaf46.png</file>
+        <file alias="db">icons/db.png</file>
+    </qresource>
+</RCC>

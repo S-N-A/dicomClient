@@ -25,20 +25,18 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    dicomtree.cpp \
-    dicomtreeitem.cpp \
-    scenezoom.cpp
+    scenezoom.cpp \
+    sidebar.cpp
 
 HEADERS += \
         mainwindow.h \
-    dicomtree.h \
-    dicomtreeitem.h \
-    scenezoom.h
+    scenezoom.h \
+    sidebar.h
 
 FORMS += \
         mainwindow.ui
 
-
+RESOURCES += resource.qrc
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -62,22 +60,3 @@ LIBS += -lgdcmcharls -L/usr/local/lib/gdcm-2.8/ \
         -lgdcmzlib -L/usr/local/lib/gdcm-2.8/ \
         -lsocketxx -L/usr/local/lib/gdcm-2.8/ \
          -lgdcmjpeg8 -L/usr/local/lib/gdcm-2.8/
-#unix:!macx: LIBS += -L$$PWD/../../../../usr/local/lib/ -ldcmcore
-
-#INCLUDEPATH += $$PWD/../../../../usr/local/include/dcmcore
-#DEPENDPATH += $$PWD/../../../../usr/local/include/dcmcore
-
-#unix:!macx: LIBS += -L$$PWD/../../../../usr/local/lib/ -ldcmimage
-
-#INCLUDEPATH += $$PWD/../../../../usr/local/include/dcmimage
-#DEPENDPATH += $$PWD/../../../../usr/local/include/dcmimage
-
-#unix:!macx: LIBS += -L$$PWD/../../../../usr/local/lib/ -ldcmmod
-
-#INCLUDEPATH += $$PWD/../../../../usr/local/include/dcmmod
-#DEPENDPATH += $$PWD/../../../../usr/local/include/dcmmod
-
-#unix:!macx: LIBS += -L$$PWD/../../../../usr/local/lib/ -ldcmnet
-
-#INCLUDEPATH += $$PWD/../../../../usr/local/include/dcmnet
-#DEPENDPATH += $$PWD/../../../../usr/local/include/dcmnet

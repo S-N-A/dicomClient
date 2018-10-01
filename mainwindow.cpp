@@ -5,8 +5,12 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
-    ui->centralWidget->setWindowTitle(tr("Dicom Viewer"));
+    QIcon viewerIcon(QString(":/icons/viewerIcon"));
+    QIcon dbIcon(QString(":/icons/db"));
+    ui->sideBarWidget->addAction(QString("Просмотр"), viewerIcon);
+    ui->sideBarWidget->addAction(QString("База данных"), dbIcon);
     scene = new QGraphicsScene();
 }
 

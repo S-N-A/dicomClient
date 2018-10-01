@@ -9,6 +9,7 @@
 #include <QImageWriter>
 #include <QShowEvent>
 #include <QMessageBox>
+#include <QIcon>
 #include "gdcmImageReader.h"
 #include "gdcmScanner.h"
 #include "gdcmGlobal.h"
