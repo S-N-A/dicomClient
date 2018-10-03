@@ -26,12 +26,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     scenezoom.cpp \
-    sidebar.cpp
+    sidebar.cpp \
+    converters.cpp
 
 HEADERS += \
         mainwindow.h \
     scenezoom.h \
-    sidebar.h
+    sidebar.h \
+    converters.h
 
 FORMS += \
         mainwindow.ui

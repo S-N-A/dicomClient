@@ -3,5 +3,6 @@
         <file alias="viewerIcon">icons/viewer-icon.png</file>
         <file>icons/kaf46.png</file>
         <file alias="db">icons/db.png</file>
+	<file alias="accessibility">icons/accessibility.png</file>
     </qresource>
 </RCC>

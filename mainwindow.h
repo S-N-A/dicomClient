@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include <QFileDialog>
 #include <QDebug>
 #include <QPixmap>
@@ -10,13 +11,9 @@
 #include <QShowEvent>
 #include <QMessageBox>
 #include <QIcon>
-#include "gdcmImageReader.h"
-#include "gdcmScanner.h"
-#include "gdcmGlobal.h"
-#include "gdcmDicts.h"
-#include "gdcmDict.h"
-#include "gdcmAttribute.h"
-#include "gdcmStringFilter.h"
+
+
+#include <converters.h>
 
 namespace Ui {
 class MainWindow;
@@ -30,12 +27,13 @@ public:
     QString fileName;
     QGraphicsScene *scene;
     void showEvent(QShowEvent*);
-    bool ConvertToFormat_RGB888(gdcm::Image const & gimage, char *buffer, QImage* &imageQt);
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
     void on_loadDicomButton_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
