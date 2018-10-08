@@ -158,5 +158,6 @@ int PrintCSA(const std::string filename){
 
 
 bool CEcho(){
-    return gdcm::CompositeNetworkFunctions::CEcho("localhost",6666, "DICOOGLE-STORAGE");
+    return gdcm::CompositeNetworkFunctions::CEcho("localhost",6666, "KAF46-TITLE"
+                                                                    "");
 }
