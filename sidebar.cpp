@@ -1,4 +1,5 @@
 #include "sidebar.h"
+#include "mainwindow.h"
 
 #include <QPaintEvent>
 #include <QPainter>
@@ -84,6 +85,7 @@ void SideBar::mousePressEvent(QMouseEvent *event)
         mOverAction = nullptr;
     mCheckedAction = tempAction;
     tempAction->setChecked(true);
+    emit tempAction->triggered();
     update();
     QWidget::mousePressEvent(event);
 }

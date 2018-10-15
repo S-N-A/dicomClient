@@ -2,17 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QMessageBox>
-#include <QFileDialog>
-#include <QDebug>
-#include <QPixmap>
-#include <QGraphicsScene>
-#include <QImageWriter>
-#include <QShowEvent>
-#include <QMessageBox>
 #include <QIcon>
 
-
+#include <viewerform.h>
 #include <converters.h>
 
 namespace Ui {
@@ -25,15 +17,15 @@ class MainWindow : public QMainWindow
 
 public:
     QString fileName;
-    QGraphicsScene *scene;
-    void showEvent(QShowEvent*);
+    void initSidebar();
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
-    void on_loadDicomButton_clicked();
+    void displayViewerLayout();
+    void displayDbLayout();
+    void displayAccessibilityLayout();
 
-    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -8,6 +8,7 @@
 class SideBar : public QWidget
 {
     Q_OBJECT
+
 public:
     explicit SideBar(QWidget *parent=nullptr);
     void addAction(QAction *action);

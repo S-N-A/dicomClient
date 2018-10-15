@@ -27,16 +27,19 @@ SOURCES += \
         mainwindow.cpp \
     scenezoom.cpp \
     sidebar.cpp \
-    converters.cpp
+    converters.cpp \
+    viewerform.cpp
 
 HEADERS += \
         mainwindow.h \
     scenezoom.h \
     sidebar.h \
-    converters.h
+    converters.h \
+    viewerform.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+        viewerform.ui \
 
 RESOURCES += resource.qrc
 
