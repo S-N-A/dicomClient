@@ -28,6 +28,10 @@ private slots:
 
 
 private:
+    const int m_standartXGeom = 150;
+    const int m_standartYGeom = 24;
+    const int m_standartWidth = 1051;
+    const int m_standartHeight = 975;
     Ui::MainWindow *ui;
 };
 

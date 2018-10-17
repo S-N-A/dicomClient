@@ -299,6 +299,17 @@ QMenu::separator {
     </property>
     <layout class="QVBoxLayout" name="viewerLayout"/>
    </widget>
+   <widget class="AccessibilityForm" name="accessibilityWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>0</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -324,6 +335,12 @@ QMenu::separator {
    <class>ViewerForm</class>
    <extends>QWidget</extends>
    <header>viewerform.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AccessibilityForm</class>
+   <extends>QWidget</extends>
+   <header location="global">accessibilityform.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

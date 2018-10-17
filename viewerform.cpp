@@ -40,6 +40,15 @@ void ViewerForm::on_loadImageButton_clicked()
         QMessageBox::warning(this, tr("Error"), tr("Couldnt convert image to RGB 888"));
         return;
     }
+    dicomDict map = getTags(fileName.toStdString().c_str());
+    dicomDict::Iterator it;
+    for (it=map.begin(); it!=map.end(); ++it){
+        qDebug() << it.key().c_str() << it.value().first.c_str() << it.value().second.c_str();
+    }
+
+
+
+
     scene->clear();
     scene->addPixmap(QPixmap::fromImage(*imageQt));
     ui->dicomGraphicsView->setScene(scene);
@@ -50,12 +59,3 @@ void ViewerForm::showEvent(QShowEvent*){
 }
 
 
-void ViewerForm::getTags(gdcm::DataSet&) const{
-    const gdcm::Global& g = gdcm::Global::GetInstance();
-    const gdcm::Dicts &dicts = g.GetDicts();
-    const gdcm::Dict &pubdict = dicts.GetPublicDict();
-    gdcm::Tag tPatientsName;
-      //const DictEntry &de2 =
-    pubdict.GetDictEntryByName("Patient's Name", tPatientsName);
-    QString(tPatientsName.IsIllegal())
-}

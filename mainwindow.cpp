@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     this->initSidebar();
     ui->viewerWidget->hide();
+    ui->accessibilityWidget->hide();
 }
 
 void MainWindow::displayDbLayout(){
@@ -15,12 +16,14 @@ void MainWindow::displayDbLayout(){
 }
 
 void MainWindow::displayAccessibilityLayout(){
-
+    ui->viewerWidget->hide();
+    ui->accessibilityWidget->show();
+    ui->accessibilityWidget->setGeometry(m_standartXGeom, m_standartYGeom, m_standartWidth, m_standartHeight);
 }
 
 void MainWindow::displayViewerLayout(){
     ui->viewerWidget->show();
-    ui->viewerWidget->setGeometry(150, 24, 1051, 975);
+    ui->viewerWidget->setGeometry(m_standartXGeom, m_standartYGeom, m_standartWidth, m_standartHeight);
     ui->viewerWidget->update();
 }
 

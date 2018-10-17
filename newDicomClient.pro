@@ -28,18 +28,23 @@ SOURCES += \
     scenezoom.cpp \
     sidebar.cpp \
     converters.cpp \
-    viewerform.cpp
+    viewerform.cpp \
+    tagshelpers.cpp \
+    accessibilityform.cpp
 
 HEADERS += \
         mainwindow.h \
     scenezoom.h \
     sidebar.h \
     converters.h \
-    viewerform.h
+    viewerform.h \
+    tagshelpers.h \
+    accessibilityform.h
 
 FORMS += \
         mainwindow.ui \
         viewerform.ui \
+    accessibilityform.ui
 
 RESOURCES += resource.qrc
 

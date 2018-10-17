@@ -4,10 +4,12 @@
 #include <QWidget>
 #include <QString>
 #include <QShowEvent>
+#include <QMap>
 #include <QGraphicsScene>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <converters.h>
+#include <tagshelpers.h>
 #include <QDebug>
 
 namespace Ui {
@@ -22,7 +24,6 @@ public:
     QString fileName;
     QGraphicsScene *scene;
     void showEvent(QShowEvent*);
-    void getTags(gdcm::DataSet&) const;
     explicit ViewerForm(QWidget *parent = nullptr);
     ~ViewerForm();
 

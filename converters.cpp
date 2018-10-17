@@ -155,9 +155,3 @@ int PrintCSA(const std::string filename){
       }
     return ret;
 }
-
-
-bool CEcho(){
-    return gdcm::CompositeNetworkFunctions::CEcho("localhost",6666, "KAF46-TITLE"
-                                                                    "");
-}
