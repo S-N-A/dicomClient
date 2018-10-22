@@ -41,12 +41,13 @@ void ViewerForm::on_loadImageButton_clicked()
         return;
     }
     dicomDict map = getTags(fileName.toStdString().c_str());
+    // To delete. For debug purposes
     dicomDict::Iterator it;
     for (it=map.begin(); it!=map.end(); ++it){
         qDebug() << it.key().c_str() << it.value().first.c_str() << it.value().second.c_str();
     }
 
-
+    initTable(map);
 
 
     scene->clear();
@@ -58,4 +59,25 @@ void ViewerForm::showEvent(QShowEvent*){
     ui->dicomGraphicsView->fitInView(scene->sceneRect(), Qt::AspectRatioMode::KeepAspectRatio);
 }
 
+
+void ViewerForm::initTable(const dicomDict& dict){
+    ui->dicomAttributeTableWidget->setColumnCount(m_table_columns_count);
+    ui->dicomAttributeTableWidget->setRowCount(dict.size());
+    ui->dicomAttributeTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->dicomAttributeTableWidget->setHorizontalHeaderLabels(QStringList() << "Tag" << "Description" << "Value");
+    int i = 0; // TODO: Dirty unneeded assignment
+    for(auto key: dict.keys()){
+        QTableWidgetItem* tagItem = new QTableWidgetItem(tr(key.c_str()));
+        QTableWidgetItem* descriptionItem = new QTableWidgetItem(dict[key].first.c_str());
+        QTableWidgetItem* valueItem = new QTableWidgetItem(dict[key].second.c_str());
+        ui->dicomAttributeTableWidget->setItem(i, m_columns::Tag, tagItem);
+        ui->dicomAttributeTableWidget->setItem(i, m_columns::Description, descriptionItem);
+        ui->dicomAttributeTableWidget->setItem(i, m_columns::Value, valueItem);
+        i++;
+    }
+    i=0;
+    ui->dicomAttributeTableWidget->update();
+    return;
+
+}
 

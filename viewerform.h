@@ -32,6 +32,9 @@ private slots:
 
 
 private:
+    enum m_columns{Tag, Description, Value};
+    const int m_table_columns_count = 3;
+    void initTable(const dicomDict& dict);
     Ui::ViewerForm *ui;
 };
 

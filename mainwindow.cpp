@@ -19,9 +19,11 @@ void MainWindow::displayAccessibilityLayout(){
     ui->viewerWidget->hide();
     ui->accessibilityWidget->show();
     ui->accessibilityWidget->setGeometry(m_standartXGeom, m_standartYGeom, m_standartWidth, m_standartHeight);
+    ui->accessibilityWidget->update();
 }
 
 void MainWindow::displayViewerLayout(){
+    ui->accessibilityWidget->hide();
     ui->viewerWidget->show();
     ui->viewerWidget->setGeometry(m_standartXGeom, m_standartYGeom, m_standartWidth, m_standartHeight);
     ui->viewerWidget->update();
