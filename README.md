@@ -1,3 +1,3 @@
 # dicomClient
 Клиент Dicom. Дипломный проект.
-https://travis-ci.org/S-N-A/dicomClient.svg?branch=master
+[![Build Status](https://travis-ci.org/S-N-A/dicomClient.svg?branch=master)](https://travis-ci.org/S-N-A/dicomClient)
