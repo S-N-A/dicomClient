@@ -25,3 +25,30 @@ dicomDict getTags(const char* filename){
     }
     return TagsMap;
 }
+
+
+bool setTag(const std::string& offset, const std::string& value, const char* filename){
+    gdcm::Reader reader;
+    reader.SetFileName(filename);
+    if (!reader.Read()){
+        return false;
+    }
+    gdcm::File &file = reader.GetFile();
+    gdcm::DataSet &ds = file.GetDataSet();
+
+    gdcm::Tag tempTag;
+    tempTag.ReadFromContinuousString(offset.c_str());
+    const gdcm::Tag tag = tempTag;
+    gdcm::DataElement de = ds.GetDataElement(tag);
+    de.SetByteValue(value.c_str(), static_cast<uint32_t>(std::strlen(value.c_str())));
+    ds.Replace(de);
+
+    gdcm::Writer writer;
+    writer.SetFile( file );
+    writer.SetFileName(filename);
+    if(!writer.Write()){
+        return false;
+    }
+    return true;
+
+}

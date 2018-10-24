@@ -12,6 +12,7 @@
 #include <tagshelpers.h>
 #include <QDebug>
 
+
 namespace Ui {
 class ViewerForm;
 }
@@ -30,6 +31,7 @@ public:
 private slots:
     void on_loadImageButton_clicked();
 
+    void on_dicomAttributeTableWidget_cellChanged(int row, int column);
 
 private:
     enum m_columns{Tag, Description, Value};

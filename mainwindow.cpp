@@ -9,6 +9,17 @@ MainWindow::MainWindow(QWidget *parent) :
     this->initSidebar();
     ui->viewerWidget->hide();
     ui->accessibilityWidget->hide();
+    const gdcm::Global& g = gdcm::Global::GetInstance(); // sum of all knowledge !
+    const gdcm::Dicts &dicts = g.GetDicts();
+    const gdcm::Dict &pub = dicts.GetPublicDict();
+    std::ofstream of;
+    of.open("./dict.txt");
+    of << pub;
+    of.close();
+//    std::ostringstream stream;
+//    stream << pub;
+//    std::string out = stream.str();
+//    std::cout << out;
 }
 
 void MainWindow::displayDbLayout(){
