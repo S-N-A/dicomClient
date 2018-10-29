@@ -5,7 +5,7 @@ dicomDict getTags(const char* filename){
     gdcm::Reader reader;
     reader.SetFileName(filename); // set filename for reader
     if (!reader.Read()){ // if read was unsuccessfull
-        qDebug() << "Couldn't read " << filename;
+        qCritical(logCritical()) << "Couldn't read - " << filename;
         TagsMap.clear();
         return TagsMap; // return empty map
     }
@@ -31,6 +31,7 @@ bool setTag(const std::string& offset, const std::string& value, const char* fil
     gdcm::Reader reader;
     reader.SetFileName(filename);
     if (!reader.Read()){
+        qCritical(logCritical()) << "Couldn't set tag on dicom, because of corrupted file";
         return false;
     }
     gdcm::File &file = reader.GetFile();

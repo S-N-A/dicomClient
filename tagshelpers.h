@@ -4,6 +4,7 @@
 #include <QMap>
 #include <QDebug>
 #include <QString>
+#include <logger.h>
 
 #include "gdcmReader.h"
 #include "gdcmGlobal.h"
@@ -12,6 +13,7 @@
 #include "gdcmAttribute.h"
 #include "gdcmStringFilter.h"
 #include "gdcmWriter.h"
+
 
 typedef QMap<std::string, std::pair<std::string, std::string>> dicomDict;
 

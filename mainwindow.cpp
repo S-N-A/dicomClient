@@ -23,11 +23,16 @@ MainWindow::MainWindow(QWidget *parent) :
 }
 
 void MainWindow::displayDbLayout(){
-
+    ui->viewerWidget->hide();
+    ui->accessibilityWidget->hide();
+    ui->dbWidget->show();
+    ui->dbWidget->setGeometry(m_standartXGeom, m_standartYGeom, m_standartWidth, m_standartHeight);
+    ui->dbWidget->update();
 }
 
 void MainWindow::displayAccessibilityLayout(){
     ui->viewerWidget->hide();
+    ui->dbWidget->hide();
     ui->accessibilityWidget->show();
     ui->accessibilityWidget->setGeometry(m_standartXGeom, m_standartYGeom, m_standartWidth, m_standartHeight);
     ui->accessibilityWidget->update();
@@ -35,6 +40,7 @@ void MainWindow::displayAccessibilityLayout(){
 
 void MainWindow::displayViewerLayout(){
     ui->accessibilityWidget->hide();
+    ui->dbWidget->hide();
     ui->viewerWidget->show();
     ui->viewerWidget->setGeometry(m_standartXGeom, m_standartYGeom, m_standartWidth, m_standartHeight);
     ui->viewerWidget->update();

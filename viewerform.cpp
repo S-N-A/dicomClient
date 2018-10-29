@@ -20,16 +20,18 @@ void ViewerForm::on_loadImageButton_clicked()
     fileName = QFileDialog::getOpenFileName(this, tr("Open dicom file"), tr("/home/ilya/"), tr("*.dcm"));
     if (fileName.isEmpty()){
         QMessageBox::warning(this, tr("Error"), tr("Error reading file: %1").arg(fileName));
+        qCritical(logCritical()) << "Error reading file  - " << fileName.toStdString().c_str();
         return;
     }
     gdcm::ImageReader ir;
     ir.SetFileName(fileName.toStdString().c_str());
     if (!ir.Read()){
         QMessageBox::warning(this, tr("Error"), tr("Failed to parse file: %1").arg(fileName));
+        qCritical(logCritical()) << "Couldn't parse file - " << fileName.toStdString().c_str();
         return;
     }
     gdcm::DataSet ds;
-    qDebug() << "Getting image from ImageReader object";
+    qDebug(logDebug()) << "Getting image from ImageReader object";
     const gdcm::Image &gImage = ir.GetImage();
     std::vector<char> vbuffer;
     vbuffer.resize(gImage.GetBufferLength()); //?
@@ -38,6 +40,7 @@ void ViewerForm::on_loadImageButton_clicked()
     QImage *imageQt= nullptr;
     if (!ConvertToFormat_RGB888(gImage, buffer, imageQt)){
         QMessageBox::warning(this, tr("Error"), tr("Couldnt convert image to RGB 888"));
+        qCritical(logCritical()) << "Couldn't conver image to RGB888 in " << fileName.toStdString().c_str();
         return;
     }
     dicomDict map = getTags(fileName.toStdString().c_str());
@@ -66,6 +69,7 @@ void ViewerForm::initTable(const dicomDict& dict){
     ui->dicomAttributeTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->dicomAttributeTableWidget->setHorizontalHeaderLabels(QStringList() << "Tag" << "Description" << "Value");
     int i = 0; // TODO: Dirty unneeded assignment
+    qDebug(logDebug()) << "Signals on viewerform are blocked";
     ui->dicomAttributeTableWidget->blockSignals(true);
     for(auto key: dict.keys()){
         QTableWidgetItem* tagItem = new QTableWidgetItem(tr(key.c_str()));
@@ -78,6 +82,7 @@ void ViewerForm::initTable(const dicomDict& dict){
         ui->dicomAttributeTableWidget->setItem(i, m_columns::Value, valueItem);
         i++;
     }
+    qDebug(logDebug()) << "Signals on viewer form are unblocked";
     ui->dicomAttributeTableWidget->blockSignals(false);
     i=0;
     ui->dicomAttributeTableWidget->update();
@@ -95,6 +100,7 @@ void ViewerForm::on_dicomAttributeTableWidget_cellChanged(int row, int column)
     std::string valueAsString = value->text().toStdString();
     if (!setTag(tagAsString, valueAsString, fileName.toStdString().c_str())){
         QMessageBox::warning(this, tr("Error"), tr("Error reading/writing file: %1").arg(fileName));
+        qCritical(logCritical()) << "Couln't read - " << fileName.toStdString().c_str();
         return;
     }
     return;

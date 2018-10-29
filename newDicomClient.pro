@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets
+QT       += core gui widgets sql
 
 TARGET = newDicomClient
 TEMPLATE = app
@@ -30,7 +30,9 @@ SOURCES += \
     converters.cpp \
     viewerform.cpp \
     tagshelpers.cpp \
-    accessibilityform.cpp
+    accessibilityform.cpp \
+    dbform.cpp \
+    logger.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,12 +41,15 @@ HEADERS += \
     converters.h \
     viewerform.h \
     tagshelpers.h \
-    accessibilityform.h
+    accessibilityform.h \
+    dbform.h \
+    logger.h
 
 FORMS += \
         mainwindow.ui \
         viewerform.ui \
-    accessibilityform.ui
+    accessibilityform.ui \
+    dbform.ui
 
 RESOURCES += resource.qrc
 

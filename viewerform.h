@@ -11,7 +11,7 @@
 #include <converters.h>
 #include <tagshelpers.h>
 #include <QDebug>
-
+#include <logger.h>
 
 namespace Ui {
 class ViewerForm;
