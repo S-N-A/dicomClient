@@ -13,27 +13,33 @@ DbForm::DbForm(QWidget *parent) :
         QMessageBox::warning(this, tr("Ошибка"), tr("Ошибка доступа к базе данных"));
     }
     qDebug(logDebug()) << m_db.connectOptions();
+
     initTableWidget();
 
 }
 
 
 bool DbForm::initTableWidget(){
-    QSqlQuery query;
-    query.prepare("SELECT * FROM :table");
-    query.bindValue(":table", m_tableName);
-    query.exec();
-
-    ui->dbTableWidget->setColumnCount(query.record().count());
-    qDebug(logDebug()) << "Query record count - " << query.record().count();
-    ui->dbTableWidget->setRowCount(query.size());
-    qDebug(logDebug()) << "Query row count - " <<query.size();
-    ui->dbTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    QStringList headers;
-    for(int index=0; index< query.record().count(); index++){
-        headers << query.record().fieldName(index);
-    }
-    ui->dbTableWidget->setHorizontalHeaderLabels(headers);
+//    QSqlQuery query;
+//    query.prepare("SELECT * FROM PATIENT"); //TODO
+//    //query.bindValue(":table", m_tableName);
+//    query.exec();
+//    qDebug(logDebug()) << query.lastQuery();
+//    ui->dbTableWidget->setColumnCount(query.record().count());
+//    qDebug(logDebug()) << "Query record count - " << query.record().count();
+//    ui->dbTableWidget->setRowCount(query.size());
+//    qDebug(logDebug()) << "Query row count - " <<query.size();
+//    ui->dbTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+//    QStringList headers;
+//    for(int index=0; index< query.record().count(); index++){
+//        headers << query.record().fieldName(index);
+//    }
+//    ui->dbTableWidget->setHorizontalHeaderLabels(headers);
+//    while (query.next()){
+//        QTableWidgetItem *_id = new QTableWidgetItem(query.record().value(0).toString());
+//        QTableWidgetItem *name = new QTableWidgetItem(query.record().value(1).toString());
+//        ui->dbTableWidget->setItem(0, query.record().`)
+//    }
     return true;
 }
 
