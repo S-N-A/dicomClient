@@ -5,6 +5,8 @@
 #include <QMessageBox>
 #include <gdcmCompositeNetworkFunctions.h>
 
+#include <logger.h>
+
 namespace Ui {
 class AccessibilityForm;
 }
@@ -15,8 +17,6 @@ class AccessibilityForm : public QWidget
 
 public:
     void checkConnection();
-    template<typename T>
-    void checkEquality(T a, T b);
     explicit AccessibilityForm(QWidget *parent = nullptr);
     ~AccessibilityForm();
 
@@ -33,8 +33,8 @@ private:
     const QString m_ReqInfo = "Информация по запросу";
     const QString m_SuccessText = "Успешно";
     const QString m_FailText = "Запрос завершился с ошибкой";
-    QString m_address, m_port, m_title;
     Ui::AccessibilityForm *ui;
+    QString m_address, m_port, m_title;
 };
 
 #endif // ACCESSIBILITYFORM_H
