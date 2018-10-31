@@ -20,7 +20,11 @@ dicomDict getTags(const char* filename){
             const gdcm::Tag tag = elem.GetTag();
             auto value = ds.GetDataElement(tag);
             auto pair = sf.ToStringPair(value.GetTag());
-            TagsMap[tag.PrintAsContinuousString()] = pair;
+            QString qTag = tag.PrintAsContinuousString().c_str();
+            QPair<QString, QString> qPair(pair.first.c_str(), pair.second.c_str());
+            TagsMap[qTag] = qPair;
+
+            // TagsMap[QString(tag.PrintAsContinuousString())] = QPair(pair.first, pair.second);
         }
     }
     return TagsMap;

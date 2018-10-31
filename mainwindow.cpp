@@ -9,13 +9,14 @@ MainWindow::MainWindow(QWidget *parent) :
     this->initSidebar();
     ui->viewerWidget->hide();
     ui->accessibilityWidget->hide();
-    const gdcm::Global& g = gdcm::Global::GetInstance(); // sum of all knowledge !
-    const gdcm::Dicts &dicts = g.GetDicts();
-    const gdcm::Dict &pub = dicts.GetPublicDict();
-    std::ofstream of;
-    of.open("./dict.txt");
-    of << pub;
-    of.close();
+    ui->dbWidget->hide();
+//    const gdcm::Global& g = gdcm::Global::GetInstance(); // sum of all knowledge !
+//    const gdcm::Dicts &dicts = g.GetDicts();
+//    const gdcm::Dict &pub = dicts.GetPublicDict();
+//    std::ofstream of;
+//    of.open("./dict.txt");
+//    of << pub;
+//    of.close();
 //    std::ostringstream stream;
 //    stream << pub;
 //    std::string out = stream.str();
@@ -57,6 +58,8 @@ void MainWindow::initSidebar(){
     connect(viewerAction, SIGNAL(triggered()), this, SLOT(displayViewerLayout()));
     connect(dbAction, SIGNAL(triggered()), this, SLOT(displayDbLayout()));
     connect(checkAction, SIGNAL(triggered()), this, SLOT(displayAccessibilityLayout()));
+    connect(ui->viewerWidget, SIGNAL(sendInsertSignal(QString&, QImage&, dicomDict&)), ui->dbWidget,
+            SLOT(acceptInsertSignal(QString&, QImage&, dicomDict&)));
     ui->sideBarWidget->addAction(viewerAction);
     ui->sideBarWidget->addAction(dbAction);
     ui->sideBarWidget->addAction(checkAction);

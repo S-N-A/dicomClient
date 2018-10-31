@@ -40,15 +40,18 @@ void ViewerForm::on_loadImageButton_clicked()
     QImage *imageQt= nullptr;
     if (!ConvertToFormat_RGB888(gImage, buffer, imageQt)){
         QMessageBox::warning(this, tr("Error"), tr("Couldnt convert image to RGB 888"));
-        qCritical(logCritical()) << "Couldn't conver image to RGB888 in " << fileName.toStdString().c_str();
+        qCritical(logCritical()) << "Couldn't convert image to RGB888 in " << fileName.toStdString().c_str();
         return;
     }
     dicomDict map = getTags(fileName.toStdString().c_str());
     // To delete. For debug purposes
     dicomDict::Iterator it;
     for (it=map.begin(); it!=map.end(); ++it){
-        qDebug() << it.key().c_str() << it.value().first.c_str() << it.value().second.c_str();
+        qDebug() << it.key().toStdString().c_str() << it.value().first.toStdString().c_str() << it.value().second.toStdString().c_str();
     }
+    QString test = "test";
+
+    emit sendInsertSignal(test, *imageQt, map);
 
     initTable(map); // fill table with dicom attributes
 
@@ -72,9 +75,9 @@ void ViewerForm::initTable(const dicomDict& dict){
     qDebug(logDebug()) << "Signals on viewerform are blocked";
     ui->dicomAttributeTableWidget->blockSignals(true);
     for(auto key: dict.keys()){
-        QTableWidgetItem* tagItem = new QTableWidgetItem(tr(key.c_str()));
-        QTableWidgetItem* descriptionItem = new QTableWidgetItem(dict[key].first.c_str());
-        QTableWidgetItem* valueItem = new QTableWidgetItem(dict[key].second.c_str());
+        QTableWidgetItem* tagItem = new QTableWidgetItem(tr(key.toStdString().c_str()));
+        QTableWidgetItem* descriptionItem = new QTableWidgetItem(dict[key].first.toStdString().c_str());
+        QTableWidgetItem* valueItem = new QTableWidgetItem(dict[key].second.toStdString().c_str());
         ui->dicomAttributeTableWidget->setItem(i, m_columns::Tag, tagItem);
         tagItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
         ui->dicomAttributeTableWidget->setItem(i, m_columns::Description, descriptionItem);
@@ -105,3 +108,4 @@ void ViewerForm::on_dicomAttributeTableWidget_cellChanged(int row, int column)
     }
     return;
 }
+

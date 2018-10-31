@@ -2,10 +2,11 @@
 #define TAGSHELPERS_H
 
 #include <QMap>
+#include <QPair>
 #include <QDebug>
 #include <QString>
 #include <logger.h>
-
+#include <QPair>
 #include "gdcmReader.h"
 #include "gdcmGlobal.h"
 #include "gdcmDicts.h"
@@ -15,7 +16,7 @@
 #include "gdcmWriter.h"
 
 
-typedef QMap<std::string, std::pair<std::string, std::string>> dicomDict;
+typedef QMap<QString, QPair<QString, QString> > dicomDict;
 
 static dicomDict TagsMap;
 dicomDict getTags(const char* filename);

@@ -33,6 +33,9 @@ private slots:
 
     void on_dicomAttributeTableWidget_cellChanged(int row, int column);
 
+signals:
+    void sendInsertSignal(QString& name, QImage& image, dicomDict& dict);
+
 private:
     enum m_columns{Tag, Description, Value};
     const int m_table_columns_count = 3;
