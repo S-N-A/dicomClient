@@ -2,6 +2,7 @@
 #define DBFORM_H
 
 #include <QWidget>
+#include <QTableWidgetItem>
 #include <QBuffer>
 #include <QSqlError>
 #include <QSqlDatabase>
@@ -10,6 +11,7 @@
 #include <QSqlRecord>
 #include <logger.h>
 #include <tagshelpers.h>
+#include <serializehelper.h>
 
 namespace Ui {
 class DbForm;
@@ -21,21 +23,24 @@ class DbForm : public QWidget
 
 public:
     explicit DbForm(QWidget *parent = nullptr);
-    dicomDict deserialize(const QString& data) const;
-    QString serialize(const dicomDict& data) const;
     ~DbForm();
 
 public slots:
     void acceptInsertSignal(QString& name, QImage& image, dicomDict& dict);
 
+private slots:
+    void on_dbTableWidget_cellClicked(int row, int column);
+
 private:
     Ui::DbForm *ui;
+    enum class columns {id = 0, name = 1, image = 2, data = 3};
+    enum dicomColumns{tag, description, value};
     const QString m_dbPath;
     const QString m_dbTable;
     QSqlDatabase m_db;
-    const QString m_tableName = "PATIENT";
     bool initTableWidget();
     bool dumpToDb(QString& name, QImage& image, dicomDict& dict);
+    void initBorderWidget(const dicomDict &dict);
 };
 
 #endif // DBFORM_H

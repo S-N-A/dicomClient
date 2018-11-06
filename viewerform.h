@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QString>
+#include <QCheckBox>
 #include <QShowEvent>
 #include <QMap>
 #include <QGraphicsScene>
@@ -37,9 +38,11 @@ signals:
     void sendInsertSignal(QString& name, QImage& image, dicomDict& dict);
 
 private:
+    bool showMessageBoxAskingForChange();
+    bool m_changeAllowed;
     enum m_columns{Tag, Description, Value};
     const int m_table_columns_count = 3;
-    void initTable(const dicomDict& dict);
+    void initTable(const dicomDict& dict); // Should be refactored with dbform;
     Ui::ViewerForm *ui;
 };
 

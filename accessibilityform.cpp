@@ -5,9 +5,6 @@ AccessibilityForm::AccessibilityForm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::AccessibilityForm), m_address(""), m_port(""), m_title("")
 {
-    m_address = "";
-    m_port="";
-    m_title="";
     ui->setupUi(this);
 }
 
@@ -18,14 +15,12 @@ AccessibilityForm::~AccessibilityForm()
 
 
 void AccessibilityForm::checkConnection(){
-    qDebug(logDebug()) << "Connect options : " << this->m_address << this->m_port;
-    gdcm::Directory::FilenamesType filename;
-    filename.push_back("/home/ilya/test.dcm");
+    qDebug(logDebug()) << "Connect options : " << m_address << m_port;
     if(gdcm::CompositeNetworkFunctions::CEcho(this->m_address.toStdString().c_str(),
                                            static_cast<uint16_t>(this->m_port.toInt()),
                                               [=](){if (m_title.isEmpty()){ return "test";}
-                                              else {return m_title.toStdString().c_str();}}()) &&
-            gdcm::CompositeNetworkFunctions::CStore("127.0.0.1",104,filename)){
+                                              else {return m_title.toStdString().c_str();}}()))
+    {
         QMessageBox::information(this, m_ReqInfo, m_SuccessText);
         return;
     } else {

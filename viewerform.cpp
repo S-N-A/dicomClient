@@ -5,6 +5,7 @@ ViewerForm::ViewerForm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ViewerForm)
 {
+    m_changeAllowed = false;
     ui->setupUi(this);
     scene = new QGraphicsScene();
 }
@@ -23,6 +24,12 @@ void ViewerForm::on_loadImageButton_clicked()
         qCritical(logCritical()) << "Error reading file  - " << fileName.toStdString().c_str();
         return;
     }
+
+
+    const gdcm::Global& g = gdcm::Global::GetInstance();
+    const gdcm::Dicts &dicts = g.GetDicts();
+    const gdcm::Dict &pubdict = dicts.GetPublicDict();
+
     gdcm::ImageReader ir;
     ir.SetFileName(fileName.toStdString().c_str());
     if (!ir.Read()){
@@ -49,9 +56,12 @@ void ViewerForm::on_loadImageButton_clicked()
     for (it=map.begin(); it!=map.end(); ++it){
         qDebug() << it.key().toStdString().c_str() << it.value().first.toStdString().c_str() << it.value().second.toStdString().c_str();
     }
-    QString test = "test";
 
-    emit sendInsertSignal(test, *imageQt, map);
+    gdcm::Tag tPatientsName;
+    pubdict.GetDictEntryByName("Patient's Name", tPatientsName);
+    QString tagName = tPatientsName.PrintAsContinuousString().c_str();
+    emit sendInsertSignal(map[tagName].second, *imageQt, map);
+
 
     initTable(map); // fill table with dicom attributes
 
@@ -65,6 +75,33 @@ void ViewerForm::showEvent(QShowEvent*){
     ui->dicomGraphicsView->fitInView(scene->sceneRect(), Qt::AspectRatioMode::KeepAspectRatio);
 }
 
+
+bool ViewerForm::showMessageBoxAskingForChange(){
+    QCheckBox *cb = new QCheckBox("Больше не показывать");
+    QMessageBox box;
+    box.setText("Значение тэга dicom файла изменено");
+    box.setInformativeText("Принять изменения?");
+    box.setIcon(QMessageBox::Question);
+
+    box.setStandardButtons(QMessageBox::Discard | QMessageBox::Ok);
+    box.setDefaultButton(QMessageBox::Ok);
+    box.setCheckBox(cb);
+    connect(cb, &QCheckBox::stateChanged, [this](int state){
+        if (static_cast<Qt::CheckState>(state) == Qt::CheckState::Checked){
+            this->m_changeAllowed = true;
+        }
+    });
+    int ret{box.exec()};
+    switch (ret) {
+        case QMessageBox::Ok:
+            return true;
+        case QMessageBox::Discard:
+            return false;
+        default:
+            qDebug(logCritical()) << "Unknown error, while choosing messagebox cariant";
+            return false;
+    }
+}
 
 void ViewerForm::initTable(const dicomDict& dict){
     ui->dicomAttributeTableWidget->setColumnCount(m_table_columns_count);
@@ -96,6 +133,11 @@ void ViewerForm::initTable(const dicomDict& dict){
 
 void ViewerForm::on_dicomAttributeTableWidget_cellChanged(int row, int column)
 {
+    if (!m_changeAllowed){
+        if (!showMessageBoxAskingForChange()){
+            return;
+        }
+    }
     QTableWidgetItem* tag = ui->dicomAttributeTableWidget->item(row, m_columns::Tag);
     std::string tagAsString = tag->text().toStdString();
 

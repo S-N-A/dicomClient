@@ -32,7 +32,8 @@ SOURCES += \
     tagshelpers.cpp \
     accessibilityform.cpp \
     dbform.cpp \
-    logger.cpp
+    logger.cpp \
+    serializehelper.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -43,7 +44,8 @@ HEADERS += \
     tagshelpers.h \
     accessibilityform.h \
     dbform.h \
-    logger.h
+    logger.h \
+    serializehelper.h
 
 FORMS += \
         mainwindow.ui \
