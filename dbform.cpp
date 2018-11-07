@@ -1,10 +1,10 @@
 #include "dbform.h"
 #include "ui_dbform.h"
-#include <QScopedPointer>
 
 DbForm::DbForm(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::DbForm), m_dbPath("dicom.db"), m_dbTable("patient")
+    ui(new Ui::DbForm), m_dbPath("dicom.db"), m_dbTable("patient"),
+    m_okIcon(":/icons/ok"), m_unavailableIcon(":/icons/unavailable")
 {
     ui->setupUi(this);
     m_db = QSqlDatabase::addDatabase("QSQLITE");
@@ -14,8 +14,8 @@ DbForm::DbForm(QWidget *parent) :
         QMessageBox::warning(this, tr("Ошибка"), tr("Ошибка доступа к базе данных"));
     }
     qDebug(logDebug()) << m_db.connectOptions();
-
     initTableWidget();
+    m_previewScene.clear();
 
 }
 
@@ -50,20 +50,28 @@ bool DbForm::initTableWidget(){
         ui->dbTableWidget->setItem(counter, static_cast<int>(columns::name), name);
         name->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
         if (query.value(static_cast<int>(columns::image)).isNull()){
-            QTableWidgetItem *null = new QTableWidgetItem("Doesn't exist");
+//            QTableWidgetItem *null = new QTableWidgetItem("Doesn't exist");
+            QTableWidgetItem *null = new QTableWidgetItem();
+            null->setIcon(m_unavailableIcon);
             null->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
             ui->dbTableWidget->setItem(counter, static_cast<int>(columns::image), null);
         } else {
-            QTableWidgetItem *exist = new QTableWidgetItem("Is present");
+//          QTableWidgetItem *exist = new QTableWidgetItem("Is present");
+            QTableWidgetItem *exist = new QTableWidgetItem();
+            exist->setIcon(m_okIcon);
             exist->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
             ui->dbTableWidget->setItem(counter, static_cast<int>(columns::image), exist);
         }
         if (query.value(static_cast<int>(columns::data)).isNull()){
-            QTableWidgetItem *null = new QTableWidgetItem("Doesn't exist");
+            //QTableWidgetItem *null = new QTableWidgetItem("Doesn't exist");
+            QTableWidgetItem *null = new QTableWidgetItem();
+            null->setIcon(m_unavailableIcon);
             null->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
             ui->dbTableWidget->setItem(counter, static_cast<int>(columns::data), null);
         } else {
-            QTableWidgetItem *exist = new QTableWidgetItem("Is present");
+            //QTableWidgetItem *exist = new QTableWidgetItem("Is present");
+            QTableWidgetItem *exist = new QTableWidgetItem();
+            exist->setIcon(m_okIcon);
             exist->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
             ui->dbTableWidget->setItem(counter, static_cast<int>(columns::data), exist);
         }
@@ -72,7 +80,29 @@ bool DbForm::initTableWidget(){
     return true;
 }
 
-
+void DbForm::previewImage(const int& id){
+    QSqlQuery query;
+    QByteArray ba;
+    query.prepare("SELECT image FROM " + m_dbTable + " WHERE id=" + QString::number(id));
+    if ( !query.exec()){
+        // Fail silently for now
+        qDebug(logCritical()) << "Couldn't execute following query" << query.lastQuery();
+        return;
+    }
+    query.first();
+    ba = query.value(0).toByteArray();
+    if ( ba.isEmpty()){
+        qDebug(logCritical()) << "Image in db is empty or query is broken";
+        return;
+    }
+    QImage img = Serialize::byteArrayToImage(ba);
+    m_previewScene.clear();
+    m_previewScene.addPixmap(QPixmap::fromImage(img));
+    ui->dbGraphicsView->setScene(&m_previewScene);
+    ui->dbGraphicsView->fitInView(m_previewScene.sceneRect(),
+                                  Qt::KeepAspectRatio);
+    ui->dbGraphicsView->update();
+}
 
 bool DbForm::dumpToDb(QString& name, QImage& image, dicomDict& dict){
     QSqlQuery query;
@@ -98,11 +128,34 @@ bool DbForm::dumpToDb(QString& name, QImage& image, dicomDict& dict){
 }
 
 
+bool DbForm::askForSave(){
+    QMessageBox box;
+    box.setText("Сохранение в базу");
+    box.setInformativeText("Был загружен новый файл. Сохранить в локальную базу?");
+    box.setWindowTitle("Сохранение");
+    box.setIcon(QMessageBox::Question);
 
+    box.setStandardButtons(QMessageBox::Discard | QMessageBox::Ok);
+    box.setDefaultButton(QMessageBox::Ok);
+    int ret = box.exec();
+    switch(ret){
+    case QMessageBox::Ok:
+        return true;
+    case QMessageBox::Discard:
+        return false;
+    default:
+        return false;
+    }
+}
 
 void DbForm::acceptInsertSignal(QString& name, QImage& image, dicomDict& dict){
     qDebug(logDebug()) << "Signal accepted by db form";
-    dumpToDb(name, image, dict);
+    if(askForSave()){
+        dumpToDb(name, image, dict);
+    } else {
+        return;
+    }
+
 }
 
 DbForm::~DbForm()
@@ -114,29 +167,36 @@ DbForm::~DbForm()
 
 void DbForm::on_dbTableWidget_cellClicked(int row, int column)
 {
-
     QSqlQuery query;
-    QScopedPointer<QTableWidgetItem> idItem{ui->dbTableWidget->item(row, static_cast<int>(columns::id))};
+    QTableWidgetItem* idItem{ui->dbTableWidget->item(row, static_cast<int>(columns::id))};
     QByteArray dataByteArray;
     dicomDict dict;
-
-    query.prepare("SELECT data FROM " + m_dbTable + " WHERE id= :id");
-    query.bindValue(":id", idItem->text());
+    if(!idItem){
+        return;
+    }
+    previewImage(idItem->text().toInt());
+    query.prepare("SELECT data FROM " + m_dbTable + " WHERE id=" + idItem->text());
+//    query.bindValue(":id", idItem->text());
     if ( !query.exec() ){
         qDebug(logCritical()) << "Critical DB error - Couldn't exec last query";
         return;
     }
     qDebug(logDebug()) << query.lastQuery();
-    ui->dbBorderDicomTable->clear();
-    ui->dbBorderDicomTable->setColumnCount(query.record().count());
-    ui->dbBorderDicomTable->setRowCount(1); // Change for some reasonable literal
-    ui->dbBorderDicomTable->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui->dbBorderDicomTable->setHorizontalHeaderLabels(QStringList() << "Tag" << "Description" << "Value");
-    ui->dbBorderDicomTable->blockSignals(true);
     query.first();
     dataByteArray = query.value(0).toByteArray();
+    // Check if no data on element
+    if (dataByteArray.isEmpty()){
+        return;
+    }
     dict = Serialize::byteArrayToDicomData(&dataByteArray);
     int i = 0;
+    ui->dbBorderDicomTable->clear();
+    ui->dbBorderDicomTable->setColumnCount(3);
+    qDebug(logDebug()) << "Query record count: " << query.record().count();
+    ui->dbBorderDicomTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->dbBorderDicomTable->setHorizontalHeaderLabels(QStringList() << "Tag" << "Description" << "Value");
+    ui->dbBorderDicomTable->setRowCount(dict.size());
+    ui->dbBorderDicomTable->blockSignals(true);
     for(auto key: dict.keys()){
         QTableWidgetItem* tagItem = new QTableWidgetItem(key.toStdString().c_str());
         QTableWidgetItem* descriptionItem = new QTableWidgetItem(dict[key].first.toStdString().c_str());
@@ -151,4 +211,5 @@ void DbForm::on_dbTableWidget_cellClicked(int row, int column)
     }
     ui->dbBorderDicomTable->blockSignals(false);
     ui->dbBorderDicomTable->update();
+    return;
 }

@@ -4,5 +4,7 @@
         <file>icons/kaf46.png</file>
         <file alias="db">icons/db.png</file>
 	<file alias="accessibility">icons/accessibility.png</file>
+	<file alias="ok">icons/ok.png</file>
+	<file alias="unavailable">icons/unavailable.png</file>
     </qresource>
 </RCC>

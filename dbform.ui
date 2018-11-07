@@ -16,24 +16,41 @@
   <widget class="QTableWidget" name="dbTableWidget">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>70</y>
+     <x>0</x>
+     <y>0</y>
      <width>551</width>
-     <height>401</height>
+     <height>311</height>
     </rect>
    </property>
   </widget>
   <widget class="QTableWidget" name="dbBorderDicomTable">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>500</y>
+     <x>0</x>
+     <y>320</y>
      <width>991</width>
-     <height>181</height>
+     <height>331</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="SceneZoom" name="dbGraphicsView">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>0</y>
+     <width>441</width>
+     <height>311</height>
     </rect>
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SceneZoom</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">scenezoom.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
