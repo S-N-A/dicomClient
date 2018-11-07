@@ -78,7 +78,7 @@ void SideBar::mousePressEvent(QMouseEvent *event)
     QAction* tempAction = actionAt(event->pos());
     if(tempAction == nullptr || tempAction->isChecked())
         return;
-    qDebug()<<"clicked";
+    qDebug(logDebug())<<"Clicked - " << tempAction->text();
     if(mCheckedAction)
         mCheckedAction->setChecked(false);
     if(mOverAction == tempAction)

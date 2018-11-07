@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ViewerForm</class>
- <widget class="QWidget" name="ViewerForm">
+ <class>DbForm</class>
+ <widget class="QWidget" name="DbForm">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,36 +13,33 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="loadImageButton">
+  <widget class="QTableWidget" name="dbTableWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>97</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Load Image</string>
-   </property>
-  </widget>
-  <widget class="SceneZoom" name="dicomGraphicsView">
-   <property name="geometry">
-    <rect>
-     <x>520</x>
-     <y>50</y>
-     <width>531</width>
-     <height>511</height>
+     <x>0</x>
+     <y>0</y>
+     <width>551</width>
+     <height>311</height>
     </rect>
    </property>
   </widget>
-  <widget class="QTableWidget" name="dicomAttributeTableWidget">
+  <widget class="QTableWidget" name="dbBorderDicomTable">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>50</y>
-     <width>501</width>
-     <height>511</height>
+     <x>0</x>
+     <y>320</y>
+     <width>991</width>
+     <height>331</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="SceneZoom" name="dbGraphicsView">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>0</y>
+     <width>441</width>
+     <height>311</height>
     </rect>
    </property>
   </widget>

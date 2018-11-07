@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QString>
+#include <QCheckBox>
 #include <QShowEvent>
 #include <QMap>
 #include <QGraphicsScene>
@@ -11,7 +12,7 @@
 #include <converters.h>
 #include <tagshelpers.h>
 #include <QDebug>
-
+#include <logger.h>
 
 namespace Ui {
 class ViewerForm;
@@ -33,10 +34,15 @@ private slots:
 
     void on_dicomAttributeTableWidget_cellChanged(int row, int column);
 
+signals:
+    void sendInsertSignal(QString& name, QImage& image, dicomDict& dict);
+
 private:
+    bool showMessageBoxAskingForChange();
+    bool m_changeAllowed;
     enum m_columns{Tag, Description, Value};
     const int m_table_columns_count = 3;
-    void initTable(const dicomDict& dict);
+    void initTable(const dicomDict& dict); // Should be refactored with dbform;
     Ui::ViewerForm *ui;
 };
 

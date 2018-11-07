@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets
+QT       += core gui widgets sql
 
 TARGET = newDicomClient
 TEMPLATE = app
@@ -30,7 +30,10 @@ SOURCES += \
     converters.cpp \
     viewerform.cpp \
     tagshelpers.cpp \
-    accessibilityform.cpp
+    accessibilityform.cpp \
+    dbform.cpp \
+    logger.cpp \
+    serializehelper.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,12 +42,16 @@ HEADERS += \
     converters.h \
     viewerform.h \
     tagshelpers.h \
-    accessibilityform.h
+    accessibilityform.h \
+    dbform.h \
+    logger.h \
+    serializehelper.h
 
 FORMS += \
         mainwindow.ui \
         viewerform.ui \
-    accessibilityform.ui
+    accessibilityform.ui \
+    dbform.ui
 
 RESOURCES += resource.qrc
 
@@ -53,20 +60,20 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-INCLUDEPATH += /usr/local/include/gdcm-2.8/
-LIBS += -lgdcmcharls -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmCommon -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmDICT -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmDSED -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmexpat -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmIOD -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmjpeg12 -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmjpeg16 -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmjpeg8 -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmMEXD -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmMSFF -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmopenjp2 -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmuuid -L/usr/local/lib/gdcm-2.8/ \
-        -lgdcmzlib -L/usr/local/lib/gdcm-2.8/ \
-        -lsocketxx -L/usr/local/lib/gdcm-2.8/ \
-         -lgdcmjpeg8 -L/usr/local/lib/gdcm-2.8/
+INCLUDEPATH += ../include/gdcm-2.8/
+LIBS += -lgdcmcharls -L../lib/gdcm-2.8/ \
+        -lgdcmCommon -L../lib/gdcm-2.8/ \
+        -lgdcmDICT -L../lib/gdcm-2.8/ \
+        -lgdcmDSED -L../lib/gdcm-2.8/ \
+        -lgdcmexpat -L../lib/gdcm-2.8/ \
+        -lgdcmIOD -L../lib/gdcm-2.8/ \
+        -lgdcmjpeg12 -L../lib/gdcm-2.8/ \
+        -lgdcmjpeg16 -L../lib/gdcm-2.8/ \
+        -lgdcmjpeg8 -L../lib/gdcm-2.8/ \
+        -lgdcmMEXD -L../lib/gdcm-2.8/ \
+        -lgdcmMSFF -L../lib/gdcm-2.8/ \
+        -lgdcmopenjp2 -L../lib/gdcm-2.8/ \
+        -lgdcmuuid -L../lib/gdcm-2.8/ \
+        -lgdcmzlib -L../lib/gdcm-2.8/ \
+        -lsocketxx -L../lib/gdcm-2.8/ \
+         -lgdcmjpeg8 -L../lib/gdcm-2.8/
