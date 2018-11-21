@@ -7,7 +7,9 @@
 #include <QTextStream>
 #include <server.h>
 
-static QScopedPointer<QFile> m_logFile;
+namespace {
+    QScopedPointer<QFile> m_logFile;
+}
 
 void messageHandler(QtMsgType type, const QMessageLogContext& context, const QString& msg);
 
