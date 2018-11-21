@@ -6,7 +6,7 @@
 #include <QDebug>
 #include <QEvent>
 
-#define action_height 90
+#define action_height 120
 
 SideBar::SideBar(QWidget *parent): QWidget (parent), mCheckedAction(nullptr), mOverAction(nullptr)
 {

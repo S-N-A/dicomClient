@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets sql
+QT       += core gui widgets sql network
 
 TARGET = newDicomClient
 TEMPLATE = app
@@ -33,7 +33,11 @@ SOURCES += \
     accessibilityform.cpp \
     dbform.cpp \
     logger.cpp \
-    serializehelper.cpp
+    serializehelper.cpp \
+    server.cpp \
+    client.cpp \
+    task.cpp \
+    telemedobject.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -45,7 +49,11 @@ HEADERS += \
     accessibilityform.h \
     dbform.h \
     logger.h \
-    serializehelper.h
+    serializehelper.h \
+    server.h \
+    client.h \
+    task.h \
+    telemedobject.h
 
 FORMS += \
         mainwindow.ui \

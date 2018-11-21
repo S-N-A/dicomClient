@@ -69,6 +69,24 @@ void ViewerForm::on_loadImageButton_clicked()
     scene->clear();
     scene->addPixmap(QPixmap::fromImage(*imageQt));
     ui->dicomGraphicsView->setScene(scene);
+    /*
+     * /
+     */
+    TeleMedObject obj(*imageQt, map, "Request", "");
+    QDataStream test;
+    try{
+        test << obj;
+    } catch(TeleMedObjException& exc){
+        qDebug(logDebug()) << exc.what();
+    }
+    TeleMedObject testobj;
+    try{
+    test >> testobj;
+    } catch (TeleMedObjException& exc){
+        qDebug(logDebug()) << exc.what();
+    }
+    qDebug(logDebug()) << "Done";
+
 }
 
 void ViewerForm::showEvent(QShowEvent*){

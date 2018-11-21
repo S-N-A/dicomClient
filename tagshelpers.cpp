@@ -30,6 +30,10 @@ dicomDict getTags(const char* filename){
     return TagsMap;
 }
 
+/*
+ Set tag  by given offset in format "00000000", value as std::string and filename with
+ EXISTING Dicom File
+ */
 
 bool setTag(const std::string& offset, const std::string& value, const char* filename){
     gdcm::Reader reader;

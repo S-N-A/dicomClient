@@ -115,7 +115,7 @@ bool DbForm::dumpToDb(QString& name, QImage& image, dicomDict& dict){
 
     query.prepare("INSERT INTO patient(name, image, data) VALUES (:name, :image, :data)");
     query.bindValue(":name", name);
-    query.bindValue(":image", imageByteArray );
+    query.bindValue(":image", imageByteArray);
     query.bindValue(":data", dataByteArray);
     if (!query.exec()){
         qDebug(logCritical()) << "Couldn't insert object in DB " << query.lastError();

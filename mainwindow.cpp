@@ -10,17 +10,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->viewerWidget->hide();
     ui->accessibilityWidget->hide();
     ui->dbWidget->hide();
-//    const gdcm::Global& g = gdcm::Global::GetInstance(); // sum of all knowledge !
-//    const gdcm::Dicts &dicts = g.GetDicts();
-//    const gdcm::Dict &pub = dicts.GetPublicDict();
-//    std::ofstream of;
-//    of.open("./dict.txt");
-//    of << pub;
-//    of.close();
-//    std::ostringstream stream;
-//    stream << pub;
-//    std::string out = stream.str();
-//    std::cout << out;
+
+}
+
+void MainWindow::getData(QByteArray block){
+    qDebug(logDebug())<< block;
 }
 
 void MainWindow::displayDbLayout(){
@@ -48,13 +42,14 @@ void MainWindow::displayViewerLayout(){
 }
 
 
+
 void MainWindow::initSidebar(){
     QIcon viewerIcon(QString(":/icons/viewerIcon"));
     QIcon dbIcon(QString(":/icons/db"));
     QIcon accessibilityIcon(QString(":/icons/accessibility"));
     QAction *viewerAction = new QAction(viewerIcon, QString("Просмотр"));
     QAction *dbAction = new QAction(dbIcon, QString("База данных"));
-    QAction *checkAction = new QAction(accessibilityIcon, QString("Проверить доступность"));
+    QAction *checkAction = new QAction(accessibilityIcon, QString("Сетевое взаиможействие"));
     connect(viewerAction, SIGNAL(triggered()), this, SLOT(displayViewerLayout()));
     connect(dbAction, SIGNAL(triggered()), this, SLOT(displayDbLayout()));
     connect(checkAction, SIGNAL(triggered()), this, SLOT(displayAccessibilityLayout()));

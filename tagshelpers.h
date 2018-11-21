@@ -16,7 +16,8 @@
 #include "gdcmWriter.h"
 
 
-typedef QMap<QString, QPair<QString, QString> > dicomDict;
+//typedef QMap<QString, QPair<QString, QString> > dicomDict;
+using dicomDict = QMap<QString, QPair<QString, QString> >;
 
 static dicomDict TagsMap;
 dicomDict getTags(const char* filename);

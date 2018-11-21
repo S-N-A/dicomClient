@@ -5,17 +5,23 @@
 #include <QLoggingCategory>
 #include <QDateTime>
 #include <QTextStream>
+#include <server.h>
 
 static QScopedPointer<QFile> m_logFile;
 
 void messageHandler(QtMsgType type, const QMessageLogContext& context, const QString& msg);
 
+
+
 int main(int argc, char *argv[])
 {
+
     QApplication a(argc, argv);
     m_logFile.reset(new QFile("./logDicomClient.txt"));
     m_logFile.data()->open(QFile::Append | QFile::Text);
     qInstallMessageHandler(messageHandler);
+    Server server;
+    server.startServer();
 
     MainWindow w;
     w.show();
