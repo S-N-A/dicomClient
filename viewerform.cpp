@@ -73,18 +73,11 @@ void ViewerForm::on_loadImageButton_clicked()
      * /
      */
     TeleMedObject obj(*imageQt, map, "Request", "");
-    QDataStream test;
-    try{
-        test << obj;
-    } catch(TeleMedObjException& exc){
-        qDebug(logDebug()) << exc.what();
-    }
-    TeleMedObject testobj;
-    try{
-    test >> testobj;
-    } catch (TeleMedObjException& exc){
-        qDebug(logDebug()) << exc.what();
-    }
+    QJsonDocument test_json;
+    test_json = obj.toJson();
+    TeleMedObject test(test_json);
+
+
     qDebug(logDebug()) << "Done";
 
 }

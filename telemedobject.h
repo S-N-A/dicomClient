@@ -2,9 +2,12 @@
 #define TELEMEDOBJECT_H
 
 #include <QImage>
+#include <QTextCodec>
 #include "tagshelpers.h"
 #include <QString>
 #include <QException>
+#include <QJsonObject>
+#include <QJsonDocument>
 #include "serializehelper.h"
 
 
@@ -25,8 +28,10 @@ public:
     TeleMedObject(){}
     TeleMedObject(QImage img, dicomDict dict,
                   QString Request, QString Response);
-    friend QDataStream& operator<<(QDataStream& ds, const TeleMedObject& medobj);
-    friend QDataStream& operator>>(QDataStream& ds, TeleMedObject& medobj);
+    TeleMedObject(const QJsonDocument& doc);
+    QJsonDocument toJson();
+
+
     ~TeleMedObject(){}
 private:
     QImage m_img;

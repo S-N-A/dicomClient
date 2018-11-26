@@ -13,28 +13,24 @@ TeleMedObject::TeleMedObject(QImage img, dicomDict dict,
     }
 }
 
+TeleMedObject::TeleMedObject(const QJsonDocument& doc){
 
-QDataStream& operator<<(QDataStream& ds, const TeleMedObject& medobj){
+    QJsonObject obj = doc.object();
+    m_img = Serialize::imageFrom(obj["image"]);
+    m_dicomDict = Serialize::dictFromBase64(obj["dictionary"]);
+    m_request = obj["request"].toString();
+    m_response = obj["response"].toString();
+    }
 
 
-//    QByteArray ImageBa = Serialize::imageToByteArray(medobj.m_img);
-//    QByteArray dicomDictBa = Serialize::dicomDataToByteArray(medobj.m_dicomDict);
-//    ds.setVersion(SerVersion);
-//    ds << ImageBa ;//<< dicomDictBa;//<< medobj.m_request << medobj.m_response;
-//    return ds;
+QJsonDocument TeleMedObject::toJson(){
+    QJsonObject obj;
+    obj["image"] = Serialize::jsonValFromImage(m_img);
+    obj["dictionary"] = QLatin1String(Serialize::dicomDataToByteArray(m_dicomDict).toBase64());
+    obj["request"] = m_request;
+    obj["response"] = m_response;
+    QJsonDocument doc(obj);
+    return doc;
 }
 
-QDataStream& operator>>(QDataStream& ds, TeleMedObject& medobj){
-//    QByteArray ImageBa;
-//    QByteArray dicomDictBa;
-//    QByteArray test_ba;
-//    ds >> test_ba;
-//    qDebug(logDebug()) << test_ba.data();
-//    ds >> ImageBa >> dicomDictBa >> medobj.m_request >> medobj.m_response;
-//    medobj.m_img = Serialize::byteArrayToImage(ImageBa);
-//    medobj.m_dicomDict = Serialize::byteArrayToDicomData(&dicomDictBa);
-//    if (medobj.m_img.isNull() || medobj.m_dicomDict.isEmpty()){
-//        throw TeleMedObjException("Serialization failed because image or dict is corrupted");
-//    }
-//    return  ds;
-}
+

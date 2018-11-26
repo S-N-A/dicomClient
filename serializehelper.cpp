@@ -29,4 +29,26 @@ dicomDict byteArrayToDicomData(QByteArray* ba){
     (*dsPointer) >> dict;
     return dict;
 }
+QJsonValue jsonValFromImage(const QImage& p){
+    QBuffer buffer;
+    buffer.open(QIODevice::WriteOnly);
+    p.save(&buffer, "PNG");
+    auto const encoded = buffer.data().toBase64();
+    return {QLatin1String(encoded)};
+}
+
+dicomDict dictFromBase64(const QJsonValue& value){
+    auto const encoded = value.toString().toLatin1();
+    QByteArray ba = QByteArray::fromBase64(encoded);
+    dicomDict dict = byteArrayToDicomData(&ba);
+    return dict;
+}
+
+QImage imageFrom(const QJsonValue& val){
+    auto const encoded = val.toString().toLatin1();
+    QImage pixmap;
+    pixmap.loadFromData(QByteArray::fromBase64(encoded), "PNG");
+    return pixmap;
+}
+
 }
