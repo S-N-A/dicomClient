@@ -17,18 +17,7 @@ QImage byteArrayToImage(const QByteArray &ba){
     return outPixMap.toImage();
 }
 
-QByteArray dicomDataToByteArray(const dicomDict &dict){
-    QByteArray ba;
-    QScopedPointer<QDataStream> dsPointer(new  QDataStream(&ba, QIODevice::WriteOnly));
-    (*dsPointer) << dict;
-    return ba;
-}
-dicomDict byteArrayToDicomData(QByteArray* ba){
-    dicomDict dict;
-    QScopedPointer<QDataStream> dsPointer(new QDataStream(ba, QIODevice::ReadOnly));
-    (*dsPointer) >> dict;
-    return dict;
-}
+
 QJsonValue jsonValFromImage(const QImage& p){
     QBuffer buffer;
     buffer.open(QIODevice::WriteOnly);
@@ -37,12 +26,6 @@ QJsonValue jsonValFromImage(const QImage& p){
     return {QLatin1String(encoded)};
 }
 
-dicomDict dictFromBase64(const QJsonValue& value){
-    auto const encoded = value.toString().toLatin1();
-    QByteArray ba = QByteArray::fromBase64(encoded);
-    dicomDict dict = byteArrayToDicomData(&ba);
-    return dict;
-}
 
 QImage imageFrom(const QJsonValue& val){
     auto const encoded = val.toString().toLatin1();

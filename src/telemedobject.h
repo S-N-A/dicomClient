@@ -2,7 +2,9 @@
 #define TELEMEDOBJECT_H
 
 #include <QImage>
+#include <QMap>
 #include <QTextCodec>
+#include <QMessageBox>
 #include "tagshelpers.h"
 #include <QString>
 #include <QException>
@@ -11,6 +13,7 @@
 #include "serializehelper.h"
 
 
+using addInfoMap = QMap<QString, QString>;
 class TeleMedObjException : public QException{
 public:
     TeleMedObjException(const char* errorString) : m_errorString(errorString){}
@@ -24,20 +27,19 @@ private:
 
 class TeleMedObject
 {
+
 public:
     TeleMedObject(){}
-    TeleMedObject(QImage img, dicomDict dict,
-                  QString Request, QString Response);
+    TeleMedObject(QImage img, dicomDict dict, addInfoMap map);
     TeleMedObject(const QJsonDocument& doc);
     QJsonDocument toJson();
-
+    bool isEmpty();
 
     ~TeleMedObject(){}
 private:
     QImage m_img;
     dicomDict m_dicomDict;
-    QString m_request;
-    QString m_response;
+    addInfoMap m_addInfoMap;
 };
 
 #endif // TELEMEDOBJECT_H

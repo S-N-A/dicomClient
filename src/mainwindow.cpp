@@ -49,12 +49,12 @@ void MainWindow::initSidebar(){
     QIcon accessibilityIcon(QString(":/icons/accessibility"));
     QAction *viewerAction = new QAction(viewerIcon, QString("Просмотр"));
     QAction *dbAction = new QAction(dbIcon, QString("База данных"));
-    QAction *checkAction = new QAction(accessibilityIcon, QString("Сетевое взаиможействие"));
+    QAction *checkAction = new QAction(accessibilityIcon, QString("Сетевое взаимодействие"));
     connect(viewerAction, SIGNAL(triggered()), this, SLOT(displayViewerLayout()));
     connect(dbAction, SIGNAL(triggered()), this, SLOT(displayDbLayout()));
     connect(checkAction, SIGNAL(triggered()), this, SLOT(displayAccessibilityLayout()));
-    connect(ui->viewerWidget, SIGNAL(sendInsertSignal(QString&, QImage&, dicomDict&)), ui->dbWidget,
-            SLOT(acceptInsertSignal(QString&, QImage&, dicomDict&)));
+    connect(ui->viewerWidget, SIGNAL(sendInsertSignal(QString&, QImage&, dicomDict&, addInfoMap&)), ui->dbWidget,
+            SLOT(acceptInsertSignal(QString&, QImage&, dicomDict&, addInfoMap&)));
     ui->sideBarWidget->addAction(viewerAction);
     ui->sideBarWidget->addAction(dbAction);
     ui->sideBarWidget->addAction(checkAction);

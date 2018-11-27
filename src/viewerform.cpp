@@ -60,7 +60,8 @@ void ViewerForm::on_loadImageButton_clicked()
     gdcm::Tag tPatientsName;
     pubdict.GetDictEntryByName("Patient's Name", tPatientsName);
     QString tagName = tPatientsName.PrintAsContinuousString().c_str();
-    emit sendInsertSignal(map[tagName].second, *imageQt, map);
+    addInfoMap infoMap;
+    emit sendInsertSignal(map[tagName].second, *imageQt, map, infoMap);
 
 
     initTable(map); // fill table with dicom attributes
@@ -72,12 +73,10 @@ void ViewerForm::on_loadImageButton_clicked()
     /*
      * /
      */
-    TeleMedObject obj(*imageQt, map, "Request", "");
+    TeleMedObject obj(*imageQt, map, infoMap);
     QJsonDocument test_json;
     test_json = obj.toJson();
     TeleMedObject test(test_json);
-
-
     qDebug(logDebug()) << "Done";
 
 }

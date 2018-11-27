@@ -50,26 +50,22 @@ bool DbForm::initTableWidget(){
         ui->dbTableWidget->setItem(counter, static_cast<int>(columns::name), name);
         name->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
         if (query.value(static_cast<int>(columns::image)).isNull()){
-//            QTableWidgetItem *null = new QTableWidgetItem("Doesn't exist");
             QTableWidgetItem *null = new QTableWidgetItem();
             null->setIcon(m_unavailableIcon);
             null->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
             ui->dbTableWidget->setItem(counter, static_cast<int>(columns::image), null);
         } else {
-//          QTableWidgetItem *exist = new QTableWidgetItem("Is present");
             QTableWidgetItem *exist = new QTableWidgetItem();
             exist->setIcon(m_okIcon);
             exist->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
             ui->dbTableWidget->setItem(counter, static_cast<int>(columns::image), exist);
         }
         if (query.value(static_cast<int>(columns::data)).isNull()){
-            //QTableWidgetItem *null = new QTableWidgetItem("Doesn't exist");
             QTableWidgetItem *null = new QTableWidgetItem();
             null->setIcon(m_unavailableIcon);
             null->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
             ui->dbTableWidget->setItem(counter, static_cast<int>(columns::data), null);
         } else {
-            //QTableWidgetItem *exist = new QTableWidgetItem("Is present");
             QTableWidgetItem *exist = new QTableWidgetItem();
             exist->setIcon(m_okIcon);
             exist->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
@@ -104,14 +100,14 @@ void DbForm::previewImage(const int& id){
     ui->dbGraphicsView->update();
 }
 
-bool DbForm::dumpToDb(QString& name, QImage& image, dicomDict& dict){
+bool DbForm::dumpToDb(QString& name, QImage& image, dicomDict& dict, addInfoMap& map){
     QSqlQuery query;
 
     // Dump image in bytearray
     QByteArray imageByteArray = Serialize::imageToByteArray(image);
 
     // Dump dict in bytearray
-    QByteArray dataByteArray = Serialize::dicomDataToByteArray(dict);
+    QByteArray dataByteArray = Serialize::dictToByteArray<dicomDict>(dict);
 
     query.prepare("INSERT INTO patient(name, image, data) VALUES (:name, :image, :data)");
     query.bindValue(":name", name);
@@ -123,8 +119,36 @@ bool DbForm::dumpToDb(QString& name, QImage& image, dicomDict& dict){
         QMessageBox::warning(this, "Ошибка", "Запись в базу была завершена с ошибкой");
         return false;
     }
+    insertAdditionalInfo(query, map);
     initTableWidget();
     return true;
+}
+
+void DbForm::insertAdditionalInfo(QSqlQuery& query, const addInfoMap& map){
+    if(!map.isEmpty()){
+        auto request = map.value("request");
+        auto response = map.value("response");
+        auto request_date = map.value("request_date");
+        auto response_date = map.value("response_date");
+        auto requester = map.value("requester");
+        auto responser = map.value("responser");
+
+        query.prepare("INSERT INTO patient (request, response, request_date, response_date, requester, responser)"
+                      "VALUES (:request, :response, :request_date, :response_date, :requester, :responser)");
+        query.bindValue(":request", request);
+        query.bindValue(":response", response);
+        query.bindValue(":request_date", request_date);
+        query.bindValue(":response_date", response_date);
+        query.bindValue(":requester", requester);
+        query.bindValue(":responser", responser);
+        if (!query.exec()){
+            qDebug(logCritical()) << "Couldn't insert object in DB " << query.lastError();
+            qDebug(logCritical()) << query.lastQuery();
+            QMessageBox::warning(this, "Ошибка", "Запись в базу была завершена с ошибкой");
+            return;
+        }
+
+    }
 }
 
 
@@ -148,10 +172,10 @@ bool DbForm::askForSave(){
     }
 }
 
-void DbForm::acceptInsertSignal(QString& name, QImage& image, dicomDict& dict){
+void DbForm::acceptInsertSignal(QString& name, QImage& image, dicomDict& dict, addInfoMap& map){
     qDebug(logDebug()) << "Signal accepted by db form";
     if(askForSave()){
-        dumpToDb(name, image, dict);
+        dumpToDb(name, image, dict, map);
     } else {
         return;
     }
@@ -188,7 +212,7 @@ void DbForm::on_dbTableWidget_cellClicked(int row, int column)
     if (dataByteArray.isEmpty()){
         return;
     }
-    dict = Serialize::byteArrayToDicomData(&dataByteArray);
+    dict = Serialize::byteArrayToDict<dicomDict>(&dataByteArray);
     int i = 0;
     ui->dbBorderDicomTable->clear();
     ui->dbBorderDicomTable->setColumnCount(3);
