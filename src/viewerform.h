@@ -19,6 +19,8 @@ namespace Ui {
 class ViewerForm;
 }
 
+using addInfoMap = QMap<QString,QString>;
+
 class ViewerForm : public QWidget
 {
     Q_OBJECT
@@ -36,7 +38,7 @@ private slots:
     void on_dicomAttributeTableWidget_cellChanged(int row, int column);
 
 signals:
-    void sendInsertSignal(QString& name, QImage& image, dicomDict& dict);
+    void sendInsertSignal(QString& name, QImage& image, dicomDict& dict, addInfoMap& infoMap);
 
 private:
     bool showMessageBoxAskingForChange();

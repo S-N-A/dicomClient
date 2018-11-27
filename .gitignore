@@ -1,3 +1,5 @@
 *.pro
 *.png
 *.user
+lib/
+include/

@@ -13,6 +13,8 @@ namespace Ui {
 class MainWindow;
 }
 
+using addInfoMap = QMap<QString, QString>;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

@@ -13,10 +13,13 @@
 #include <logger.h>
 #include <tagshelpers.h>
 #include <serializehelper.h>
+#include "senddialog.h"
 
 namespace Ui {
 class DbForm;
 }
+
+using addInfoMap = QMap<QString,QString>;
 
 class DbForm : public QWidget
 {
@@ -24,10 +27,11 @@ class DbForm : public QWidget
 
 public:
     explicit DbForm(QWidget *parent = nullptr);
+    friend class SendDialog;
     ~DbForm();
 
 public slots:
-    void acceptInsertSignal(QString& name, QImage& image, dicomDict& dict);
+    void acceptInsertSignal(QString& name, QImage& image, dicomDict& dict, addInfoMap& map);
 
 private slots:
     void on_dbTableWidget_cellClicked(int row, int column);
@@ -45,8 +49,9 @@ private:
     QSqlDatabase m_db;
     QGraphicsScene m_previewScene;
     bool initTableWidget();
-    bool dumpToDb(QString& name, QImage& image, dicomDict& dict);
+    bool dumpToDb(QString& name, QImage& image, dicomDict& dict, addInfoMap& map);
     void initBorderWidget(const dicomDict &dict);
+    void insertAdditionalInfo(QSqlQuery& query, const addInfoMap& map);
 };
 
 #endif // DBFORM_H
