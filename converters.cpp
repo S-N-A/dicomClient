@@ -9,7 +9,6 @@ bool ConvertToFormat_RGB888(gdcm::Image const & gimage, char *buffer, QImage* &i
 
     gimage.GetBuffer(buffer);
 
-    // Let's start with the easy case:
     if( gimage.GetPhotometricInterpretation() == gdcm::PhotometricInterpretation::RGB )
       {
       if( gimage.GetPixelFormat() != gdcm::PixelFormat::UINT8 )
@@ -17,7 +16,6 @@ bool ConvertToFormat_RGB888(gdcm::Image const & gimage, char *buffer, QImage* &i
         return false;
         }
       unsigned char *ubuffer = reinterpret_cast<unsigned char*>(buffer);
-      // QImage::Format_RGB888  13  The image is stored using a 24-bit RGB format (8-8-8).
       imageQt = new QImage(reinterpret_cast<unsigned char*>(ubuffer), static_cast<int>(dimX), static_cast<int>(dimY),
                            static_cast<int>(3*dimX), QImage::Format_RGB888);
       }

@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QIcon>
+#include <QMessageBox>
+
 
 #include <viewerform.h>
 #include <converters.h>
@@ -25,7 +27,7 @@ private slots:
     void displayViewerLayout();
     void displayDbLayout();
     void displayAccessibilityLayout();
-
+    void getData(QByteArray block);
 
 private:
     const int m_standartXGeom = 300;

@@ -13,6 +13,7 @@
 #include <tagshelpers.h>
 #include <QDebug>
 #include <logger.h>
+#include "telemedobject.h"
 
 namespace Ui {
 class ViewerForm;

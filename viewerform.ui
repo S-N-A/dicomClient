@@ -18,12 +18,12 @@
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>97</width>
+     <width>201</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>Load Image</string>
+    <string>Загрузить изображение</string>
    </property>
   </widget>
   <widget class="SceneZoom" name="dicomGraphicsView">
