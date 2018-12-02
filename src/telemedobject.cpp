@@ -20,6 +20,7 @@ TeleMedObject::TeleMedObject(const QJsonDocument& doc){
     m_addInfoMap =Serialize::dictFromBase64<addInfoMap>(obj["infoMap"]);
     } catch (...){
         qDebug(logCritical()) << "Невозможно обработать полученную информацию";
+        throw TeleMedObjException("Полученные данные невоможно обработать правильно");
     }
 }
 
@@ -40,4 +41,21 @@ bool TeleMedObject::isEmpty(){
     } else {
         return false;
     }
+}
+
+QString TeleMedObject::getResponser() const{
+    auto responser = m_addInfoMap["responser"];
+    return responser;
+}
+
+QImage TeleMedObject::getImage() const{
+    return m_img;
+}
+
+dicomDict TeleMedObject::getDicomDict() const{
+    return m_dicomDict;
+}
+
+addInfoMap TeleMedObject::getInfoMap() const{
+    return m_addInfoMap;
 }

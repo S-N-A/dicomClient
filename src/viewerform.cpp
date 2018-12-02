@@ -73,10 +73,11 @@ void ViewerForm::on_loadImageButton_clicked()
     /*
      * /
      */
-    TeleMedObject obj(*imageQt, map, infoMap);
-    QJsonDocument test_json;
-    test_json = obj.toJson();
-    TeleMedObject test(test_json);
+//    TeleMedObject obj(*imageQt, map, infoMap);
+//    QJsonDocument test_json;
+//    test_json = obj.toJson();
+//    TeleMedObject test(test_json);
+
     qDebug(logDebug()) << "Done";
 
 }

@@ -1,0 +1,229 @@
+\hypertarget{classAccessibilityForm}{}\section{Класс Accessibility\+Form}
+\label{classAccessibilityForm}\index{Accessibility\+Form@{Accessibility\+Form}}
+
+
+Класс формы для осуществления сетевого взаимодействия.  
+
+
+
+
+{\ttfamily \#include $<$accessibilityform.\+h$>$}
+
+
+
+Граф наследования\+:Accessibility\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classAccessibilityForm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Accessibility\+Form\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{classAccessibilityForm__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAccessibilityForm_a0c75d12469be97cc2e80a2a7e5db66d5}{get\+Data\+From\+Server} (Q\+Byte\+Array ba)
+\begin{DoxyCompactList}\small\item\em get\+Data\+From\+Server \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAccessibilityForm_abd079103500734db443b13a5f177938c}{send\+Signal\+To\+Dump} (Q\+String \&name, Q\+Image \&image, \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&dict, \hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \&map)
+\begin{DoxyCompactList}\small\item\em send\+Signal\+To\+Dump \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAccessibilityForm_aed3d56ba8bea5e204065b33aeabc501f}{Accessibility\+Form} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAccessibilityForm}{Accessibility\+Form}. \end{DoxyCompactList}\item 
+bool \hyperlink{classAccessibilityForm_a8c465f42556cfec6742dc973e8f3580b}{ask\+For\+Save} ()
+\begin{DoxyCompactList}\small\item\em ask\+For\+Save \end{DoxyCompactList}\item 
+\hyperlink{classAccessibilityForm_a35c94d7857e2a4db9a8fe5c60ecc8e64}{$\sim$\+Accessibility\+Form} ()
+\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Graphics\+Scene $\ast$ \hyperlink{classAccessibilityForm_a5ce983d3b40e1486857d263b11fda575}{scene}
+\end{DoxyCompactItemize}
+\subsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAccessibilityForm_a47e343e6d2668e2fb9d79c3a4e342bfd}{on\+\_\+request\+Button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em on\+\_\+request\+Button\+\_\+clicked \end{DoxyCompactList}\item 
+void \hyperlink{classAccessibilityForm_aa9ec98dd84724349a77477f0431298dc}{on\+\_\+response\+Button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em on\+\_\+response\+Button\+\_\+clicked \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAccessibilityForm_adc4f7fd9320458525471566366e33030}{show\+Current\+Obj} ()
+\begin{DoxyCompactList}\small\item\em show\+Current\+Obj \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTeleMedObject}{Tele\+Med\+Object} \hyperlink{classAccessibilityForm_a7abf8a65145b6a1164e15fe5667156ab}{m\+\_\+current\+\_\+telemedobj}
+\begin{DoxyCompactList}\small\item\em m\+\_\+current\+\_\+telemedobj \end{DoxyCompactList}\item 
+Ui\+::\+Accessibility\+Form $\ast$ \hyperlink{classAccessibilityForm_a410e78e46d46b2e5785277eba28fc8de}{ui}
+\begin{DoxyCompactList}\small\item\em ui \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс формы для осуществления сетевого взаимодействия. 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Необходимо сделать}
+\item[\hyperlink{todo__todo000001}{Необходимо сделать}]Запись в базу объекта ответа\end{DoxyRefDesc}
+
+
+Данный класс предназначен для управления функциями, виджета \char`\"{}Сетевое взаимодействие\char`\"{} 
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classAccessibilityForm_aed3d56ba8bea5e204065b33aeabc501f}\label{classAccessibilityForm_aed3d56ba8bea5e204065b33aeabc501f}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!Accessibility\+Form@{Accessibility\+Form}}
+\index{Accessibility\+Form@{Accessibility\+Form}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{Accessibility\+Form()}{AccessibilityForm()}}
+{\footnotesize\ttfamily Accessibility\+Form\+::\+Accessibility\+Form (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{classAccessibilityForm}{Accessibility\+Form}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Конструтор класса, принимающий в параметре ссылку на родительский виджет \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAccessibilityForm_a35c94d7857e2a4db9a8fe5c60ecc8e64}\label{classAccessibilityForm_a35c94d7857e2a4db9a8fe5c60ecc8e64}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!````~Accessibility\+Form@{$\sim$\+Accessibility\+Form}}
+\index{````~Accessibility\+Form@{$\sim$\+Accessibility\+Form}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{$\sim$\+Accessibility\+Form()}{~AccessibilityForm()}}
+{\footnotesize\ttfamily Accessibility\+Form\+::$\sim$\+Accessibility\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classAccessibilityForm_a8c465f42556cfec6742dc973e8f3580b}\label{classAccessibilityForm_a8c465f42556cfec6742dc973e8f3580b}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!ask\+For\+Save@{ask\+For\+Save}}
+\index{ask\+For\+Save@{ask\+For\+Save}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{ask\+For\+Save()}{askForSave()}}
+{\footnotesize\ttfamily bool Accessibility\+Form\+::ask\+For\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ask\+For\+Save 
+
+\begin{DoxyReturn}{Возвращает}
+Возвращает значение типа boolean, указывающее на необходимость сохранения в базу данных
+\end{DoxyReturn}
+Если функция вернула true -\/ посылаем сигнал сохранения в базу данных \mbox{\Hypertarget{classAccessibilityForm_a0c75d12469be97cc2e80a2a7e5db66d5}\label{classAccessibilityForm_a0c75d12469be97cc2e80a2a7e5db66d5}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!get\+Data\+From\+Server@{get\+Data\+From\+Server}}
+\index{get\+Data\+From\+Server@{get\+Data\+From\+Server}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{get\+Data\+From\+Server}{getDataFromServer}}
+{\footnotesize\ttfamily void Accessibility\+Form\+::get\+Data\+From\+Server (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{ba }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+get\+Data\+From\+Server 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ba} & Набор байт, сформированный при отправке сообщения\\
+\hline
+\end{DoxyParams}
+Функция принимает присланные данные от запрашивающего и обрабатывает их \mbox{\Hypertarget{classAccessibilityForm_a47e343e6d2668e2fb9d79c3a4e342bfd}\label{classAccessibilityForm_a47e343e6d2668e2fb9d79c3a4e342bfd}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!on\+\_\+request\+Button\+\_\+clicked@{on\+\_\+request\+Button\+\_\+clicked}}
+\index{on\+\_\+request\+Button\+\_\+clicked@{on\+\_\+request\+Button\+\_\+clicked}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{on\+\_\+request\+Button\+\_\+clicked}{on\_requestButton\_clicked}}
+{\footnotesize\ttfamily void Accessibility\+Form\+::on\+\_\+request\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+on\+\_\+request\+Button\+\_\+clicked 
+
+Слот отображающий форму отправки запроса, при нажатии на кнопку \char`\"{}Сделать запрос\char`\"{} \mbox{\Hypertarget{classAccessibilityForm_aa9ec98dd84724349a77477f0431298dc}\label{classAccessibilityForm_aa9ec98dd84724349a77477f0431298dc}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!on\+\_\+response\+Button\+\_\+clicked@{on\+\_\+response\+Button\+\_\+clicked}}
+\index{on\+\_\+response\+Button\+\_\+clicked@{on\+\_\+response\+Button\+\_\+clicked}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{on\+\_\+response\+Button\+\_\+clicked}{on\_responseButton\_clicked}}
+{\footnotesize\ttfamily void Accessibility\+Form\+::on\+\_\+response\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+on\+\_\+response\+Button\+\_\+clicked 
+
+Слот, который собирает информацию с виджета, после нажатия на кнопку \char`\"{}Ответить\char`\"{} для последующей отправки \mbox{\Hypertarget{classAccessibilityForm_abd079103500734db443b13a5f177938c}\label{classAccessibilityForm_abd079103500734db443b13a5f177938c}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!send\+Signal\+To\+Dump@{send\+Signal\+To\+Dump}}
+\index{send\+Signal\+To\+Dump@{send\+Signal\+To\+Dump}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{send\+Signal\+To\+Dump}{sendSignalToDump}}
+{\footnotesize\ttfamily void Accessibility\+Form\+::send\+Signal\+To\+Dump (\begin{DoxyParamCaption}\item[{Q\+String \&}]{name,  }\item[{Q\+Image \&}]{image,  }\item[{\hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&}]{dict,  }\item[{\hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+send\+Signal\+To\+Dump 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Имя пациента \\
+\hline
+{\em image} & Медицинское изображение \\
+\hline
+{\em dict} & Словарь, содержащий значения тегов исходного файла формата dicom \\
+\hline
+{\em map} & Словарь, содержащий дополнительную информацию о запросе\textbackslash{}ответе \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAccessibilityForm_adc4f7fd9320458525471566366e33030}\label{classAccessibilityForm_adc4f7fd9320458525471566366e33030}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!show\+Current\+Obj@{show\+Current\+Obj}}
+\index{show\+Current\+Obj@{show\+Current\+Obj}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{show\+Current\+Obj()}{showCurrentObj()}}
+{\footnotesize\ttfamily void Accessibility\+Form\+::show\+Current\+Obj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+show\+Current\+Obj 
+
+Функция отображающая объект запроса на виджете. Объект запроса берется из m\+\_\+current\+\_\+telemedobj 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classAccessibilityForm_a7abf8a65145b6a1164e15fe5667156ab}\label{classAccessibilityForm_a7abf8a65145b6a1164e15fe5667156ab}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!m\+\_\+current\+\_\+telemedobj@{m\+\_\+current\+\_\+telemedobj}}
+\index{m\+\_\+current\+\_\+telemedobj@{m\+\_\+current\+\_\+telemedobj}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+current\+\_\+telemedobj}{m\_current\_telemedobj}}
+{\footnotesize\ttfamily \hyperlink{classTeleMedObject}{Tele\+Med\+Object} Accessibility\+Form\+::m\+\_\+current\+\_\+telemedobj\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+current\+\_\+telemedobj 
+
+Объект запроса, отображаемый на виджете \mbox{\Hypertarget{classAccessibilityForm_a5ce983d3b40e1486857d263b11fda575}\label{classAccessibilityForm_a5ce983d3b40e1486857d263b11fda575}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!scene@{scene}}
+\index{scene@{scene}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily Q\+Graphics\+Scene$\ast$ Accessibility\+Form\+::scene}
+
+\mbox{\Hypertarget{classAccessibilityForm_a410e78e46d46b2e5785277eba28fc8de}\label{classAccessibilityForm_a410e78e46d46b2e5785277eba28fc8de}} 
+\index{Accessibility\+Form@{Accessibility\+Form}!ui@{ui}}
+\index{ui@{ui}!Accessibility\+Form@{Accessibility\+Form}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Accessibility\+Form$\ast$ Accessibility\+Form\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ui 
+
+Указатель на объект интерфейса для виджета 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{accessibilityform_8h}{accessibilityform.\+h}\item 
+\hyperlink{accessibilityform_8cpp}{accessibilityform.\+cpp}\end{DoxyCompactItemize}

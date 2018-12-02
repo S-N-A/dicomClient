@@ -1,0 +1,142 @@
+\hypertarget{classTask}{}\section{Класс Task}
+\label{classTask}\index{Task@{Task}}
+
+
+Класс задачи  
+
+
+
+
+{\ttfamily \#include $<$task.\+h$>$}
+
+
+
+Граф наследования\+:Task\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classTask__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Task\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classTask__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classTask_a9a38657c8c17d817273b70166f35f8e2}{Result} (Q\+Byte\+Array ba)
+\begin{DoxyCompactList}\small\item\em Result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTask_a14c504e1e0ecef1a22429d6bf80771ac}{Task} (Q\+Object $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classTask}{Task}. \end{DoxyCompactList}\item 
+void \hyperlink{classTask_a332a2afecfed5236f3e4246a788943a1}{set\+Client\+Info} (const Q\+Byte\+Array \&ba)
+\begin{DoxyCompactList}\small\item\em set\+Client\+Info \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classTask_a034b41e0d81a3dc01804bbc3f73a25f2}{run} ()
+\begin{DoxyCompactList}\small\item\em run \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Byte\+Array \hyperlink{classTask_ac961587d9c0cc627b69ead09f2311834}{m\+\_\+client\+\_\+request}
+\begin{DoxyCompactList}\small\item\em m\+\_\+client\+\_\+request \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс задачи 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018
+\end{DoxyDate}
+Класс задачи выполняемой в отдельном потоке 
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classTask_a14c504e1e0ecef1a22429d6bf80771ac}\label{classTask_a14c504e1e0ecef1a22429d6bf80771ac}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\subsubsection{\texorpdfstring{Task()}{Task()}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classTask}{Task}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский объект\\
+\hline
+\end{DoxyParams}
+Конструктор класса задачи 
+
+\subsection{Методы}
+\mbox{\Hypertarget{classTask_a9a38657c8c17d817273b70166f35f8e2}\label{classTask_a9a38657c8c17d817273b70166f35f8e2}} 
+\index{Task@{Task}!Result@{Result}}
+\index{Result@{Result}!Task@{Task}}
+\subsubsection{\texorpdfstring{Result}{Result}}
+{\footnotesize\ttfamily void Task\+::\+Result (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{ba }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Result. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ba} & Набор байт\\
+\hline
+\end{DoxyParams}
+Функция для отправки сигнала из отдельного потока в вызывающий объект типа \hyperlink{classClient}{Client} \mbox{\Hypertarget{classTask_a034b41e0d81a3dc01804bbc3f73a25f2}\label{classTask_a034b41e0d81a3dc01804bbc3f73a25f2}} 
+\index{Task@{Task}!run@{run}}
+\index{run@{run}!Task@{Task}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Task\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+run 
+
+Функция для запуска отдельного потока при обработке информации полученной при сетевом взаимодействии \mbox{\Hypertarget{classTask_a332a2afecfed5236f3e4246a788943a1}\label{classTask_a332a2afecfed5236f3e4246a788943a1}} 
+\index{Task@{Task}!set\+Client\+Info@{set\+Client\+Info}}
+\index{set\+Client\+Info@{set\+Client\+Info}!Task@{Task}}
+\subsubsection{\texorpdfstring{set\+Client\+Info()}{setClientInfo()}}
+{\footnotesize\ttfamily void Task\+::set\+Client\+Info (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{ba }\end{DoxyParamCaption})}
+
+
+
+set\+Client\+Info 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ba} & Набор байт\\
+\hline
+\end{DoxyParams}
+Функция для сохранения полученного набора данных из сетевого взаимодействия в память 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classTask_ac961587d9c0cc627b69ead09f2311834}\label{classTask_ac961587d9c0cc627b69ead09f2311834}} 
+\index{Task@{Task}!m\+\_\+client\+\_\+request@{m\+\_\+client\+\_\+request}}
+\index{m\+\_\+client\+\_\+request@{m\+\_\+client\+\_\+request}!Task@{Task}}
+\subsubsection{\texorpdfstring{m\+\_\+client\+\_\+request}{m\_client\_request}}
+{\footnotesize\ttfamily Q\+Byte\+Array Task\+::m\+\_\+client\+\_\+request\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+client\+\_\+request 
+
+Набор байт в запросе, сохраненный в память 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{task_8h}{task.\+h}\item 
+\hyperlink{task_8cpp}{task.\+cpp}\end{DoxyCompactItemize}

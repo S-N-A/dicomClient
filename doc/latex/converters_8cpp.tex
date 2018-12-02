@@ -1,0 +1,48 @@
+\hypertarget{converters_8cpp}{}\section{Файл converters.\+cpp}
+\label{converters_8cpp}\index{converters.\+cpp@{converters.\+cpp}}
+{\ttfamily \#include $<$converters.\+h$>$}\newline
+Граф включаемых заголовочных файлов для converters.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{converters_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{converters_8cpp_a3cc84957f028460a3f51654587168008}{Convert\+To\+Format\+\_\+\+R\+G\+B888} (gdcm\+::\+Image const \&gimage, char $\ast$buffer, Q\+Image $\ast$\&image\+Qt)
+\begin{DoxyCompactList}\small\item\em Функция для конвертации изображения в файле формата dicom в изображение типа Q\+Image. \end{DoxyCompactList}\item 
+int \hyperlink{converters_8cpp_a0d3e845f11c48538ab8f45dae9a2d8f3}{Print\+C\+SA} (const std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Print\+C\+SA Функция для уведомления о наличии C\+SA тегов. В программе не используется. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{converters_8cpp_a3cc84957f028460a3f51654587168008}\label{converters_8cpp_a3cc84957f028460a3f51654587168008}} 
+\index{converters.\+cpp@{converters.\+cpp}!Convert\+To\+Format\+\_\+\+R\+G\+B888@{Convert\+To\+Format\+\_\+\+R\+G\+B888}}
+\index{Convert\+To\+Format\+\_\+\+R\+G\+B888@{Convert\+To\+Format\+\_\+\+R\+G\+B888}!converters.\+cpp@{converters.\+cpp}}
+\subsubsection{\texorpdfstring{Convert\+To\+Format\+\_\+\+R\+G\+B888()}{ConvertToFormat\_RGB888()}}
+{\footnotesize\ttfamily bool Convert\+To\+Format\+\_\+\+R\+G\+B888 (\begin{DoxyParamCaption}\item[{gdcm\+::\+Image const \&}]{gimage,  }\item[{char $\ast$}]{buffer,  }\item[{Q\+Image $\ast$\&}]{image\+Qt }\end{DoxyParamCaption})}
+
+
+
+Функция для конвертации изображения в файле формата dicom в изображение типа Q\+Image. 
+
+\mbox{\Hypertarget{converters_8cpp_a0d3e845f11c48538ab8f45dae9a2d8f3}\label{converters_8cpp_a0d3e845f11c48538ab8f45dae9a2d8f3}} 
+\index{converters.\+cpp@{converters.\+cpp}!Print\+C\+SA@{Print\+C\+SA}}
+\index{Print\+C\+SA@{Print\+C\+SA}!converters.\+cpp@{converters.\+cpp}}
+\subsubsection{\texorpdfstring{Print\+C\+S\+A()}{PrintCSA()}}
+{\footnotesize\ttfamily int Print\+C\+SA (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Print\+C\+SA Функция для уведомления о наличии C\+SA тегов. В программе не используется. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em filename} & Путь до dicom файла \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+1 -\/ если не найдено, 0 -\/ если найдено 
+\end{DoxyReturn}

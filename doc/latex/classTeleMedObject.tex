@@ -1,0 +1,227 @@
+\hypertarget{classTeleMedObject}{}\section{Класс Tele\+Med\+Object}
+\label{classTeleMedObject}\index{Tele\+Med\+Object@{Tele\+Med\+Object}}
+
+
+Класс объекта информации в телемедицинском сеансе  
+
+
+
+
+{\ttfamily \#include $<$telemedobject.\+h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTeleMedObject_a754462ce944702c386aa3b6191e4db33}{Tele\+Med\+Object} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classTeleMedObject}{Tele\+Med\+Object}. \end{DoxyCompactList}\item 
+\hyperlink{classTeleMedObject_a38ee0e32441775b2f4f10907b672af44}{Tele\+Med\+Object} (Q\+Image img, \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} dict, \hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} map)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classTeleMedObject}{Tele\+Med\+Object}. \end{DoxyCompactList}\item 
+\hyperlink{classTeleMedObject_ac0e5013f81a28e85101305fd8b7f6a59}{Tele\+Med\+Object} (const Q\+Json\+Document \&doc)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classTeleMedObject}{Tele\+Med\+Object}. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{classTeleMedObject_a5d79f3bf01cc9ee2b714f9fa1da422df}{get\+Responser} () const
+\begin{DoxyCompactList}\small\item\em get\+Responser \end{DoxyCompactList}\item 
+Q\+Json\+Document \hyperlink{classTeleMedObject_a37d8e7cede94ef1695171d35c6c0c1ce}{to\+Json} ()
+\begin{DoxyCompactList}\small\item\em to\+Json \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{classTeleMedObject_a69c34b50bb901268d193bbbb7a7698c5}{get\+Image} () const
+\begin{DoxyCompactList}\small\item\em get\+Image \end{DoxyCompactList}\item 
+\hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \hyperlink{classTeleMedObject_a66119d8882d0e8319d337a559bfa78a3}{get\+Dicom\+Dict} () const
+\begin{DoxyCompactList}\small\item\em get\+Dicom\+Dict \end{DoxyCompactList}\item 
+\hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \hyperlink{classTeleMedObject_a56def4aa26d190a557014d9a3d99099f}{get\+Info\+Map} () const
+\begin{DoxyCompactList}\small\item\em get\+Info\+Map \end{DoxyCompactList}\item 
+bool \hyperlink{classTeleMedObject_a651ae9fa2690217a8327d194682ef60c}{is\+Empty} ()
+\begin{DoxyCompactList}\small\item\em is\+Empty \end{DoxyCompactList}\item 
+\hyperlink{classTeleMedObject_a6d60cc13e1b1812938cb9a7277c49d43}{$\sim$\+Tele\+Med\+Object} ()
+\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Image \hyperlink{classTeleMedObject_a4ea4fc9f1c9e7f7e7760b1c7db163789}{m\+\_\+img}
+\begin{DoxyCompactList}\small\item\em m\+\_\+img \end{DoxyCompactList}\item 
+\hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \hyperlink{classTeleMedObject_a15a8c04c55623d826a04908a949fce31}{m\+\_\+dicom\+Dict}
+\begin{DoxyCompactList}\small\item\em m\+\_\+dicom\+Dict \end{DoxyCompactList}\item 
+\hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \hyperlink{classTeleMedObject_a812a8fdb794711a94a9fc0fa4f1de27e}{m\+\_\+add\+Info\+Map}
+\begin{DoxyCompactList}\small\item\em m\+\_\+add\+Info\+Map \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс объекта информации в телемедицинском сеансе 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018
+\end{DoxyDate}
+Данный класс предназначен для построения объекта информации для передачи\textbackslash{}получения в телемедицинском сеансе 
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classTeleMedObject_a754462ce944702c386aa3b6191e4db33}\label{classTeleMedObject_a754462ce944702c386aa3b6191e4db33}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{Tele\+Med\+Object()}{TeleMedObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Tele\+Med\+Object\+::\+Tele\+Med\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{classTeleMedObject}{Tele\+Med\+Object}. 
+
+Конструктор по умолчанию \mbox{\Hypertarget{classTeleMedObject_a38ee0e32441775b2f4f10907b672af44}\label{classTeleMedObject_a38ee0e32441775b2f4f10907b672af44}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{Tele\+Med\+Object()}{TeleMedObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Tele\+Med\+Object\+::\+Tele\+Med\+Object (\begin{DoxyParamCaption}\item[{Q\+Image}]{img,  }\item[{\hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict}}]{dict,  }\item[{\hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map}}]{map }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classTeleMedObject}{Tele\+Med\+Object}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em img} & Изображение \\
+\hline
+{\em dict} & Словарь с данными из исследования \\
+\hline
+{\em map} & Словарь с дополнительными данными о запросе\textbackslash{}ответе\\
+\hline
+\end{DoxyParams}
+Конструктор выбрасывает исключение при невалидных входных данных (пустые данные) \mbox{\Hypertarget{classTeleMedObject_ac0e5013f81a28e85101305fd8b7f6a59}\label{classTeleMedObject_ac0e5013f81a28e85101305fd8b7f6a59}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{Tele\+Med\+Object()}{TeleMedObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Tele\+Med\+Object\+::\+Tele\+Med\+Object (\begin{DoxyParamCaption}\item[{const Q\+Json\+Document \&}]{doc }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classTeleMedObject}{Tele\+Med\+Object}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em doc} & Информация в виде json\\
+\hline
+\end{DoxyParams}
+Конструктор для построения объекта из типа json В данном виде данные передаются по сети \mbox{\Hypertarget{classTeleMedObject_a6d60cc13e1b1812938cb9a7277c49d43}\label{classTeleMedObject_a6d60cc13e1b1812938cb9a7277c49d43}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!````~Tele\+Med\+Object@{$\sim$\+Tele\+Med\+Object}}
+\index{````~Tele\+Med\+Object@{$\sim$\+Tele\+Med\+Object}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{$\sim$\+Tele\+Med\+Object()}{~TeleMedObject()}}
+{\footnotesize\ttfamily Tele\+Med\+Object\+::$\sim$\+Tele\+Med\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classTeleMedObject_a66119d8882d0e8319d337a559bfa78a3}\label{classTeleMedObject_a66119d8882d0e8319d337a559bfa78a3}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!get\+Dicom\+Dict@{get\+Dicom\+Dict}}
+\index{get\+Dicom\+Dict@{get\+Dicom\+Dict}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{get\+Dicom\+Dict()}{getDicomDict()}}
+{\footnotesize\ttfamily \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} Tele\+Med\+Object\+::get\+Dicom\+Dict (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Dicom\+Dict 
+
+\begin{DoxyReturn}{Возвращает}
+Словарь с информацией об исследовании
+\end{DoxyReturn}
+Функция возвращает словарь с информацией об исследовании \mbox{\Hypertarget{classTeleMedObject_a69c34b50bb901268d193bbbb7a7698c5}\label{classTeleMedObject_a69c34b50bb901268d193bbbb7a7698c5}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!get\+Image@{get\+Image}}
+\index{get\+Image@{get\+Image}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{get\+Image()}{getImage()}}
+{\footnotesize\ttfamily Q\+Image Tele\+Med\+Object\+::get\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Image 
+
+\begin{DoxyReturn}{Возвращает}
+Изображение
+\end{DoxyReturn}
+Получение изображения из объекта \mbox{\Hypertarget{classTeleMedObject_a56def4aa26d190a557014d9a3d99099f}\label{classTeleMedObject_a56def4aa26d190a557014d9a3d99099f}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!get\+Info\+Map@{get\+Info\+Map}}
+\index{get\+Info\+Map@{get\+Info\+Map}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{get\+Info\+Map()}{getInfoMap()}}
+{\footnotesize\ttfamily \hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} Tele\+Med\+Object\+::get\+Info\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Info\+Map 
+
+\begin{DoxyReturn}{Возвращает}
+Словарь с информацией о запросе\textbackslash{}ответе
+\end{DoxyReturn}
+Функция возвращает словарь с информацией о запросе\textbackslash{}ответе \mbox{\Hypertarget{classTeleMedObject_a5d79f3bf01cc9ee2b714f9fa1da422df}\label{classTeleMedObject_a5d79f3bf01cc9ee2b714f9fa1da422df}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!get\+Responser@{get\+Responser}}
+\index{get\+Responser@{get\+Responser}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{get\+Responser()}{getResponser()}}
+{\footnotesize\ttfamily Q\+String Tele\+Med\+Object\+::get\+Responser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Responser 
+
+\begin{DoxyReturn}{Возвращает}
+Строка идентифицирующая отвечающую сторону 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTeleMedObject_a651ae9fa2690217a8327d194682ef60c}\label{classTeleMedObject_a651ae9fa2690217a8327d194682ef60c}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{is\+Empty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Tele\+Med\+Object\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+is\+Empty 
+
+\begin{DoxyReturn}{Возвращает}
+true -\/ если объект информации пустой
+\end{DoxyReturn}
+Функция проверяет, что объект информации пустой \mbox{\Hypertarget{classTeleMedObject_a37d8e7cede94ef1695171d35c6c0c1ce}\label{classTeleMedObject_a37d8e7cede94ef1695171d35c6c0c1ce}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!to\+Json@{to\+Json}}
+\index{to\+Json@{to\+Json}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{to\+Json()}{toJson()}}
+{\footnotesize\ttfamily Q\+Json\+Document Tele\+Med\+Object\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+to\+Json 
+
+\begin{DoxyReturn}{Возвращает}
+Информация об объекте в виде json
+\end{DoxyReturn}
+Функция строит объект информации в виде документа json 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classTeleMedObject_a812a8fdb794711a94a9fc0fa4f1de27e}\label{classTeleMedObject_a812a8fdb794711a94a9fc0fa4f1de27e}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!m\+\_\+add\+Info\+Map@{m\+\_\+add\+Info\+Map}}
+\index{m\+\_\+add\+Info\+Map@{m\+\_\+add\+Info\+Map}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{m\+\_\+add\+Info\+Map}{m\_addInfoMap}}
+{\footnotesize\ttfamily \hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} Tele\+Med\+Object\+::m\+\_\+add\+Info\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+add\+Info\+Map 
+
+Словарь с информацией о запросе\textbackslash{}ответе \mbox{\Hypertarget{classTeleMedObject_a15a8c04c55623d826a04908a949fce31}\label{classTeleMedObject_a15a8c04c55623d826a04908a949fce31}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!m\+\_\+dicom\+Dict@{m\+\_\+dicom\+Dict}}
+\index{m\+\_\+dicom\+Dict@{m\+\_\+dicom\+Dict}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{m\+\_\+dicom\+Dict}{m\_dicomDict}}
+{\footnotesize\ttfamily \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} Tele\+Med\+Object\+::m\+\_\+dicom\+Dict\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+dicom\+Dict 
+
+Словарь с информацией об исследовании \mbox{\Hypertarget{classTeleMedObject_a4ea4fc9f1c9e7f7e7760b1c7db163789}\label{classTeleMedObject_a4ea4fc9f1c9e7f7e7760b1c7db163789}} 
+\index{Tele\+Med\+Object@{Tele\+Med\+Object}!m\+\_\+img@{m\+\_\+img}}
+\index{m\+\_\+img@{m\+\_\+img}!Tele\+Med\+Object@{Tele\+Med\+Object}}
+\subsubsection{\texorpdfstring{m\+\_\+img}{m\_img}}
+{\footnotesize\ttfamily Q\+Image Tele\+Med\+Object\+::m\+\_\+img\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+img 
+
+Изображение исследования 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{telemedobject_8h}{telemedobject.\+h}\item 
+\hyperlink{telemedobject_8cpp}{telemedobject.\+cpp}\end{DoxyCompactItemize}

@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Загрузить изображение</string>
+    <string>Загрузить исследование</string>
    </property>
   </widget>
   <widget class="SceneZoom" name="dicomGraphicsView">

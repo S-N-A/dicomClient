@@ -1,0 +1,229 @@
+\hypertarget{classMainWindow}{}\section{Класс Main\+Window}
+\label{classMainWindow}\index{Main\+Window@{Main\+Window}}
+
+
+Класс главного окна программы.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+Граф наследования\+:Main\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classMainWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Main\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classMainWindow__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMainWindow_a3dea38a93f87d0ee9452035a4c9b8b7b}{init\+Sidebar} ()
+\begin{DoxyCompactList}\small\item\em init\+Sidebar \end{DoxyCompactList}\item 
+\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classMainWindow}{Main\+Window}. \end{DoxyCompactList}\item 
+\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \hyperlink{classMainWindow_a06968aebc42a16ab51c5888b4784075d}{file\+Name}
+\begin{DoxyCompactList}\small\item\em file\+Name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMainWindow_aa9f8c5c52b9f244da93730fa8af5ed34}{display\+Viewer\+Layout} ()
+\begin{DoxyCompactList}\small\item\em display\+Viewer\+Layout \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_ab8b823d0d84f50c5f243720f44471a7f}{display\+Db\+Layout} ()
+\begin{DoxyCompactList}\small\item\em display\+Db\+Layout \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a0f4b0fd14e2af4b462223612ed22c695}{display\+Accessibility\+Layout} ()
+\begin{DoxyCompactList}\small\item\em display\+Accessibility\+Layout \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a3da5047b0ff5cf5c10a20174a99c420c}{get\+Data} (Q\+Byte\+Array block)
+\begin{DoxyCompactList}\small\item\em get\+Data \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{classMainWindow_a46d1e00d9af1678f68303e2f04a6a541}{m\+\_\+standart\+X\+Geom} = 300
+\begin{DoxyCompactList}\small\item\em m\+\_\+standart\+X\+Geom \end{DoxyCompactList}\item 
+const int \hyperlink{classMainWindow_a8ff8787bb09d87248d74e152d2133926}{m\+\_\+standart\+Y\+Geom} = 24
+\begin{DoxyCompactList}\small\item\em m\+\_\+standart\+Y\+Geom \end{DoxyCompactList}\item 
+const int \hyperlink{classMainWindow_a2aa939210e4ccc0fdbec8fd7e4497617}{m\+\_\+standart\+Width} = 1051
+\begin{DoxyCompactList}\small\item\em m\+\_\+standart\+Width \end{DoxyCompactList}\item 
+const int \hyperlink{classMainWindow_a5ebb2638e7863a72adc4e6f75336bd77}{m\+\_\+standart\+Height} = 975
+\begin{DoxyCompactList}\small\item\em m\+\_\+standart\+Height \end{DoxyCompactList}\item 
+Ui\+::\+Main\+Window $\ast$ \hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}
+\begin{DoxyCompactList}\small\item\em ui \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс главного окна программы. 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018
+\end{DoxyDate}
+Данный класс предназначен для управления функциями главного окна приложения 
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d}} 
+\index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
+\index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{Main\+Window()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{classMainWindow}{Main\+Window}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский класс виджет\\
+\hline
+\end{DoxyParams}
+Конструктор класса главного окна приложения \mbox{\Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}} 
+\index{Main\+Window@{Main\+Window}!````~Main\+Window@{$\sim$\+Main\+Window}}
+\index{````~Main\+Window@{$\sim$\+Main\+Window}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Main\+Window()}{~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::$\sim$\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classMainWindow_a0f4b0fd14e2af4b462223612ed22c695}\label{classMainWindow_a0f4b0fd14e2af4b462223612ed22c695}} 
+\index{Main\+Window@{Main\+Window}!display\+Accessibility\+Layout@{display\+Accessibility\+Layout}}
+\index{display\+Accessibility\+Layout@{display\+Accessibility\+Layout}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{display\+Accessibility\+Layout}{displayAccessibilityLayout}}
+{\footnotesize\ttfamily void Main\+Window\+::display\+Accessibility\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+display\+Accessibility\+Layout 
+
+Слот для отображения виджета сетевого взаимодействия \mbox{\Hypertarget{classMainWindow_ab8b823d0d84f50c5f243720f44471a7f}\label{classMainWindow_ab8b823d0d84f50c5f243720f44471a7f}} 
+\index{Main\+Window@{Main\+Window}!display\+Db\+Layout@{display\+Db\+Layout}}
+\index{display\+Db\+Layout@{display\+Db\+Layout}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{display\+Db\+Layout}{displayDbLayout}}
+{\footnotesize\ttfamily void Main\+Window\+::display\+Db\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+display\+Db\+Layout 
+
+Слот для отображения виджета просмотра содержимго базы данных \mbox{\Hypertarget{classMainWindow_aa9f8c5c52b9f244da93730fa8af5ed34}\label{classMainWindow_aa9f8c5c52b9f244da93730fa8af5ed34}} 
+\index{Main\+Window@{Main\+Window}!display\+Viewer\+Layout@{display\+Viewer\+Layout}}
+\index{display\+Viewer\+Layout@{display\+Viewer\+Layout}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{display\+Viewer\+Layout}{displayViewerLayout}}
+{\footnotesize\ttfamily void Main\+Window\+::display\+Viewer\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+display\+Viewer\+Layout 
+
+Слот для отображения виджета просмотра файла полученного с файловой системы \mbox{\Hypertarget{classMainWindow_a3da5047b0ff5cf5c10a20174a99c420c}\label{classMainWindow_a3da5047b0ff5cf5c10a20174a99c420c}} 
+\index{Main\+Window@{Main\+Window}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{get\+Data}{getData}}
+{\footnotesize\ttfamily void Main\+Window\+::get\+Data (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+get\+Data 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em block} & Набор байт\\
+\hline
+\end{DoxyParams}
+Функция используется исключительно в целях тестирования. Записывает полученный набор байт в лог программы \mbox{\Hypertarget{classMainWindow_a3dea38a93f87d0ee9452035a4c9b8b7b}\label{classMainWindow_a3dea38a93f87d0ee9452035a4c9b8b7b}} 
+\index{Main\+Window@{Main\+Window}!init\+Sidebar@{init\+Sidebar}}
+\index{init\+Sidebar@{init\+Sidebar}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{init\+Sidebar()}{initSidebar()}}
+{\footnotesize\ttfamily void Main\+Window\+::init\+Sidebar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+init\+Sidebar 
+
+Функция для инициализации боковой панели выбора виджетов 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classMainWindow_a06968aebc42a16ab51c5888b4784075d}\label{classMainWindow_a06968aebc42a16ab51c5888b4784075d}} 
+\index{Main\+Window@{Main\+Window}!file\+Name@{file\+Name}}
+\index{file\+Name@{file\+Name}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{file\+Name}{fileName}}
+{\footnotesize\ttfamily Q\+String Main\+Window\+::file\+Name}
+
+
+
+file\+Name 
+
+Глобальное имя файла загружаемого объекта -\/ dicom \mbox{\Hypertarget{classMainWindow_a5ebb2638e7863a72adc4e6f75336bd77}\label{classMainWindow_a5ebb2638e7863a72adc4e6f75336bd77}} 
+\index{Main\+Window@{Main\+Window}!m\+\_\+standart\+Height@{m\+\_\+standart\+Height}}
+\index{m\+\_\+standart\+Height@{m\+\_\+standart\+Height}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+standart\+Height}{m\_standartHeight}}
+{\footnotesize\ttfamily const int Main\+Window\+::m\+\_\+standart\+Height = 975\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+standart\+Height 
+
+Фиксированная высота отображаемого виджета \mbox{\Hypertarget{classMainWindow_a2aa939210e4ccc0fdbec8fd7e4497617}\label{classMainWindow_a2aa939210e4ccc0fdbec8fd7e4497617}} 
+\index{Main\+Window@{Main\+Window}!m\+\_\+standart\+Width@{m\+\_\+standart\+Width}}
+\index{m\+\_\+standart\+Width@{m\+\_\+standart\+Width}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+standart\+Width}{m\_standartWidth}}
+{\footnotesize\ttfamily const int Main\+Window\+::m\+\_\+standart\+Width = 1051\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+standart\+Width 
+
+Фиксированная ширина отображаемого виджета \mbox{\Hypertarget{classMainWindow_a46d1e00d9af1678f68303e2f04a6a541}\label{classMainWindow_a46d1e00d9af1678f68303e2f04a6a541}} 
+\index{Main\+Window@{Main\+Window}!m\+\_\+standart\+X\+Geom@{m\+\_\+standart\+X\+Geom}}
+\index{m\+\_\+standart\+X\+Geom@{m\+\_\+standart\+X\+Geom}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+standart\+X\+Geom}{m\_standartXGeom}}
+{\footnotesize\ttfamily const int Main\+Window\+::m\+\_\+standart\+X\+Geom = 300\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+standart\+X\+Geom 
+
+Отступ по горизонтали отображаемых виджетов в главном окне \mbox{\Hypertarget{classMainWindow_a8ff8787bb09d87248d74e152d2133926}\label{classMainWindow_a8ff8787bb09d87248d74e152d2133926}} 
+\index{Main\+Window@{Main\+Window}!m\+\_\+standart\+Y\+Geom@{m\+\_\+standart\+Y\+Geom}}
+\index{m\+\_\+standart\+Y\+Geom@{m\+\_\+standart\+Y\+Geom}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+standart\+Y\+Geom}{m\_standartYGeom}}
+{\footnotesize\ttfamily const int Main\+Window\+::m\+\_\+standart\+Y\+Geom = 24\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+standart\+Y\+Geom 
+
+Отступ по вертикали отображаемых виджетов в главном окне \mbox{\Hypertarget{classMainWindow_a35466a70ed47252a0191168126a352a5}\label{classMainWindow_a35466a70ed47252a0191168126a352a5}} 
+\index{Main\+Window@{Main\+Window}!ui@{ui}}
+\index{ui@{ui}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ui 
+
+Указатель на объект интерфейса для главного окна 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mainwindow_8h}{mainwindow.\+h}\item 
+\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}\end{DoxyCompactItemize}

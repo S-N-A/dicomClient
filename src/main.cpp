@@ -7,7 +7,8 @@
 #include <QLoggingCategory>
 #include <QDateTime>
 #include <QTextStream>
-#include <server.h>
+
+#include "server.h"
 
 namespace {
     QScopedPointer<QFile> m_logFile;
@@ -16,9 +17,7 @@ namespace {
 void messageHandler(QtMsgType type, const QMessageLogContext& context, const QString& msg);
 
 
-
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 
     QApplication a(argc, argv);
 
@@ -48,15 +47,17 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    m_logFile.reset(new QFile("./logDicomClient.txt"));
+    m_logFile.reset(new QFile("./log.txt"));
     m_logFile.data()->open(QFile::Append | QFile::Text);
     qInstallMessageHandler(messageHandler);
+
     Server server;
     server.startServer();
-
     MainWindow w;
+    auto acForm = w.children().at(1)->children().at(2);
+    qDebug(logDebug()) << w.children().at(1)->children().at(2);
+    QObject::connect(&server, SIGNAL(transferDataToWidget(QByteArray)), acForm, SLOT(getDataFromServer(QByteArray)));
     w.show();
-
     return a.exec();
 }
 

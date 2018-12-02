@@ -61,3 +61,13 @@ bool setTag(const std::string& offset, const std::string& value, const char* fil
     return true;
 
 }
+
+QString getNameFromDict(dicomDict& dict){
+    const gdcm::Global& g = gdcm::Global::GetInstance();
+    const gdcm::Dicts &dicts = g.GetDicts();
+    const gdcm::Dict &pubdict = dicts.GetPublicDict();
+    gdcm::Tag tPatientsName;
+    pubdict.GetDictEntryByName("Patient's Name", tPatientsName);
+    QString tagName = tPatientsName.PrintAsContinuousString().c_str();
+    return dict[tagName].second;
+}

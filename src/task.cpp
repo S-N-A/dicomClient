@@ -14,4 +14,5 @@ void Task::run(){
 
 void Task::setClientInfo(const QByteArray& ba){
     m_client_request = ba;
+    qDebug(logDebug()) << "m_client_request: " << m_client_request;
 }

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа по телемедицине: Файл senddialog.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Программа по телемедицине
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для осуществления телемединского сеанса связи</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл senddialog.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;QDialog&gt;</code><br />
+<code>#include &lt;QSqlError&gt;</code><br />
+<code>#include &lt;QHostInfo&gt;</code><br />
+<code>#include &lt;QNetworkInterface&gt;</code><br />
+<code>#include &lt;QFile&gt;</code><br />
+<code>#include &lt;QTcpSocket&gt;</code><br />
+<code>#include &lt;QSqlQuery&gt;</code><br />
+<code>#include &lt;QSqlRecord&gt;</code><br />
+<code>#include &lt;QIcon&gt;</code><br />
+<code>#include &lt;QDateTime&gt;</code><br />
+<code>#include &lt;QMessageBox&gt;</code><br />
+<code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="telemedobject_8h_source.html">telemedobject.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tablefields_8h_source.html">tablefields.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для senddialog.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="senddialog_8h__incl.png" border="0" usemap="#senddialog_8h" alt=""/></div>
+<map name="senddialog_8h" id="senddialog_8h">
+<area shape="rect" id="node13" href="logger_8h.html" title="logger.h" alt="" coords="826,304,894,331"/>
+<area shape="rect" id="node15" href="telemedobject_8h.html" title="telemedobject.h" alt="" coords="1479,80,1593,107"/>
+<area shape="rect" id="node39" href="tablefields_8h.html" title="tablefields.h" alt="" coords="1618,80,1710,107"/>
+<area shape="rect" id="node19" href="tagshelpers_8h.html" title="tagshelpers.h" alt="" coords="1323,229,1423,256"/>
+<area shape="rect" id="node33" href="serializehelper_8h.html" title="serializehelper.h" alt="" coords="1413,155,1529,181"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="senddialog_8h__dep__incl.png" border="0" usemap="#senddialog_8hdep" alt=""/></div>
+<map name="senddialog_8hdep" id="senddialog_8hdep">
+<area shape="rect" id="node2" href="accessibilityform_8h.html" title="accessibilityform.h" alt="" coords="13,155,143,181"/>
+<area shape="rect" id="node4" href="dbform_8h.html" title="dbform.h" alt="" coords="116,80,189,107"/>
+<area shape="rect" id="node6" href="senddialog_8cpp.html" title="senddialog.cpp" alt="" coords="214,80,323,107"/>
+<area shape="rect" id="node3" href="accessibilityform_8cpp.html" title="accessibilityform.cpp" alt="" coords="5,229,151,256"/>
+<area shape="rect" id="node5" href="dbform_8cpp.html" title="dbform.cpp" alt="" coords="168,155,255,181"/>
+</map>
+</div>
+</div>
+<p><a href="senddialog_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSendDialog.html">SendDialog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс формы отправки запроса  <a href="classSendDialog.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceUi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceUi.html">Ui</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:aa9b1321518febdee7323e4994ecc1ec3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="senddialog_8h.html#aa9b1321518febdee7323e4994ecc1ec3">idWithObject</a> = QPair&lt; <a class="el" href="classTeleMedObject.html">TeleMedObject</a>, int &gt;</td></tr>
+<tr class="separator:aa9b1321518febdee7323e4994ecc1ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="aa9b1321518febdee7323e4994ecc1ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b1321518febdee7323e4994ecc1ec3">&#9670;&nbsp;</a></span>idWithObject</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="senddialog_8h.html#aa9b1321518febdee7323e4994ecc1ec3">idWithObject</a> =  QPair&lt;<a class="el" href="classTeleMedObject.html">TeleMedObject</a>, int&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

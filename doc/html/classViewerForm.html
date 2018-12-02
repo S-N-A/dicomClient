@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа по телемедицине: Класс ViewerForm</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Программа по телемедицине
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для осуществления телемединского сеанса связи</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pri-types">Закрытые типы</a> &#124;
+<a href="#pri-slots">Закрытые слоты</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classViewerForm-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс ViewerForm</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс формы для отображения файлов dcm.  
+ <a href="classViewerForm.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="viewerform_8h_source.html">viewerform.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:ViewerForm:</div>
+<div class="dyncontent">
+<div class="center"><img src="classViewerForm__inherit__graph.png" border="0" usemap="#ViewerForm_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса ViewerForm:</div>
+<div class="dyncontent">
+<div class="center"><img src="classViewerForm__coll__graph.png" border="0" usemap="#ViewerForm_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:a5d3adb46be46748d665e38e47decdf2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#a5d3adb46be46748d665e38e47decdf2c">sendInsertSignal</a> (QString &amp;name, QImage &amp;image, <a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> &amp;dict, <a class="el" href="dbform_8h.html#a1ec1a645f41e1c6544d384ca863a936c">addInfoMap</a> &amp;infoMap)</td></tr>
+<tr class="memdesc:a5d3adb46be46748d665e38e47decdf2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">sendInsertSignal  <a href="#a5d3adb46be46748d665e38e47decdf2c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5d3adb46be46748d665e38e47decdf2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ae36251270d9db1b29cecb787876dfdc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#ae36251270d9db1b29cecb787876dfdc1">showEvent</a> (QShowEvent *)</td></tr>
+<tr class="memdesc:ae36251270d9db1b29cecb787876dfdc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">showEvent  <a href="#ae36251270d9db1b29cecb787876dfdc1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae36251270d9db1b29cecb787876dfdc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64816c194730c3d825edbb7b7773dee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#ac64816c194730c3d825edbb7b7773dee">ViewerForm</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:ac64816c194730c3d825edbb7b7773dee"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classViewerForm.html" title="Класс формы для отображения файлов dcm. ">ViewerForm</a>.  <a href="#ac64816c194730c3d825edbb7b7773dee">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac64816c194730c3d825edbb7b7773dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac75f02831e65d75ef9b9843d9a180ee4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#ac75f02831e65d75ef9b9843d9a180ee4">~ViewerForm</a> ()</td></tr>
+<tr class="separator:ac75f02831e65d75ef9b9843d9a180ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ab2f0d1908098c723c3f52e89f69e46f4"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#ab2f0d1908098c723c3f52e89f69e46f4">fileName</a></td></tr>
+<tr class="memdesc:ab2f0d1908098c723c3f52e89f69e46f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">fileName  <a href="#ab2f0d1908098c723c3f52e89f69e46f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab2f0d1908098c723c3f52e89f69e46f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65bd3ad0087e45497639bb3050084d0a"><td class="memItemLeft" align="right" valign="top">QGraphicsScene *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#a65bd3ad0087e45497639bb3050084d0a">scene</a></td></tr>
+<tr class="memdesc:a65bd3ad0087e45497639bb3050084d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">scene  <a href="#a65bd3ad0087e45497639bb3050084d0a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a65bd3ad0087e45497639bb3050084d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Закрытые типы</h2></td></tr>
+<tr class="memitem:adb304869a7f4e7573df0e018cd03a845"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#adb304869a7f4e7573df0e018cd03a845">m_columns</a> { <a class="el" href="classViewerForm.html#adb304869a7f4e7573df0e018cd03a845a530374d647e5499f1079a433971650fd">Tag</a>, 
+<a class="el" href="classViewerForm.html#adb304869a7f4e7573df0e018cd03a845a4106ad6b7649446b55c2fc0c9e546ca2">Description</a>, 
+<a class="el" href="classViewerForm.html#adb304869a7f4e7573df0e018cd03a845a36c75b35df69479c62b3a215e7c8bb64">Value</a>
+ }<tr class="memdesc:adb304869a7f4e7573df0e018cd03a845"><td class="mdescLeft">&#160;</td><td class="mdescRight">The m_columns enum.  <a href="classViewerForm.html#adb304869a7f4e7573df0e018cd03a845">Подробнее...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:adb304869a7f4e7573df0e018cd03a845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Закрытые слоты</h2></td></tr>
+<tr class="memitem:aebe4c92a2d951281558a7074347a7ec7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#aebe4c92a2d951281558a7074347a7ec7">on_loadImageButton_clicked</a> ()</td></tr>
+<tr class="memdesc:aebe4c92a2d951281558a7074347a7ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">on_loadImageButton_clicked  <a href="#aebe4c92a2d951281558a7074347a7ec7">Подробнее...</a><br /></td></tr>
+<tr class="separator:aebe4c92a2d951281558a7074347a7ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298b0181b562b7521e62212db1976cdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#a298b0181b562b7521e62212db1976cdd">on_dicomAttributeTableWidget_cellChanged</a> (int row, int column)</td></tr>
+<tr class="memdesc:a298b0181b562b7521e62212db1976cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">on_dicomAttributeTableWidget_cellChanged  <a href="#a298b0181b562b7521e62212db1976cdd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a298b0181b562b7521e62212db1976cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a8b7701ce8061967e519b691aa5a9ec93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#a8b7701ce8061967e519b691aa5a9ec93">showMessageBoxAskingForChange</a> ()</td></tr>
+<tr class="memdesc:a8b7701ce8061967e519b691aa5a9ec93"><td class="mdescLeft">&#160;</td><td class="mdescRight">showMessageBoxAskingForChange  <a href="#a8b7701ce8061967e519b691aa5a9ec93">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8b7701ce8061967e519b691aa5a9ec93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c109da65b355c5e9712a148b01ee7f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#a2c109da65b355c5e9712a148b01ee7f3">initTable</a> (const <a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> &amp;dict)</td></tr>
+<tr class="memdesc:a2c109da65b355c5e9712a148b01ee7f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">initTable  <a href="#a2c109da65b355c5e9712a148b01ee7f3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2c109da65b355c5e9712a148b01ee7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a38c70bda1c65ed5a26e06eb73233ffb2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#a38c70bda1c65ed5a26e06eb73233ffb2">m_changeAllowed</a></td></tr>
+<tr class="memdesc:a38c70bda1c65ed5a26e06eb73233ffb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">m_changeAllowed  <a href="#a38c70bda1c65ed5a26e06eb73233ffb2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a38c70bda1c65ed5a26e06eb73233ffb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec8417758835f4b71657413c06eec160"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#aec8417758835f4b71657413c06eec160">m_table_columns_count</a> = 3</td></tr>
+<tr class="memdesc:aec8417758835f4b71657413c06eec160"><td class="mdescLeft">&#160;</td><td class="mdescRight">m_table_columns_count  <a href="#aec8417758835f4b71657413c06eec160">Подробнее...</a><br /></td></tr>
+<tr class="separator:aec8417758835f4b71657413c06eec160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e264f78c6535b2442b03629ebdc0347"><td class="memItemLeft" align="right" valign="top">Ui::ViewerForm *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classViewerForm.html#a0e264f78c6535b2442b03629ebdc0347">ui</a></td></tr>
+<tr class="memdesc:a0e264f78c6535b2442b03629ebdc0347"><td class="mdescLeft">&#160;</td><td class="mdescRight">ui Указатель на объект интерфейса для данного класса  <a href="#a0e264f78c6535b2442b03629ebdc0347">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0e264f78c6535b2442b03629ebdc0347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс формы для отображения файлов dcm. </p>
+<dl class="section author"><dt>Автор</dt><dd>Илья Трефилов </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>01.12.2018 </dd></dl>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="adb304869a7f4e7573df0e018cd03a845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb304869a7f4e7573df0e018cd03a845">&#9670;&nbsp;</a></span>m_columns</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classViewerForm.html#adb304869a7f4e7573df0e018cd03a845">ViewerForm::m_columns</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The m_columns enum. </p>
+<p>Отображение колонок таблицы на колонки в базе данных </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="adb304869a7f4e7573df0e018cd03a845a530374d647e5499f1079a433971650fd"></a>Tag&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adb304869a7f4e7573df0e018cd03a845a4106ad6b7649446b55c2fc0c9e546ca2"></a>Description&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adb304869a7f4e7573df0e018cd03a845a36c75b35df69479c62b3a215e7c8bb64"></a>Value&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac64816c194730c3d825edbb7b7773dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64816c194730c3d825edbb7b7773dee">&#9670;&nbsp;</a></span>ViewerForm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ViewerForm::ViewerForm </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classViewerForm.html" title="Класс формы для отображения файлов dcm. ">ViewerForm</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Указатель на родительский виджет</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Конструктор класса формы </p>
+
+</div>
+</div>
+<a id="ac75f02831e65d75ef9b9843d9a180ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac75f02831e65d75ef9b9843d9a180ee4">&#9670;&nbsp;</a></span>~ViewerForm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ViewerForm::~ViewerForm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a2c109da65b355c5e9712a148b01ee7f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c109da65b355c5e9712a148b01ee7f3">&#9670;&nbsp;</a></span>initTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ViewerForm::initTable </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> &amp;&#160;</td>
+          <td class="paramname"><em>dict</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>initTable </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dict</td><td>Словарь с данными об исследовании</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Функция для инициализации таблицы данными из dcm файла </p>
+
+</div>
+</div>
+<a id="a298b0181b562b7521e62212db1976cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298b0181b562b7521e62212db1976cdd">&#9670;&nbsp;</a></span>on_dicomAttributeTableWidget_cellChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ViewerForm::on_dicomAttributeTableWidget_cellChanged </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>on_dicomAttributeTableWidget_cellChanged </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>Строка </td></tr>
+    <tr><td class="paramname">column</td><td>Столбец</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Слот для предложения пользователю изменить значение тега в файле Действует при изменении пользователем тега в таблице </p>
+
+</div>
+</div>
+<a id="aebe4c92a2d951281558a7074347a7ec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe4c92a2d951281558a7074347a7ec7">&#9670;&nbsp;</a></span>on_loadImageButton_clicked</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ViewerForm::on_loadImageButton_clicked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>on_loadImageButton_clicked </p>
+<p>Слот для показа диалогового окна выбора файла </p>
+
+</div>
+</div>
+<a id="a5d3adb46be46748d665e38e47decdf2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d3adb46be46748d665e38e47decdf2c">&#9670;&nbsp;</a></span>sendInsertSignal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ViewerForm::sendInsertSignal </td>
+          <td>(</td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QImage &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> &amp;&#160;</td>
+          <td class="paramname"><em>dict</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dbform_8h.html#a1ec1a645f41e1c6544d384ca863a936c">addInfoMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>infoMap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>sendInsertSignal </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Имя пациента </td></tr>
+    <tr><td class="paramname">image</td><td>Изображение </td></tr>
+    <tr><td class="paramname">dict</td><td>Словарь с данными об исследовании </td></tr>
+    <tr><td class="paramname">infoMap</td><td>Словарь с данными о запросе\ответе </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae36251270d9db1b29cecb787876dfdc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae36251270d9db1b29cecb787876dfdc1">&#9670;&nbsp;</a></span>showEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ViewerForm::showEvent </td>
+          <td>(</td>
+          <td class="paramtype">QShowEvent *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>showEvent </p>
+<p>Событие отображения изображения в сцене, масштабирующее изображение по рамке сцены </p>
+
+</div>
+</div>
+<a id="a8b7701ce8061967e519b691aa5a9ec93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7701ce8061967e519b691aa5a9ec93">&#9670;&nbsp;</a></span>showMessageBoxAskingForChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ViewerForm::showMessageBoxAskingForChange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>showMessageBoxAskingForChange </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true - если ползователь нажал OK</dd></dl>
+<p>Функция для отображения диалога о необходимости сохранения информации из dcm фaйла в базу </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ab2f0d1908098c723c3f52e89f69e46f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f0d1908098c723c3f52e89f69e46f4">&#9670;&nbsp;</a></span>fileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ViewerForm::fileName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fileName </p>
+<p>Имя файла на файловой системе </p>
+
+</div>
+</div>
+<a id="a38c70bda1c65ed5a26e06eb73233ffb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c70bda1c65ed5a26e06eb73233ffb2">&#9670;&nbsp;</a></span>m_changeAllowed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ViewerForm::m_changeAllowed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>m_changeAllowed </p>
+<p>Флажок отображающий возможность изменения тега в файле </p>
+
+</div>
+</div>
+<a id="aec8417758835f4b71657413c06eec160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec8417758835f4b71657413c06eec160">&#9670;&nbsp;</a></span>m_table_columns_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ViewerForm::m_table_columns_count = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>m_table_columns_count </p>
+<p>Количество столбцов в таблице виджета </p>
+
+</div>
+</div>
+<a id="a65bd3ad0087e45497639bb3050084d0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65bd3ad0087e45497639bb3050084d0a">&#9670;&nbsp;</a></span>scene</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QGraphicsScene* ViewerForm::scene</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>scene </p>
+<p>Сцена для показа изображения </p>
+
+</div>
+</div>
+<a id="a0e264f78c6535b2442b03629ebdc0347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e264f78c6535b2442b03629ebdc0347">&#9670;&nbsp;</a></span>ui</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::ViewerForm* ViewerForm::ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ui Указатель на объект интерфейса для данного класса </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="viewerform_8h_source.html">viewerform.h</a></li>
+<li><a class="el" href="viewerform_8cpp.html">viewerform.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
