@@ -1,0 +1,300 @@
+\hypertarget{classSendDialog}{}\section{Класс Send\+Dialog}
+\label{classSendDialog}\index{Send\+Dialog@{Send\+Dialog}}
+
+
+Класс формы отправки запроса  
+
+
+
+
+{\ttfamily \#include $<$senddialog.\+h$>$}
+
+
+
+Граф наследования\+:Send\+Dialog\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classSendDialog__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Send\+Dialog\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classSendDialog__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSendDialog_a4bfe5b37d110edee9e324c138aaf1377}{Send\+Dialog} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSendDialog}{Send\+Dialog}. \end{DoxyCompactList}\item 
+void \hyperlink{classSendDialog_a66420c8a246b7aa3c466087e655ff0ea}{send\+Data} (const Q\+Byte\+Array \&ba, const Q\+String \&host, const int \&id)
+\begin{DoxyCompactList}\small\item\em send\+Data \end{DoxyCompactList}\item 
+\hyperlink{classSendDialog_af374a7a7ccd8b4dcdd0d567ce72c04a3}{$\sim$\+Send\+Dialog} ()
+\end{DoxyCompactItemize}
+\subsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSendDialog_a542483b8bf0dd1230e060e217d58d468}{on\+\_\+send\+Button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em on\+\_\+send\+Button\+\_\+clicked \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classSendDialog_a479b0de26c1b97fa47ffcbd67252da1f}{init\+Table} ()
+\begin{DoxyCompactList}\small\item\em init\+Table \end{DoxyCompactList}\item 
+Q\+Json\+Document \hyperlink{classSendDialog_a26dea1897c6af47118f88e89fcc0a7f1}{read\+Config} () const
+\begin{DoxyCompactList}\small\item\em read\+Config \end{DoxyCompactList}\item 
+\hyperlink{senddialog_8h_aa9b1321518febdee7323e4994ecc1ec3}{id\+With\+Object} \hyperlink{classSendDialog_a7b74a8f29ac1cd411195fb9d9f48cd44}{build\+Tele\+Med\+Object} ()
+\begin{DoxyCompactList}\small\item\em build\+Tele\+Med\+Object \end{DoxyCompactList}\item 
+bool \hyperlink{classSendDialog_a0bde13a7efe3bd50e9fe67a7b87b9f2c}{connect\+To\+Host} (const Q\+String \&host)
+\begin{DoxyCompactList}\small\item\em connect\+To\+Host \end{DoxyCompactList}\item 
+bool \hyperlink{classSendDialog_a2942d10e361268fb72c55fa158c57a83}{write\+Data} (const Q\+Byte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em write\+Data \end{DoxyCompactList}\item 
+Q\+String \hyperlink{classSendDialog_af8fc97ec266db98d488701a4601f1b26}{get\+Host} (const Q\+String \&name) const
+\begin{DoxyCompactList}\small\item\em get\+Host \end{DoxyCompactList}\item 
+void \hyperlink{classSendDialog_a2bea7a847533969d7a3ff885d6aff656}{update\+Table} (const int \&id, Q\+Byte\+Array \&ba)
+\begin{DoxyCompactList}\small\item\em update\+Table \end{DoxyCompactList}\item 
+bool \hyperlink{classSendDialog_a6da8a7a2736bad8f3da4d6d8e1608f3d}{build\+Combo\+Box} ()
+\begin{DoxyCompactList}\small\item\em build\+Combo\+Box \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Tcp\+Socket \hyperlink{classSendDialog_a101575f24f58bbbbe03759c3602dcca3}{m\+\_\+tcp\+Socket}
+\begin{DoxyCompactList}\small\item\em m\+\_\+tcp\+Socket \end{DoxyCompactList}\item 
+Q\+Json\+Document \hyperlink{classSendDialog_a51192da75f8dee9536f99c5b390d858f}{m\+\_\+name\+Mapping}
+\begin{DoxyCompactList}\small\item\em m\+\_\+name\+Mapping \end{DoxyCompactList}\item 
+Ui\+::\+Send\+Dialog $\ast$ \hyperlink{classSendDialog_af3fd5ba452e7e546ebd1a3160c2333a9}{ui}
+\begin{DoxyCompactList}\small\item\em ui \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс формы отправки запроса 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018
+\end{DoxyDate}
+Класс формы отправки запроса 
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classSendDialog_a4bfe5b37d110edee9e324c138aaf1377}\label{classSendDialog_a4bfe5b37d110edee9e324c138aaf1377}} 
+\index{Send\+Dialog@{Send\+Dialog}!Send\+Dialog@{Send\+Dialog}}
+\index{Send\+Dialog@{Send\+Dialog}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{Send\+Dialog()}{SendDialog()}}
+{\footnotesize\ttfamily Send\+Dialog\+::\+Send\+Dialog (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{classSendDialog}{Send\+Dialog}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский виджет\\
+\hline
+\end{DoxyParams}
+Конструктор класса формы \mbox{\Hypertarget{classSendDialog_af374a7a7ccd8b4dcdd0d567ce72c04a3}\label{classSendDialog_af374a7a7ccd8b4dcdd0d567ce72c04a3}} 
+\index{Send\+Dialog@{Send\+Dialog}!````~Send\+Dialog@{$\sim$\+Send\+Dialog}}
+\index{````~Send\+Dialog@{$\sim$\+Send\+Dialog}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{$\sim$\+Send\+Dialog()}{~SendDialog()}}
+{\footnotesize\ttfamily Send\+Dialog\+::$\sim$\+Send\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classSendDialog_a6da8a7a2736bad8f3da4d6d8e1608f3d}\label{classSendDialog_a6da8a7a2736bad8f3da4d6d8e1608f3d}} 
+\index{Send\+Dialog@{Send\+Dialog}!build\+Combo\+Box@{build\+Combo\+Box}}
+\index{build\+Combo\+Box@{build\+Combo\+Box}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{build\+Combo\+Box()}{buildComboBox()}}
+{\footnotesize\ttfamily bool Send\+Dialog\+::build\+Combo\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+build\+Combo\+Box 
+
+\begin{DoxyReturn}{Возвращает}
+true -\/ если удалось получить имена из файла config.\+json для их отображения в боксе
+\end{DoxyReturn}
+Функция строит бокс с выпадающим списком с именами врачей для отправки данных Имя отображается на ip адрес \mbox{\Hypertarget{classSendDialog_a7b74a8f29ac1cd411195fb9d9f48cd44}\label{classSendDialog_a7b74a8f29ac1cd411195fb9d9f48cd44}} 
+\index{Send\+Dialog@{Send\+Dialog}!build\+Tele\+Med\+Object@{build\+Tele\+Med\+Object}}
+\index{build\+Tele\+Med\+Object@{build\+Tele\+Med\+Object}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{build\+Tele\+Med\+Object()}{buildTeleMedObject()}}
+{\footnotesize\ttfamily \hyperlink{senddialog_8h_aa9b1321518febdee7323e4994ecc1ec3}{id\+With\+Object} Send\+Dialog\+::build\+Tele\+Med\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+build\+Tele\+Med\+Object 
+
+\begin{DoxyReturn}{Возвращает}
+Объект -\/ пару, информация о отправляемом объекте и id из базы данных
+\end{DoxyReturn}
+Функция для построения объекта, связующего информацию в запросе и номер объекта в базе данных \mbox{\Hypertarget{classSendDialog_a0bde13a7efe3bd50e9fe67a7b87b9f2c}\label{classSendDialog_a0bde13a7efe3bd50e9fe67a7b87b9f2c}} 
+\index{Send\+Dialog@{Send\+Dialog}!connect\+To\+Host@{connect\+To\+Host}}
+\index{connect\+To\+Host@{connect\+To\+Host}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{connect\+To\+Host()}{connectToHost()}}
+{\footnotesize\ttfamily bool Send\+Dialog\+::connect\+To\+Host (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{host }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+connect\+To\+Host 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em host} & ip адрес или имя хоста в сети, куда надо отправить данные \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true -\/ если подключение было успешным
+\end{DoxyReturn}
+Функция для подключения к принимающему информацию хосту \mbox{\Hypertarget{classSendDialog_af8fc97ec266db98d488701a4601f1b26}\label{classSendDialog_af8fc97ec266db98d488701a4601f1b26}} 
+\index{Send\+Dialog@{Send\+Dialog}!get\+Host@{get\+Host}}
+\index{get\+Host@{get\+Host}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{get\+Host()}{getHost()}}
+{\footnotesize\ttfamily Q\+String Send\+Dialog\+::get\+Host (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get\+Host 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Имя врача \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ip адрес или имя хоста в сети выбранного врача
+\end{DoxyReturn}
+Функция для получения ip адреса по имени \mbox{\Hypertarget{classSendDialog_a479b0de26c1b97fa47ffcbd67252da1f}\label{classSendDialog_a479b0de26c1b97fa47ffcbd67252da1f}} 
+\index{Send\+Dialog@{Send\+Dialog}!init\+Table@{init\+Table}}
+\index{init\+Table@{init\+Table}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{init\+Table()}{initTable()}}
+{\footnotesize\ttfamily bool Send\+Dialog\+::init\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+init\+Table 
+
+\begin{DoxyReturn}{Возвращает}
+true -\/ если удалось получить данные из таблицы базы данных в таблицу виджета
+\end{DoxyReturn}
+Функция инициализирующая таблицу с информацией из базы данных \mbox{\Hypertarget{classSendDialog_a542483b8bf0dd1230e060e217d58d468}\label{classSendDialog_a542483b8bf0dd1230e060e217d58d468}} 
+\index{Send\+Dialog@{Send\+Dialog}!on\+\_\+send\+Button\+\_\+clicked@{on\+\_\+send\+Button\+\_\+clicked}}
+\index{on\+\_\+send\+Button\+\_\+clicked@{on\+\_\+send\+Button\+\_\+clicked}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{on\+\_\+send\+Button\+\_\+clicked}{on\_sendButton\_clicked}}
+{\footnotesize\ttfamily void Send\+Dialog\+::on\+\_\+send\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+on\+\_\+send\+Button\+\_\+clicked 
+
+Слот принимающий нажатие на кнопку отправить и отправляющий данные. Проверки на валидность ввода реализованы \mbox{\Hypertarget{classSendDialog_a26dea1897c6af47118f88e89fcc0a7f1}\label{classSendDialog_a26dea1897c6af47118f88e89fcc0a7f1}} 
+\index{Send\+Dialog@{Send\+Dialog}!read\+Config@{read\+Config}}
+\index{read\+Config@{read\+Config}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{read\+Config()}{readConfig()}}
+{\footnotesize\ttfamily Q\+Json\+Document Send\+Dialog\+::read\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+read\+Config 
+
+\begin{DoxyReturn}{Возвращает}
+Объект, представляющий json из файла
+\end{DoxyReturn}
+Функция читающая файл config.\+json, возвращает объет типа J\+S\+ON из данного файла Данная функция необходима для отображения ip адресов на имена врачей \mbox{\Hypertarget{classSendDialog_a66420c8a246b7aa3c466087e655ff0ea}\label{classSendDialog_a66420c8a246b7aa3c466087e655ff0ea}} 
+\index{Send\+Dialog@{Send\+Dialog}!send\+Data@{send\+Data}}
+\index{send\+Data@{send\+Data}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{send\+Data()}{sendData()}}
+{\footnotesize\ttfamily void Send\+Dialog\+::send\+Data (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{ba,  }\item[{const Q\+String \&}]{host,  }\item[{const int \&}]{id }\end{DoxyParamCaption})}
+
+
+
+send\+Data 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ba} & Набор байт для отправки по сети \\
+\hline
+{\em host} & Ip адресс или имя хоста на который надо отправить информацию \\
+\hline
+{\em id} & Номер объекта из базы данных для отправки\\
+\hline
+\end{DoxyParams}
+Функция отправляет объект информации о клиента из базы данных в виде бинарных данных по сети \mbox{\Hypertarget{classSendDialog_a2bea7a847533969d7a3ff885d6aff656}\label{classSendDialog_a2bea7a847533969d7a3ff885d6aff656}} 
+\index{Send\+Dialog@{Send\+Dialog}!update\+Table@{update\+Table}}
+\index{update\+Table@{update\+Table}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{update\+Table()}{updateTable()}}
+{\footnotesize\ttfamily void Send\+Dialog\+::update\+Table (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{Q\+Byte\+Array \&}]{ba }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+update\+Table 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em id} & Номер отправляемого объекта в базе данных \\
+\hline
+{\em ba} & Бинарные данные, представлюящие объект запроса\\
+\hline
+\end{DoxyParams}
+Функция обновляет данные в таблице базы данных после отправки запроса \mbox{\Hypertarget{classSendDialog_a2942d10e361268fb72c55fa158c57a83}\label{classSendDialog_a2942d10e361268fb72c55fa158c57a83}} 
+\index{Send\+Dialog@{Send\+Dialog}!write\+Data@{write\+Data}}
+\index{write\+Data@{write\+Data}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{write\+Data()}{writeData()}}
+{\footnotesize\ttfamily bool Send\+Dialog\+::write\+Data (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+write\+Data 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em data} & Бинарные данные, представлюящие объект запроса \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true -\/ если запись была успешна
+\end{DoxyReturn}
+Записывает данные в открытое соединение между отправляющей и принимающей стороной 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classSendDialog_a51192da75f8dee9536f99c5b390d858f}\label{classSendDialog_a51192da75f8dee9536f99c5b390d858f}} 
+\index{Send\+Dialog@{Send\+Dialog}!m\+\_\+name\+Mapping@{m\+\_\+name\+Mapping}}
+\index{m\+\_\+name\+Mapping@{m\+\_\+name\+Mapping}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{m\+\_\+name\+Mapping}{m\_nameMapping}}
+{\footnotesize\ttfamily Q\+Json\+Document Send\+Dialog\+::m\+\_\+name\+Mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+name\+Mapping 
+
+Объект, представляющий докумет типа J\+S\+ON \mbox{\Hypertarget{classSendDialog_a101575f24f58bbbbe03759c3602dcca3}\label{classSendDialog_a101575f24f58bbbbe03759c3602dcca3}} 
+\index{Send\+Dialog@{Send\+Dialog}!m\+\_\+tcp\+Socket@{m\+\_\+tcp\+Socket}}
+\index{m\+\_\+tcp\+Socket@{m\+\_\+tcp\+Socket}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{m\+\_\+tcp\+Socket}{m\_tcpSocket}}
+{\footnotesize\ttfamily Q\+Tcp\+Socket Send\+Dialog\+::m\+\_\+tcp\+Socket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+tcp\+Socket 
+
+Сокет для отправки данных по сети \mbox{\Hypertarget{classSendDialog_af3fd5ba452e7e546ebd1a3160c2333a9}\label{classSendDialog_af3fd5ba452e7e546ebd1a3160c2333a9}} 
+\index{Send\+Dialog@{Send\+Dialog}!ui@{ui}}
+\index{ui@{ui}!Send\+Dialog@{Send\+Dialog}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Send\+Dialog$\ast$ Send\+Dialog\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ui 
+
+Указатель на объект интерфейса для формы отправки данных 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{senddialog_8h}{senddialog.\+h}\item 
+\hyperlink{senddialog_8cpp}{senddialog.\+cpp}\end{DoxyCompactItemize}

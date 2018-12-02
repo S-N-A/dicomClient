@@ -1,0 +1,81 @@
+\hypertarget{tagshelpers_8cpp}{}\section{Файл tagshelpers.\+cpp}
+\label{tagshelpers_8cpp}\index{tagshelpers.\+cpp@{tagshelpers.\+cpp}}
+{\ttfamily \#include $<$tagshelpers.\+h$>$}\newline
+Граф включаемых заголовочных файлов для tagshelpers.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tagshelpers_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \hyperlink{tagshelpers_8cpp_a5de97453445a235f3447e900ec778ee4}{get\+Tags} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em get\+Tags \end{DoxyCompactList}\item 
+bool \hyperlink{tagshelpers_8cpp_a597aa9a6202848f5e5a44d57c281908e}{set\+Tag} (const std\+::string \&offset, const std\+::string \&value, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em set\+Tag \end{DoxyCompactList}\item 
+Q\+String \hyperlink{tagshelpers_8cpp_a34c2e8ab74c0f6438a86a1c281ef15a6}{get\+Name\+From\+Dict} (\hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&dict)
+\begin{DoxyCompactList}\small\item\em get\+Name\+From\+Dict \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{tagshelpers_8cpp_a34c2e8ab74c0f6438a86a1c281ef15a6}\label{tagshelpers_8cpp_a34c2e8ab74c0f6438a86a1c281ef15a6}} 
+\index{tagshelpers.\+cpp@{tagshelpers.\+cpp}!get\+Name\+From\+Dict@{get\+Name\+From\+Dict}}
+\index{get\+Name\+From\+Dict@{get\+Name\+From\+Dict}!tagshelpers.\+cpp@{tagshelpers.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Name\+From\+Dict()}{getNameFromDict()}}
+{\footnotesize\ttfamily Q\+String get\+Name\+From\+Dict (\begin{DoxyParamCaption}\item[{\hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&}]{dict }\end{DoxyParamCaption})}
+
+
+
+get\+Name\+From\+Dict 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em dict} & Словарь с данными об исследовании \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Имя пациента
+\end{DoxyReturn}
+Функция получает имя пациента из набора данных об исследовании \mbox{\Hypertarget{tagshelpers_8cpp_a5de97453445a235f3447e900ec778ee4}\label{tagshelpers_8cpp_a5de97453445a235f3447e900ec778ee4}} 
+\index{tagshelpers.\+cpp@{tagshelpers.\+cpp}!get\+Tags@{get\+Tags}}
+\index{get\+Tags@{get\+Tags}!tagshelpers.\+cpp@{tagshelpers.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Tags()}{getTags()}}
+{\footnotesize\ttfamily \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} get\+Tags (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+get\+Tags 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em filename} & Имя файла типа dcm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Словарь с данными из файла в формате dicom
+\end{DoxyReturn}
+Функция для получения тегов dicom из файла типа dcm в словарь \mbox{\Hypertarget{tagshelpers_8cpp_a597aa9a6202848f5e5a44d57c281908e}\label{tagshelpers_8cpp_a597aa9a6202848f5e5a44d57c281908e}} 
+\index{tagshelpers.\+cpp@{tagshelpers.\+cpp}!set\+Tag@{set\+Tag}}
+\index{set\+Tag@{set\+Tag}!tagshelpers.\+cpp@{tagshelpers.\+cpp}}
+\subsubsection{\texorpdfstring{set\+Tag()}{setTag()}}
+{\footnotesize\ttfamily bool set\+Tag (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{offset,  }\item[{const std\+::string \&}]{value,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+set\+Tag 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em offset} & Сдвиг по файлу, на котором находится искомый тег \\
+\hline
+{\em value} & Значение тега для записи \\
+\hline
+{\em filename} & Имя файла на файловой системе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true -\/ если запись была успешна
+\end{DoxyReturn}
+Функция для записи собственного значения в существующий тег файла dcm 

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>DICOM Клиент</string>
+   <string>Телемедицинская программа</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resource.qrc">

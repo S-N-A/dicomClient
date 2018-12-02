@@ -1,0 +1,195 @@
+\hypertarget{classClient}{}\section{Класс Client}
+\label{classClient}\index{Client@{Client}}
+
+
+Класс имитирующий клиента подключенного к серверу  
+
+
+
+
+{\ttfamily \#include $<$client.\+h$>$}
+
+
+
+Граф наследования\+:Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classClient__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classClient__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classClient_a5f3de6434245dc99ceac8601806cb6b1}{connected} ()
+\begin{DoxyCompactList}\small\item\em connected \end{DoxyCompactList}\item 
+void \hyperlink{classClient_ac2cdeb8b0249c1bf0ddd2167da861ad4}{disconnected} ()
+\begin{DoxyCompactList}\small\item\em disconnected \end{DoxyCompactList}\item 
+void \hyperlink{classClient_acfd4db27c0fec82a26e4d112b585b534}{ready\+Read} ()
+\begin{DoxyCompactList}\small\item\em ready\+Read Слот для записи в лог факта готовности к обмену информацией \end{DoxyCompactList}\item 
+void \hyperlink{classClient_a21d8173cfcb182fe554a0828c5dea8be}{Task\+Result} (Q\+Byte\+Array ba)
+\begin{DoxyCompactList}\small\item\em Task\+Result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classClient_ae73142778c856392f6b40803558461df}{transfer\+Data\+To\+Server} (Q\+Byte\+Array ba)
+\begin{DoxyCompactList}\small\item\em transfer\+Data\+To\+Server \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classClient_a5b62b1caeb5c2c35a2ae367851d3ad92}{Client} (Q\+Object $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classClient}{Client}. \end{DoxyCompactList}\item 
+void \hyperlink{classClient_a38b742b4f0fbb661f4884686899ea5c2}{set\+Socket} (qintptr Descriptor)
+\begin{DoxyCompactList}\small\item\em set\+Socket \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Tcp\+Socket $\ast$ \hyperlink{classClient_acfb33719fbe6b0685ca7324c0ee893c5}{socket}
+\begin{DoxyCompactList}\small\item\em socket \end{DoxyCompactList}\item 
+const int \hyperlink{classClient_a61dd7284140818bcb19dbd5bcccec846}{m\+\_\+max\+\_\+thread\+\_\+count} = 5
+\begin{DoxyCompactList}\small\item\em m\+\_\+max\+\_\+thread\+\_\+count \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс имитирующий клиента подключенного к серверу 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018
+\end{DoxyDate}
+Данный класс предназначен для сохранения и обработки информации от подключенного клиента с сохранением контекста 
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classClient_a5b62b1caeb5c2c35a2ae367851d3ad92}\label{classClient_a5b62b1caeb5c2c35a2ae367851d3ad92}} 
+\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\subsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily Client\+::\+Client (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{classClient}{Client}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Ссылка на родительский объект типа Q\+Object\\
+\hline
+\end{DoxyParams}
+Конструктор класса \hyperlink{classClient}{Client} 
+
+\subsection{Методы}
+\mbox{\Hypertarget{classClient_a5f3de6434245dc99ceac8601806cb6b1}\label{classClient_a5f3de6434245dc99ceac8601806cb6b1}} 
+\index{Client@{Client}!connected@{connected}}
+\index{connected@{connected}!Client@{Client}}
+\subsubsection{\texorpdfstring{connected}{connected}}
+{\footnotesize\ttfamily void Client\+::connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+connected 
+
+Слот для записи в лог факт соединения с клиентом \mbox{\Hypertarget{classClient_ac2cdeb8b0249c1bf0ddd2167da861ad4}\label{classClient_ac2cdeb8b0249c1bf0ddd2167da861ad4}} 
+\index{Client@{Client}!disconnected@{disconnected}}
+\index{disconnected@{disconnected}!Client@{Client}}
+\subsubsection{\texorpdfstring{disconnected}{disconnected}}
+{\footnotesize\ttfamily void Client\+::disconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+disconnected 
+
+Слот для записи в лог факт о завершении соединения с клиентом \mbox{\Hypertarget{classClient_acfd4db27c0fec82a26e4d112b585b534}\label{classClient_acfd4db27c0fec82a26e4d112b585b534}} 
+\index{Client@{Client}!ready\+Read@{ready\+Read}}
+\index{ready\+Read@{ready\+Read}!Client@{Client}}
+\subsubsection{\texorpdfstring{ready\+Read}{readyRead}}
+{\footnotesize\ttfamily void Client\+::ready\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+ready\+Read Слот для записи в лог факта готовности к обмену информацией 
+
+\mbox{\Hypertarget{classClient_a38b742b4f0fbb661f4884686899ea5c2}\label{classClient_a38b742b4f0fbb661f4884686899ea5c2}} 
+\index{Client@{Client}!set\+Socket@{set\+Socket}}
+\index{set\+Socket@{set\+Socket}!Client@{Client}}
+\subsubsection{\texorpdfstring{set\+Socket()}{setSocket()}}
+{\footnotesize\ttfamily void Client\+::set\+Socket (\begin{DoxyParamCaption}\item[{qintptr}]{Descriptor }\end{DoxyParamCaption})}
+
+
+
+set\+Socket 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Descriptor} & Дескриптор открытого для соединения сокета\\
+\hline
+\end{DoxyParams}
+Данная функция создает сокет при подключении клиента к серверу \mbox{\Hypertarget{classClient_a21d8173cfcb182fe554a0828c5dea8be}\label{classClient_a21d8173cfcb182fe554a0828c5dea8be}} 
+\index{Client@{Client}!Task\+Result@{Task\+Result}}
+\index{Task\+Result@{Task\+Result}!Client@{Client}}
+\subsubsection{\texorpdfstring{Task\+Result}{TaskResult}}
+{\footnotesize\ttfamily void Client\+::\+Task\+Result (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{ba }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Task\+Result. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ba} & Набор байт записанный клиентом в сокет\\
+\hline
+\end{DoxyParams}
+Слот для записи в лог полученной информации и вызова сигнала для передачи информации классу сервера \mbox{\Hypertarget{classClient_ae73142778c856392f6b40803558461df}\label{classClient_ae73142778c856392f6b40803558461df}} 
+\index{Client@{Client}!transfer\+Data\+To\+Server@{transfer\+Data\+To\+Server}}
+\index{transfer\+Data\+To\+Server@{transfer\+Data\+To\+Server}!Client@{Client}}
+\subsubsection{\texorpdfstring{transfer\+Data\+To\+Server}{transferDataToServer}}
+{\footnotesize\ttfamily void Client\+::transfer\+Data\+To\+Server (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{ba }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+transfer\+Data\+To\+Server 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ba} & Набор байт записанный клиентом в сокет\\
+\hline
+\end{DoxyParams}
+Сигнал отправки полученных данных классу сервера 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classClient_a61dd7284140818bcb19dbd5bcccec846}\label{classClient_a61dd7284140818bcb19dbd5bcccec846}} 
+\index{Client@{Client}!m\+\_\+max\+\_\+thread\+\_\+count@{m\+\_\+max\+\_\+thread\+\_\+count}}
+\index{m\+\_\+max\+\_\+thread\+\_\+count@{m\+\_\+max\+\_\+thread\+\_\+count}!Client@{Client}}
+\subsubsection{\texorpdfstring{m\+\_\+max\+\_\+thread\+\_\+count}{m\_max\_thread\_count}}
+{\footnotesize\ttfamily const int Client\+::m\+\_\+max\+\_\+thread\+\_\+count = 5\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+max\+\_\+thread\+\_\+count 
+
+Константа ограничивающая максимальное количество одновременных потоков для обработки информации. Константа создает ограничение на количество одновременно подключенных пользователей \mbox{\Hypertarget{classClient_acfb33719fbe6b0685ca7324c0ee893c5}\label{classClient_acfb33719fbe6b0685ca7324c0ee893c5}} 
+\index{Client@{Client}!socket@{socket}}
+\index{socket@{socket}!Client@{Client}}
+\subsubsection{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily Q\+Tcp\+Socket$\ast$ Client\+::socket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+socket 
+
+Указатель на открытый для соединения сокет 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{client_8h}{client.\+h}\item 
+\hyperlink{client_8cpp}{client.\+cpp}\end{DoxyCompactItemize}

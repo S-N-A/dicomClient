@@ -1,0 +1,6 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node2" href="$classAccessibilityForm.html" title="Класс формы для осуществления сетевого взаимодействия. " alt="" coords="127,5,253,32"/>
+<area shape="rect" id="node3" href="$classDbForm.html" title="Класс формы для отображения содержимого базы данных " alt="" coords="155,56,225,83"/>
+<area shape="rect" id="node4" href="$classSideBar.html" title="Класс формы боковой панели выбора виджета " alt="" coords="156,107,224,133"/>
+<area shape="rect" id="node5" href="$classViewerForm.html" title="Класс формы для отображения файлов dcm. " alt="" coords="144,157,236,184"/>
+</map>

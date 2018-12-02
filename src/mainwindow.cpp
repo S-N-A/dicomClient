@@ -55,6 +55,9 @@ void MainWindow::initSidebar(){
     connect(checkAction, SIGNAL(triggered()), this, SLOT(displayAccessibilityLayout()));
     connect(ui->viewerWidget, SIGNAL(sendInsertSignal(QString&, QImage&, dicomDict&, addInfoMap&)), ui->dbWidget,
             SLOT(acceptInsertSignal(QString&, QImage&, dicomDict&, addInfoMap&)));
+    connect(ui->accessibilityWidget, SIGNAL(sendSignalToDump(QString& name, QImage& image, dicomDict& dict, addInfoMap& map)),
+                                            ui->dbWidget,
+            SLOT(acceptInsertSignal(QString& name, QImage& image, dicomDict& dict, addInfoMap& map)));
     ui->sideBarWidget->addAction(viewerAction);
     ui->sideBarWidget->addAction(dbAction);
     ui->sideBarWidget->addAction(checkAction);

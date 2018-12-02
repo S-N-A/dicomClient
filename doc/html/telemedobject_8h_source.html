@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа по телемедицине: Исходный файл telemedobject.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Программа по телемедицине
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для осуществления телемединского сеанса связи</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">telemedobject.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="telemedobject_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TELEMEDOBJECT_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TELEMEDOBJECT_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QImage&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QMap&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QTextCodec&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QMessageBox&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tagshelpers_8h.html">tagshelpers.h</a>&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QException&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QJsonObject&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QJsonDocument&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="serializehelper_8h.html">serializehelper.h</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="telemedobject_8h.html#a8865f4251cec2170c8651965cbb8d5da">   16</a></span>&#160;<span class="keyword">using</span> <a class="code" href="dbform_8h.html#a1ec1a645f41e1c6544d384ca863a936c">addInfoMap</a> = QMap&lt;QString, QString&gt;;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classTeleMedObjException.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTeleMedObjException.html">TeleMedObjException</a> : <span class="keyword">public</span> QException{</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classTeleMedObjException.html#a351ba22504a9acf7ed560fd6659013da">   33</a></span>&#160;    <a class="code" href="classTeleMedObjException.html#a351ba22504a9acf7ed560fd6659013da">TeleMedObjException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* errorString) : <a class="code" href="classTeleMedObjException.html#a91ff803c7abad201ad2bb96a2149ea5e">m_errorString</a>(errorString){}</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classTeleMedObjException.html#a367ddc1ca442487da31f7557bd4bc6ff">   39</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <span class="keyword">raise</span>() <span class="keyword">const</span>{<span class="keywordflow">throw</span> *<span class="keyword">this</span>;}</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classTeleMedObjException.html#a32f7656b034f2a49c7622def17ff8b63">   46</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classTeleMedObjException.html">TeleMedObjException</a> *<a class="code" href="classTeleMedObjException.html#a32f7656b034f2a49c7622def17ff8b63">clone</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classTeleMedObjException.html#a351ba22504a9acf7ed560fd6659013da">TeleMedObjException</a>(*<span class="keyword">this</span>);}</div><div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classTeleMedObjException.html#a4d0745f8597c3273301fa88000e35cd8">   53</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classTeleMedObjException.html#a4d0745f8597c3273301fa88000e35cd8">what</a>() const noexcept{<span class="keywordflow">return</span> <a class="code" href="classTeleMedObjException.html#a91ff803c7abad201ad2bb96a2149ea5e">m_errorString</a>;}</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classTeleMedObjException.html#a91ff803c7abad201ad2bb96a2149ea5e">   60</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classTeleMedObjException.html#a91ff803c7abad201ad2bb96a2149ea5e">m_errorString</a>;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classTeleMedObject.html">   70</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTeleMedObject.html">TeleMedObject</a></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classTeleMedObject.html#a754462ce944702c386aa3b6191e4db33">   79</a></span>&#160;    <a class="code" href="classTeleMedObject.html#a754462ce944702c386aa3b6191e4db33">TeleMedObject</a>(){}</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classTeleMedObject.html">TeleMedObject</a>(QImage img, <a class="code" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> dict, <a class="code" href="dbform_8h.html#a1ec1a645f41e1c6544d384ca863a936c">addInfoMap</a> map);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classTeleMedObject.html">TeleMedObject</a>(<span class="keyword">const</span> QJsonDocument&amp; doc);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    QString getResponser() <span class="keyword">const</span>;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    QJsonDocument toJson();</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    QImage getImage() <span class="keyword">const</span>;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> getDicomDict() <span class="keyword">const</span>;</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="dbform_8h.html#a1ec1a645f41e1c6544d384ca863a936c">addInfoMap</a> getInfoMap() <span class="keyword">const</span>;</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">bool</span> isEmpty();</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div><div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classTeleMedObject.html#a6d60cc13e1b1812938cb9a7277c49d43">  138</a></span>&#160;    <a class="code" href="classTeleMedObject.html#a6d60cc13e1b1812938cb9a7277c49d43">~TeleMedObject</a>(){}</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classTeleMedObject.html#a4ea4fc9f1c9e7f7e7760b1c7db163789">  145</a></span>&#160;    QImage <a class="code" href="classTeleMedObject.html#a4ea4fc9f1c9e7f7e7760b1c7db163789">m_img</a>;</div><div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classTeleMedObject.html#a15a8c04c55623d826a04908a949fce31">  151</a></span>&#160;    <a class="code" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> <a class="code" href="classTeleMedObject.html#a15a8c04c55623d826a04908a949fce31">m_dicomDict</a>;</div><div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classTeleMedObject.html#a812a8fdb794711a94a9fc0fa4f1de27e">  157</a></span>&#160;    <a class="code" href="dbform_8h.html#a1ec1a645f41e1c6544d384ca863a936c">addInfoMap</a> <a class="code" href="classTeleMedObject.html#a812a8fdb794711a94a9fc0fa4f1de27e">m_addInfoMap</a>;</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;};</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#endif // TELEMEDOBJECT_H</span></div><div class="ttc" id="serializehelper_8h_html"><div class="ttname"><a href="serializehelper_8h.html">serializehelper.h</a></div></div>
+<div class="ttc" id="classTeleMedObject_html_a754462ce944702c386aa3b6191e4db33"><div class="ttname"><a href="classTeleMedObject.html#a754462ce944702c386aa3b6191e4db33">TeleMedObject::TeleMedObject</a></div><div class="ttdeci">TeleMedObject()</div><div class="ttdoc">TeleMedObject. </div><div class="ttdef"><b>Definition:</b> telemedobject.h:79</div></div>
+<div class="ttc" id="classTeleMedObject_html_a15a8c04c55623d826a04908a949fce31"><div class="ttname"><a href="classTeleMedObject.html#a15a8c04c55623d826a04908a949fce31">TeleMedObject::m_dicomDict</a></div><div class="ttdeci">dicomDict m_dicomDict</div><div class="ttdoc">m_dicomDict </div><div class="ttdef"><b>Definition:</b> telemedobject.h:151</div></div>
+<div class="ttc" id="classTeleMedObject_html_a812a8fdb794711a94a9fc0fa4f1de27e"><div class="ttname"><a href="classTeleMedObject.html#a812a8fdb794711a94a9fc0fa4f1de27e">TeleMedObject::m_addInfoMap</a></div><div class="ttdeci">addInfoMap m_addInfoMap</div><div class="ttdoc">m_addInfoMap </div><div class="ttdef"><b>Definition:</b> telemedobject.h:157</div></div>
+<div class="ttc" id="dbform_8h_html_a1ec1a645f41e1c6544d384ca863a936c"><div class="ttname"><a href="dbform_8h.html#a1ec1a645f41e1c6544d384ca863a936c">addInfoMap</a></div><div class="ttdeci">QMap&lt; QString, QString &gt; addInfoMap</div><div class="ttdef"><b>Definition:</b> dbform.h:23</div></div>
+<div class="ttc" id="tagshelpers_8h_html"><div class="ttname"><a href="tagshelpers_8h.html">tagshelpers.h</a></div></div>
+<div class="ttc" id="classTeleMedObjException_html_a4d0745f8597c3273301fa88000e35cd8"><div class="ttname"><a href="classTeleMedObjException.html#a4d0745f8597c3273301fa88000e35cd8">TeleMedObjException::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdoc">what </div><div class="ttdef"><b>Definition:</b> telemedobject.h:53</div></div>
+<div class="ttc" id="classTeleMedObjException_html"><div class="ttname"><a href="classTeleMedObjException.html">TeleMedObjException</a></div><div class="ttdoc">Класс исключения при построении объекта информации </div><div class="ttdef"><b>Definition:</b> telemedobject.h:25</div></div>
+<div class="ttc" id="tagshelpers_8h_html_ae25d30658f61420b88a380dc9e40bb74"><div class="ttname"><a href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a></div><div class="ttdeci">QMap&lt; QString, QPair&lt; QString, QString &gt; &gt; dicomDict</div><div class="ttdef"><b>Definition:</b> tagshelpers.h:20</div></div>
+<div class="ttc" id="classTeleMedObjException_html_a32f7656b034f2a49c7622def17ff8b63"><div class="ttname"><a href="classTeleMedObjException.html#a32f7656b034f2a49c7622def17ff8b63">TeleMedObjException::clone</a></div><div class="ttdeci">virtual TeleMedObjException * clone() const</div><div class="ttdoc">clone </div><div class="ttdef"><b>Definition:</b> telemedobject.h:46</div></div>
+<div class="ttc" id="classTeleMedObject_html_a6d60cc13e1b1812938cb9a7277c49d43"><div class="ttname"><a href="classTeleMedObject.html#a6d60cc13e1b1812938cb9a7277c49d43">TeleMedObject::~TeleMedObject</a></div><div class="ttdeci">~TeleMedObject()</div><div class="ttdef"><b>Definition:</b> telemedobject.h:138</div></div>
+<div class="ttc" id="classTeleMedObjException_html_a91ff803c7abad201ad2bb96a2149ea5e"><div class="ttname"><a href="classTeleMedObjException.html#a91ff803c7abad201ad2bb96a2149ea5e">TeleMedObjException::m_errorString</a></div><div class="ttdeci">const char * m_errorString</div><div class="ttdoc">m_errorString </div><div class="ttdef"><b>Definition:</b> telemedobject.h:60</div></div>
+<div class="ttc" id="classTeleMedObjException_html_a351ba22504a9acf7ed560fd6659013da"><div class="ttname"><a href="classTeleMedObjException.html#a351ba22504a9acf7ed560fd6659013da">TeleMedObjException::TeleMedObjException</a></div><div class="ttdeci">TeleMedObjException(const char *errorString)</div><div class="ttdoc">TeleMedObjException. </div><div class="ttdef"><b>Definition:</b> telemedobject.h:33</div></div>
+<div class="ttc" id="classTeleMedObject_html"><div class="ttname"><a href="classTeleMedObject.html">TeleMedObject</a></div><div class="ttdoc">Класс объекта информации в телемедицинском сеансе </div><div class="ttdef"><b>Definition:</b> telemedobject.h:70</div></div>
+<div class="ttc" id="classTeleMedObject_html_a4ea4fc9f1c9e7f7e7760b1c7db163789"><div class="ttname"><a href="classTeleMedObject.html#a4ea4fc9f1c9e7f7e7760b1c7db163789">TeleMedObject::m_img</a></div><div class="ttdeci">QImage m_img</div><div class="ttdoc">m_img </div><div class="ttdef"><b>Definition:</b> telemedobject.h:145</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

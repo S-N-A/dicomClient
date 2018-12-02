@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа по телемедицине: Класс Server</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Программа по телемедицине
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для осуществления телемединского сеанса связи</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Открытые слоты</a> &#124;
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="classServer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Server</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс сервера  
+ <a href="classServer.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="server_8h_source.html">server.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Server:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer__inherit__graph.png" border="0" usemap="#Server_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса Server:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer__coll__graph.png" border="0" usemap="#Server_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Открытые слоты</h2></td></tr>
+<tr class="memitem:a9ef1fd70a951bc612605f87b4540b308"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a9ef1fd70a951bc612605f87b4540b308">GetDataFromClient</a> (QByteArray ba)</td></tr>
+<tr class="memdesc:a9ef1fd70a951bc612605f87b4540b308"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetDataFromClient.  <a href="#a9ef1fd70a951bc612605f87b4540b308">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9ef1fd70a951bc612605f87b4540b308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:a3fddab101fd0c1b85570209fcad7155c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a3fddab101fd0c1b85570209fcad7155c">transferDataToWidget</a> (QByteArray ba)</td></tr>
+<tr class="memdesc:a3fddab101fd0c1b85570209fcad7155c"><td class="mdescLeft">&#160;</td><td class="mdescRight">transferDataToWidget  <a href="#a3fddab101fd0c1b85570209fcad7155c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3fddab101fd0c1b85570209fcad7155c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aaf98d5194faee831c6340cc736b9b879"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#aaf98d5194faee831c6340cc736b9b879">Server</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:aaf98d5194faee831c6340cc736b9b879"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classServer.html" title="Класс сервера ">Server</a>.  <a href="#aaf98d5194faee831c6340cc736b9b879">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaf98d5194faee831c6340cc736b9b879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59bb3a96b3311ed2b87e2d6899d9f79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#af59bb3a96b3311ed2b87e2d6899d9f79">startServer</a> ()</td></tr>
+<tr class="memdesc:af59bb3a96b3311ed2b87e2d6899d9f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">startServer  <a href="#af59bb3a96b3311ed2b87e2d6899d9f79">Подробнее...</a><br /></td></tr>
+<tr class="separator:af59bb3a96b3311ed2b87e2d6899d9f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a3952d37b7bc53a4377f411d9ccaa9d62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a3952d37b7bc53a4377f411d9ccaa9d62">incomingConnection</a> (qintptr socketDescriptor)</td></tr>
+<tr class="memdesc:a3952d37b7bc53a4377f411d9ccaa9d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">incomingConnection  <a href="#a3952d37b7bc53a4377f411d9ccaa9d62">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3952d37b7bc53a4377f411d9ccaa9d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс сервера </p>
+<dl class="section author"><dt>Автор</dt><dd>Илья Трефилов </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>01.12.2018</dd></dl>
+<p>Класс сервера для приема запросов </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aaf98d5194faee831c6340cc736b9b879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf98d5194faee831c6340cc736b9b879">&#9670;&nbsp;</a></span>Server()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Server::Server </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classServer.html" title="Класс сервера ">Server</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Указатель на родительский объект</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Конструктор класса сервера </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a9ef1fd70a951bc612605f87b4540b308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef1fd70a951bc612605f87b4540b308">&#9670;&nbsp;</a></span>GetDataFromClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::GetDataFromClient </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>ba</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GetDataFromClient. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ba</td><td>Набор байт</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Слот для получения информации от потока обрабатывающего соединение </p>
+
+</div>
+</div>
+<a id="a3952d37b7bc53a4377f411d9ccaa9d62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3952d37b7bc53a4377f411d9ccaa9d62">&#9670;&nbsp;</a></span>incomingConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::incomingConnection </td>
+          <td>(</td>
+          <td class="paramtype">qintptr&#160;</td>
+          <td class="paramname"><em>socketDescriptor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>incomingConnection </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socketDescriptor</td><td>Дескриптор сокета при соединении</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Функция для обработки входящего соединения и выделения необходимых системных ресурсов </p>
+
+</div>
+</div>
+<a id="af59bb3a96b3311ed2b87e2d6899d9f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af59bb3a96b3311ed2b87e2d6899d9f79">&#9670;&nbsp;</a></span>startServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::startServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>startServer </p>
+<p>Функция для запуска сервера на порту 7808 </p>
+
+</div>
+</div>
+<a id="a3fddab101fd0c1b85570209fcad7155c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fddab101fd0c1b85570209fcad7155c">&#9670;&nbsp;</a></span>transferDataToWidget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::transferDataToWidget </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>ba</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>transferDataToWidget </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ba</td><td>Набор байт</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Сигнал для передачи полученной информации в класс виджет для отображения </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="server_8h_source.html">server.h</a></li>
+<li><a class="el" href="server_8cpp.html">server.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

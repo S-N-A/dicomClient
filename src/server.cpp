@@ -17,4 +17,9 @@ void Server::incomingConnection(qintptr socketDescriptor){
     // Make client
     Client* client = new Client(this);
     client->setSocket(socketDescriptor);
+    connect(client, SIGNAL(transferDataToServer(QByteArray)), this, SLOT(GetDataFromClient(QByteArray)));
+}
+
+void Server::GetDataFromClient(QByteArray ba){
+    emit transferDataToWidget(ba);
 }

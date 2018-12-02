@@ -1,0 +1,59 @@
+\hypertarget{serializehelper_8h}{}\section{Файл serializehelper.\+h}
+\label{serializehelper_8h}\index{serializehelper.\+h@{serializehelper.\+h}}
+{\ttfamily \#include $<$Q\+Pixmap$>$}\newline
+{\ttfamily \#include $<$Q\+Byte\+Array$>$}\newline
+{\ttfamily \#include $<$Q\+Image$>$}\newline
+{\ttfamily \#include $<$Q\+Json\+Value$>$}\newline
+{\ttfamily \#include $<$Q\+Buffer$>$}\newline
+{\ttfamily \#include $<$tagshelpers.\+h$>$}\newline
+{\ttfamily \#include $<$Q\+Scoped\+Pointer$>$}\newline
+Граф включаемых заголовочных файлов для serializehelper.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serializehelper_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serializehelper_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Пространства имен}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceSerialize}{Serialize}
+\end{DoxyCompactItemize}
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{serializehelper_8h_a8865f4251cec2170c8651965cbb8d5da}{add\+Info\+Map} = Q\+Map$<$ Q\+String, Q\+String $>$
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Byte\+Array \hyperlink{namespaceSerialize_a11412877176c667f31a331bfac95d7e1}{Serialize\+::image\+To\+Byte\+Array} (const Q\+Image \&image)
+\begin{DoxyCompactList}\small\item\em image\+To\+Byte\+Array \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{namespaceSerialize_ad70935346b9a0522990d0ff87e963a26}{Serialize\+::byte\+Array\+To\+Image} (const Q\+Byte\+Array \&ba)
+\begin{DoxyCompactList}\small\item\em byte\+Array\+To\+Image \end{DoxyCompactList}\item 
+Q\+Json\+Value \hyperlink{namespaceSerialize_a794b837e3f9323b238c5b4d115f5c78b}{Serialize\+::json\+Val\+From\+Image} (const Q\+Image \&p)
+\begin{DoxyCompactList}\small\item\em json\+Val\+From\+Image \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{namespaceSerialize_a966ed9963741cb19a07f8b057faae920}{Serialize\+::image\+From} (const Q\+Json\+Value \&val)
+\begin{DoxyCompactList}\small\item\em image\+From \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\auto \hyperlink{namespaceSerialize_a5318048e43f2cacc610f177d093283f8}{Serialize\+::dict\+To\+Byte\+Array} (const T \&dict) -\/$>$ Q\+Byte\+Array
+\begin{DoxyCompactList}\small\item\em dict\+To\+Byte\+Array \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{namespaceSerialize_aac818c4b807e223e916bbe829e0d86ea}{Serialize\+::byte\+Array\+To\+Dict} (Q\+Byte\+Array $\ast$ba)
+\begin{DoxyCompactList}\small\item\em byte\+Array\+To\+Dict \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{namespaceSerialize_ac2bf64c91d863df6a6c6149c7a482af0}{Serialize\+::dict\+From\+Base64} (const Q\+Json\+Value \&value)
+\begin{DoxyCompactList}\small\item\em dict\+From\+Base64 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Типы}
+\mbox{\Hypertarget{serializehelper_8h_a8865f4251cec2170c8651965cbb8d5da}\label{serializehelper_8h_a8865f4251cec2170c8651965cbb8d5da}} 
+\index{serializehelper.\+h@{serializehelper.\+h}!add\+Info\+Map@{add\+Info\+Map}}
+\index{add\+Info\+Map@{add\+Info\+Map}!serializehelper.\+h@{serializehelper.\+h}}
+\subsubsection{\texorpdfstring{add\+Info\+Map}{addInfoMap}}
+{\footnotesize\ttfamily using \hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} =  Q\+Map$<$Q\+String, Q\+String$>$}
+

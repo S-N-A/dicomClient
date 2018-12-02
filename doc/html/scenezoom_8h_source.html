@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа по телемедицине: Исходный файл scenezoom.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Программа по телемедицине
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для осуществления телемединского сеанса связи</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">scenezoom.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="scenezoom_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SCENEZOOM_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SCENEZOOM_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QGraphicsView&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QWheelEvent&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classSceneZoom.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSceneZoom.html">SceneZoom</a>: <span class="keyword">public</span> QGraphicsView</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    Q_OBJECT</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classSceneZoom.html#a4467d1e53eb8d2af1866f25759b0dbcd">SceneZoom</a>(QWidget * parent=<span class="keyword">nullptr</span>);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSceneZoom.html#a7d535a62dbc00e43b7daabaf6a61f553">zoomIn</a>();</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSceneZoom.html#a9907761406dc1a9f1664429b4004a592">zoomOut</a>();</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSceneZoom.html#a6ef95f5202dcc08251417074fbcf14b7">wheelEvent</a>(QWheelEvent *event);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // SCENEZOOM_H</span></div><div class="ttc" id="classSceneZoom_html_a9907761406dc1a9f1664429b4004a592"><div class="ttname"><a href="classSceneZoom.html#a9907761406dc1a9f1664429b4004a592">SceneZoom::zoomOut</a></div><div class="ttdeci">void zoomOut()</div><div class="ttdoc">zoomOut </div><div class="ttdef"><b>Definition:</b> scenezoom.cpp:13</div></div>
+<div class="ttc" id="classSceneZoom_html_a7d535a62dbc00e43b7daabaf6a61f553"><div class="ttname"><a href="classSceneZoom.html#a7d535a62dbc00e43b7daabaf6a61f553">SceneZoom::zoomIn</a></div><div class="ttdeci">void zoomIn()</div><div class="ttdoc">zoomIn </div><div class="ttdef"><b>Definition:</b> scenezoom.cpp:8</div></div>
+<div class="ttc" id="classSceneZoom_html_a4467d1e53eb8d2af1866f25759b0dbcd"><div class="ttname"><a href="classSceneZoom.html#a4467d1e53eb8d2af1866f25759b0dbcd">SceneZoom::SceneZoom</a></div><div class="ttdeci">SceneZoom(QWidget *parent=nullptr)</div><div class="ttdoc">SceneZoom. </div><div class="ttdef"><b>Definition:</b> scenezoom.cpp:3</div></div>
+<div class="ttc" id="classSceneZoom_html"><div class="ttname"><a href="classSceneZoom.html">SceneZoom</a></div><div class="ttdoc">Класс реализующий логику зумирования изображения в сцене на виджете </div><div class="ttdef"><b>Definition:</b> scenezoom.h:14</div></div>
+<div class="ttc" id="classSceneZoom_html_a6ef95f5202dcc08251417074fbcf14b7"><div class="ttname"><a href="classSceneZoom.html#a6ef95f5202dcc08251417074fbcf14b7">SceneZoom::wheelEvent</a></div><div class="ttdeci">void wheelEvent(QWheelEvent *event)</div><div class="ttdoc">wheelEvent </div><div class="ttdef"><b>Definition:</b> scenezoom.cpp:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

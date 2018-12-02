@@ -40,6 +40,6 @@ void Client::readyRead(){
 
 
 void Client::TaskResult(QByteArray ba){
-    qDebug(logDebug()) << "Client::TaskResult : " << ba.toStdString().c_str();
-    socket->write(ba);
+    qDebug(logDebug()) << "Client::TaskResult : " << ba;
+    emit transferDataToServer(ba);
 }

@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа по телемедицине: Файл tagshelpers.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Программа по телемедицине
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для осуществления телемединского сеанса связи</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл tagshelpers.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;QMap&gt;</code><br />
+<code>#include &lt;QPair&gt;</code><br />
+<code>#include &lt;QDebug&gt;</code><br />
+<code>#include &lt;QString&gt;</code><br />
+<code>#include &lt;<a class="el" href="logger_8h_source.html">logger.h</a>&gt;</code><br />
+<code>#include &quot;gdcmReader.h&quot;</code><br />
+<code>#include &quot;gdcmGlobal.h&quot;</code><br />
+<code>#include &quot;gdcmDicts.h&quot;</code><br />
+<code>#include &quot;gdcmDict.h&quot;</code><br />
+<code>#include &quot;gdcmAttribute.h&quot;</code><br />
+<code>#include &quot;gdcmStringFilter.h&quot;</code><br />
+<code>#include &quot;gdcmWriter.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для tagshelpers.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="tagshelpers_8h__incl.png" border="0" usemap="#tagshelpers_8h" alt=""/></div>
+<map name="tagshelpers_8h" id="tagshelpers_8h">
+<area shape="rect" id="node6" href="logger_8h.html" title="logger.h" alt="" coords="352,80,420,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="tagshelpers_8h__dep__incl.png" border="0" usemap="#tagshelpers_8hdep" alt=""/></div>
+<map name="tagshelpers_8hdep" id="tagshelpers_8hdep">
+<area shape="rect" id="node2" href="telemedobject_8h.html" title="telemedobject.h" alt="" coords="177,155,291,181"/>
+<area shape="rect" id="node6" href="dbform_8h.html" title="dbform.h" alt="" coords="272,304,345,331"/>
+<area shape="rect" id="node9" href="viewerform_8h.html" title="viewerform.h" alt="" coords="573,229,671,256"/>
+<area shape="rect" id="node16" href="serializehelper_8h.html" title="serializehelper.h" alt="" coords="324,80,440,107"/>
+<area shape="rect" id="node18" href="tagshelpers_8cpp.html" title="tagshelpers.cpp" alt="" coords="623,80,738,107"/>
+<area shape="rect" id="node3" href="accessibilityform_8h.html" title="accessibilityform.h" alt="" coords="13,379,143,405"/>
+<area shape="rect" id="node5" href="senddialog_8h.html" title="senddialog.h" alt="" coords="48,229,143,256"/>
+<area shape="rect" id="node15" href="telemedobject_8cpp.html" title="telemedobject.cpp" alt="" coords="167,229,295,256"/>
+<area shape="rect" id="node4" href="accessibilityform_8cpp.html" title="accessibilityform.cpp" alt="" coords="5,453,151,480"/>
+<area shape="rect" id="node8" href="senddialog_8cpp.html" title="senddialog.cpp" alt="" coords="115,304,225,331"/>
+<area shape="rect" id="node7" href="dbform_8cpp.html" title="dbform.cpp" alt="" coords="265,379,352,405"/>
+<area shape="rect" id="node10" href="mainwindow_8h.html" title="mainwindow.h" alt="" coords="540,304,645,331"/>
+<area shape="rect" id="node14" href="viewerform_8cpp.html" title="viewerform.cpp" alt="" coords="669,304,780,331"/>
+<area shape="rect" id="node11" href="main_8cpp.html" title="main.cpp" alt="" coords="555,379,630,405"/>
+<area shape="rect" id="node12" href="mainwindow_8cpp.html" title="mainwindow.cpp" alt="" coords="655,379,773,405"/>
+<area shape="rect" id="node13" href="sidebar_8cpp.html" title="sidebar.cpp" alt="" coords="441,379,531,405"/>
+<area shape="rect" id="node17" href="serializehelper_8cpp.html" title="serializehelper.cpp" alt="" coords="367,155,498,181"/>
+</map>
+</div>
+</div>
+<p><a href="tagshelpers_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ae25d30658f61420b88a380dc9e40bb74"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> = QMap&lt; QString, QPair&lt; QString, QString &gt; &gt;</td></tr>
+<tr class="separator:ae25d30658f61420b88a380dc9e40bb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a5de97453445a235f3447e900ec778ee4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tagshelpers_8h.html#a5de97453445a235f3447e900ec778ee4">getTags</a> (const char *filename)</td></tr>
+<tr class="memdesc:a5de97453445a235f3447e900ec778ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">getTags  <a href="#a5de97453445a235f3447e900ec778ee4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5de97453445a235f3447e900ec778ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597aa9a6202848f5e5a44d57c281908e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tagshelpers_8h.html#a597aa9a6202848f5e5a44d57c281908e">setTag</a> (const std::string &amp;offset, const std::string &amp;value, const char *filename)</td></tr>
+<tr class="memdesc:a597aa9a6202848f5e5a44d57c281908e"><td class="mdescLeft">&#160;</td><td class="mdescRight">setTag  <a href="#a597aa9a6202848f5e5a44d57c281908e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a597aa9a6202848f5e5a44d57c281908e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c2e8ab74c0f6438a86a1c281ef15a6"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tagshelpers_8h.html#a34c2e8ab74c0f6438a86a1c281ef15a6">getNameFromDict</a> (<a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> &amp;dict)</td></tr>
+<tr class="memdesc:a34c2e8ab74c0f6438a86a1c281ef15a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">getNameFromDict  <a href="#a34c2e8ab74c0f6438a86a1c281ef15a6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a34c2e8ab74c0f6438a86a1c281ef15a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a244b7433b44125ac2757c8be01eaec41"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tagshelpers_8h.html#a244b7433b44125ac2757c8be01eaec41">TagsMap</a></td></tr>
+<tr class="separator:a244b7433b44125ac2757c8be01eaec41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="ae25d30658f61420b88a380dc9e40bb74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25d30658f61420b88a380dc9e40bb74">&#9670;&nbsp;</a></span>dicomDict</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> =  QMap&lt;QString, QPair&lt;QString, QString&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a34c2e8ab74c0f6438a86a1c281ef15a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c2e8ab74c0f6438a86a1c281ef15a6">&#9670;&nbsp;</a></span>getNameFromDict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString getNameFromDict </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> &amp;&#160;</td>
+          <td class="paramname"><em>dict</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getNameFromDict </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dict</td><td>Словарь с данными об исследовании </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Имя пациента</dd></dl>
+<p>Функция получает имя пациента из набора данных об исследовании </p>
+
+</div>
+</div>
+<a id="a5de97453445a235f3447e900ec778ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de97453445a235f3447e900ec778ee4">&#9670;&nbsp;</a></span>getTags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> getTags </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getTags </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Имя файла типа dcm </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Словарь с данными из файла в формате dicom</dd></dl>
+<p>Функция для получения тегов dicom из файла типа dcm в словарь </p>
+
+</div>
+</div>
+<a id="a597aa9a6202848f5e5a44d57c281908e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a597aa9a6202848f5e5a44d57c281908e">&#9670;&nbsp;</a></span>setTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setTag </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>setTag </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>Сдвиг по файлу, на котором находится искомый тег </td></tr>
+    <tr><td class="paramname">value</td><td>Значение тега для записи </td></tr>
+    <tr><td class="paramname">filename</td><td>Имя файла на файловой системе </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - если запись была успешна</dd></dl>
+<p>Функция для записи собственного значения в существующий тег файла dcm </p>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a244b7433b44125ac2757c8be01eaec41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244b7433b44125ac2757c8be01eaec41">&#9670;&nbsp;</a></span>TagsMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tagshelpers_8h.html#ae25d30658f61420b88a380dc9e40bb74">dicomDict</a> TagsMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

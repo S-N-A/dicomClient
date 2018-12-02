@@ -1,0 +1,131 @@
+\hypertarget{classTeleMedObjException}{}\section{Класс Tele\+Med\+Obj\+Exception}
+\label{classTeleMedObjException}\index{Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}}
+
+
+Класс исключения при построении объекта информации  
+
+
+
+
+{\ttfamily \#include $<$telemedobject.\+h$>$}
+
+
+
+Граф наследования\+:Tele\+Med\+Obj\+Exception\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classTeleMedObjException__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Tele\+Med\+Obj\+Exception\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classTeleMedObjException__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTeleMedObjException_a351ba22504a9acf7ed560fd6659013da}{Tele\+Med\+Obj\+Exception} (const char $\ast$error\+String)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classTeleMedObjException}{Tele\+Med\+Obj\+Exception}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classTeleMedObjException_a367ddc1ca442487da31f7557bd4bc6ff}{raise} () const
+\begin{DoxyCompactList}\small\item\em raise \end{DoxyCompactList}\item 
+virtual \hyperlink{classTeleMedObjException}{Tele\+Med\+Obj\+Exception} $\ast$ \hyperlink{classTeleMedObjException_a32f7656b034f2a49c7622def17ff8b63}{clone} () const
+\begin{DoxyCompactList}\small\item\em clone \end{DoxyCompactList}\item 
+virtual const char $\ast$ \hyperlink{classTeleMedObjException_a4d0745f8597c3273301fa88000e35cd8}{what} () const noexcept
+\begin{DoxyCompactList}\small\item\em what \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{classTeleMedObjException_a91ff803c7abad201ad2bb96a2149ea5e}{m\+\_\+error\+String}
+\begin{DoxyCompactList}\small\item\em m\+\_\+error\+String \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс исключения при построении объекта информации 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018
+\end{DoxyDate}
+Данный класс предназначен для сообщения о нештатных ситуациях при обработке объекта информации 
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classTeleMedObjException_a351ba22504a9acf7ed560fd6659013da}\label{classTeleMedObjException_a351ba22504a9acf7ed560fd6659013da}} 
+\index{Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}!Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}}
+\index{Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}!Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}}
+\subsubsection{\texorpdfstring{Tele\+Med\+Obj\+Exception()}{TeleMedObjException()}}
+{\footnotesize\ttfamily Tele\+Med\+Obj\+Exception\+::\+Tele\+Med\+Obj\+Exception (\begin{DoxyParamCaption}\item[{const char $\ast$}]{error\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{classTeleMedObjException}{Tele\+Med\+Obj\+Exception}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em error\+String} & Сообщение об ошибке\\
+\hline
+\end{DoxyParams}
+Конструктор класса исключения 
+
+\subsection{Методы}
+\mbox{\Hypertarget{classTeleMedObjException_a32f7656b034f2a49c7622def17ff8b63}\label{classTeleMedObjException_a32f7656b034f2a49c7622def17ff8b63}} 
+\index{Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}!clone@{clone}}
+\index{clone@{clone}!Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \hyperlink{classTeleMedObjException}{Tele\+Med\+Obj\+Exception}$\ast$ Tele\+Med\+Obj\+Exception\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+clone 
+
+\begin{DoxyReturn}{Возвращает}
+Объект исключения
+\end{DoxyReturn}
+Функция для выделения памяти под объект исключения \mbox{\Hypertarget{classTeleMedObjException_a367ddc1ca442487da31f7557bd4bc6ff}\label{classTeleMedObjException_a367ddc1ca442487da31f7557bd4bc6ff}} 
+\index{Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}!raise@{raise}}
+\index{raise@{raise}!Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}}
+\subsubsection{\texorpdfstring{raise()}{raise()}}
+{\footnotesize\ttfamily virtual void Tele\+Med\+Obj\+Exception\+::raise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+raise 
+
+Функция для вызова исключения в программе \mbox{\Hypertarget{classTeleMedObjException_a4d0745f8597c3273301fa88000e35cd8}\label{classTeleMedObjException_a4d0745f8597c3273301fa88000e35cd8}} 
+\index{Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}!what@{what}}
+\index{what@{what}!Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Tele\+Med\+Obj\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+what 
+
+\begin{DoxyReturn}{Возвращает}
+Сообщение об ошибке
+\end{DoxyReturn}
+Функция для получения сообщения об ошибке при исключении в программе 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classTeleMedObjException_a91ff803c7abad201ad2bb96a2149ea5e}\label{classTeleMedObjException_a91ff803c7abad201ad2bb96a2149ea5e}} 
+\index{Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}!m\+\_\+error\+String@{m\+\_\+error\+String}}
+\index{m\+\_\+error\+String@{m\+\_\+error\+String}!Tele\+Med\+Obj\+Exception@{Tele\+Med\+Obj\+Exception}}
+\subsubsection{\texorpdfstring{m\+\_\+error\+String}{m\_errorString}}
+{\footnotesize\ttfamily const char$\ast$ Tele\+Med\+Obj\+Exception\+::m\+\_\+error\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+error\+String 
+
+Строка с сообщением об ошибке 
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{telemedobject_8h}{telemedobject.\+h}\end{DoxyCompactItemize}

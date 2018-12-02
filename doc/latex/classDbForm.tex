@@ -1,0 +1,442 @@
+\hypertarget{classDbForm}{}\section{Класс Db\+Form}
+\label{classDbForm}\index{Db\+Form@{Db\+Form}}
+
+
+Класс формы для отображения содержимого базы данных  
+
+
+
+
+{\ttfamily \#include $<$dbform.\+h$>$}
+
+
+
+Граф наследования\+:Db\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{classDbForm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Db\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{classDbForm__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDbForm_af542d8df492aab988ff036022365f3fd}{accept\+Insert\+Signal} (Q\+String \&name, Q\+Image \&image, \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&dict, \hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \&map)
+\begin{DoxyCompactList}\small\item\em accept\+Insert\+Signal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDbForm_a66426b83490cb4c054905c12dc6a220e}{Db\+Form} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDbForm}{Db\+Form}. \end{DoxyCompactList}\item 
+\hyperlink{classDbForm_abbdba78f6818adfd9fc156b3246bb788}{$\sim$\+Db\+Form} ()
+\end{DoxyCompactItemize}
+\subsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classDbForm_a3877cc6e7b607e2999da50b5322615d4}{init\+Footer\+Table} (Q\+Table\+Widget $\ast$widget, const \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&dict)
+\begin{DoxyCompactList}\small\item\em init\+Footer\+Table \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые типы}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classDbForm_a86764414aea9eeb51e9cdfa722447b93}{columns} \{ \hyperlink{classDbForm_a86764414aea9eeb51e9cdfa722447b93ab80bb7740288fda1f201890375a60c8f}{columns\+::id} = 0, 
+\hyperlink{classDbForm_a86764414aea9eeb51e9cdfa722447b93ab068931cc450442b63f5b3d276ea4297}{columns\+::name} = 1, 
+\hyperlink{classDbForm_a86764414aea9eeb51e9cdfa722447b93a78805a221a988e79ef3f42d7c5bfd418}{columns\+::image} = 2, 
+\hyperlink{classDbForm_a86764414aea9eeb51e9cdfa722447b93a8d777f385d3dfec8815d20f7496026dc}{columns\+::data} = 3
+ \}\begin{DoxyCompactList}\small\item\em The columns enum. \end{DoxyCompactList}
+\item 
+enum \hyperlink{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fd}{dicom\+Columns} \{ \hyperlink{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fdac49e86041d3f004eeaaff68fb53cd961}{tag}, 
+\hyperlink{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fdade3e2648868259c386f105866f10211b}{description}, 
+\hyperlink{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fda545ec36d06133ca13ccb0780da8184e9}{value}
+ \}\begin{DoxyCompactList}\small\item\em The columns enum. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDbForm_ae26fa6d6d1be86e8fff9766d64392fdd}{on\+\_\+db\+Table\+Widget\+\_\+cell\+Clicked} (int row, int column)
+\begin{DoxyCompactList}\small\item\em on\+\_\+db\+Table\+Widget\+\_\+cell\+Clicked \end{DoxyCompactList}\item 
+void \hyperlink{classDbForm_aa1f2f6562e51324bb3dc453f9579380b}{on\+\_\+update\+Button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em on\+\_\+update\+Button\+\_\+clicked \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classDbForm_a40fbf82d24dc0e20031aef14dc4a8366}{ask\+For\+Save} ()
+\begin{DoxyCompactList}\small\item\em ask\+For\+Save \end{DoxyCompactList}\item 
+void \hyperlink{classDbForm_a56e109480a6bd4556baaf369bc79f99f}{preview\+Image} (const int \&id)
+\begin{DoxyCompactList}\small\item\em preview\+Image \end{DoxyCompactList}\item 
+bool \hyperlink{classDbForm_af79b6454611a052e4da31db0bac13ed1}{init\+Table\+Widget} ()
+\begin{DoxyCompactList}\small\item\em init\+Table\+Widget \end{DoxyCompactList}\item 
+bool \hyperlink{classDbForm_a3453aae86a90552e3e7dd84b38315cc0}{dump\+To\+Db} (Q\+String \&name, Q\+Image \&image, \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&dict, \hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \&map)
+\begin{DoxyCompactList}\small\item\em dump\+To\+Db \end{DoxyCompactList}\item 
+void \hyperlink{classDbForm_ab375348c98051eea969574da00484c29}{insert\+Additional\+Info} (Q\+Sql\+Query \&query, const \hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \&map)
+\begin{DoxyCompactList}\small\item\em insert\+Additional\+Info \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Db\+Form $\ast$ \hyperlink{classDbForm_a481b25bcbc8d2613cf09e786319e9559}{ui}
+\begin{DoxyCompactList}\small\item\em ui \end{DoxyCompactList}\item 
+const Q\+String \hyperlink{classDbForm_a8db1268928d78d414fd354cbc08c92c8}{m\+\_\+db\+Path}
+\begin{DoxyCompactList}\small\item\em m\+\_\+db\+Path \end{DoxyCompactList}\item 
+const Q\+String \hyperlink{classDbForm_a13a6b5d290951dfb001cfe34324c1634}{m\+\_\+db\+Table}
+\begin{DoxyCompactList}\small\item\em m\+\_\+db\+Table \end{DoxyCompactList}\item 
+const Q\+Icon \hyperlink{classDbForm_a8231b5e3687e61e8b3391040f99f33fe}{m\+\_\+ok\+Icon}
+\begin{DoxyCompactList}\small\item\em m\+\_\+ok\+Icon \end{DoxyCompactList}\item 
+const Q\+Icon \hyperlink{classDbForm_a664eef6253a7345bd09b820346c0e3c9}{m\+\_\+unavailable\+Icon}
+\begin{DoxyCompactList}\small\item\em m\+\_\+unavailable\+Icon \end{DoxyCompactList}\item 
+const Q\+Icon \hyperlink{classDbForm_ac2f11a495462056b06da8e3d62a04c22}{m\+\_\+update\+Icon}
+\begin{DoxyCompactList}\small\item\em m\+\_\+update\+Icon \end{DoxyCompactList}\item 
+Q\+Sql\+Database \hyperlink{classDbForm_a8baa011f5fa0625622b5930977ae8492}{m\+\_\+db}
+\begin{DoxyCompactList}\small\item\em m\+\_\+db \end{DoxyCompactList}\item 
+Q\+Graphics\+Scene \hyperlink{classDbForm_a2f5838603cedc772f92fc47cd484c93a}{m\+\_\+preview\+Scene}
+\begin{DoxyCompactList}\small\item\em m\+\_\+preview\+Scene \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Друзья}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDbForm_a6f843022f5255cb942da23ecb29ae451}{Send\+Dialog}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс формы для отображения содержимого базы данных 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018
+\end{DoxyDate}
+Данный класс предназначен для отбражения информации, хранящейся в локальной базе о изученных объектах 
+
+\subsection{Перечисления}
+\mbox{\Hypertarget{classDbForm_a86764414aea9eeb51e9cdfa722447b93}\label{classDbForm_a86764414aea9eeb51e9cdfa722447b93}} 
+\index{Db\+Form@{Db\+Form}!columns@{columns}}
+\index{columns@{columns}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily enum \hyperlink{classDbForm_a86764414aea9eeb51e9cdfa722447b93}{Db\+Form\+::columns}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}
+
+
+
+The columns enum. 
+
+Перечисление столбцов таблицы для отображения числовых значений на смысловое содержание информации, хранящейся в таблице \begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{id@{id}!Db\+Form@{Db\+Form}}\index{Db\+Form@{Db\+Form}!id@{id}}}\mbox{\Hypertarget{classDbForm_a86764414aea9eeb51e9cdfa722447b93ab80bb7740288fda1f201890375a60c8f}\label{classDbForm_a86764414aea9eeb51e9cdfa722447b93ab80bb7740288fda1f201890375a60c8f}} 
+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{name@{name}!Db\+Form@{Db\+Form}}\index{Db\+Form@{Db\+Form}!name@{name}}}\mbox{\Hypertarget{classDbForm_a86764414aea9eeb51e9cdfa722447b93ab068931cc450442b63f5b3d276ea4297}\label{classDbForm_a86764414aea9eeb51e9cdfa722447b93ab068931cc450442b63f5b3d276ea4297}} 
+name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{image@{image}!Db\+Form@{Db\+Form}}\index{Db\+Form@{Db\+Form}!image@{image}}}\mbox{\Hypertarget{classDbForm_a86764414aea9eeb51e9cdfa722447b93a78805a221a988e79ef3f42d7c5bfd418}\label{classDbForm_a86764414aea9eeb51e9cdfa722447b93a78805a221a988e79ef3f42d7c5bfd418}} 
+image&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{data@{data}!Db\+Form@{Db\+Form}}\index{Db\+Form@{Db\+Form}!data@{data}}}\mbox{\Hypertarget{classDbForm_a86764414aea9eeb51e9cdfa722447b93a8d777f385d3dfec8815d20f7496026dc}\label{classDbForm_a86764414aea9eeb51e9cdfa722447b93a8d777f385d3dfec8815d20f7496026dc}} 
+data&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fd}\label{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fd}} 
+\index{Db\+Form@{Db\+Form}!dicom\+Columns@{dicom\+Columns}}
+\index{dicom\+Columns@{dicom\+Columns}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{dicom\+Columns}{dicomColumns}}
+{\footnotesize\ttfamily enum \hyperlink{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fd}{Db\+Form\+::dicom\+Columns}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The columns enum. 
+
+Перечисление столбцов таблицы для отображения числовых значений на смысловое содержание информации, хранящейся в таблице \begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tag@{tag}!Db\+Form@{Db\+Form}}\index{Db\+Form@{Db\+Form}!tag@{tag}}}\mbox{\Hypertarget{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fdac49e86041d3f004eeaaff68fb53cd961}\label{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fdac49e86041d3f004eeaaff68fb53cd961}} 
+tag&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{description@{description}!Db\+Form@{Db\+Form}}\index{Db\+Form@{Db\+Form}!description@{description}}}\mbox{\Hypertarget{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fdade3e2648868259c386f105866f10211b}\label{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fdade3e2648868259c386f105866f10211b}} 
+description&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{value@{value}!Db\+Form@{Db\+Form}}\index{Db\+Form@{Db\+Form}!value@{value}}}\mbox{\Hypertarget{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fda545ec36d06133ca13ccb0780da8184e9}\label{classDbForm_a3c4b02b0603d0d9cd8c22ed0214d55fda545ec36d06133ca13ccb0780da8184e9}} 
+value&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classDbForm_a66426b83490cb4c054905c12dc6a220e}\label{classDbForm_a66426b83490cb4c054905c12dc6a220e}} 
+\index{Db\+Form@{Db\+Form}!Db\+Form@{Db\+Form}}
+\index{Db\+Form@{Db\+Form}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{Db\+Form()}{DbForm()}}
+{\footnotesize\ttfamily Db\+Form\+::\+Db\+Form (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{classDbForm}{Db\+Form}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский класс -\/ виджет\\
+\hline
+\end{DoxyParams}
+Конструктор виджета \mbox{\Hypertarget{classDbForm_abbdba78f6818adfd9fc156b3246bb788}\label{classDbForm_abbdba78f6818adfd9fc156b3246bb788}} 
+\index{Db\+Form@{Db\+Form}!````~Db\+Form@{$\sim$\+Db\+Form}}
+\index{````~Db\+Form@{$\sim$\+Db\+Form}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{$\sim$\+Db\+Form()}{~DbForm()}}
+{\footnotesize\ttfamily Db\+Form\+::$\sim$\+Db\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classDbForm_af542d8df492aab988ff036022365f3fd}\label{classDbForm_af542d8df492aab988ff036022365f3fd}} 
+\index{Db\+Form@{Db\+Form}!accept\+Insert\+Signal@{accept\+Insert\+Signal}}
+\index{accept\+Insert\+Signal@{accept\+Insert\+Signal}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{accept\+Insert\+Signal}{acceptInsertSignal}}
+{\footnotesize\ttfamily void Db\+Form\+::accept\+Insert\+Signal (\begin{DoxyParamCaption}\item[{Q\+String \&}]{name,  }\item[{Q\+Image \&}]{image,  }\item[{\hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&}]{dict,  }\item[{\hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+accept\+Insert\+Signal 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Имя пациента \\
+\hline
+{\em image} & Медицинское изображение \\
+\hline
+{\em dict} & Словарь содержащий информацию о dicom объекте \\
+\hline
+{\em map} & Словарь содержащий дополнительную информацию о запросе\textbackslash{}ответе\\
+\hline
+\end{DoxyParams}
+Слот для приема сигнала о необходимости записи объекта в базу данных \mbox{\Hypertarget{classDbForm_a40fbf82d24dc0e20031aef14dc4a8366}\label{classDbForm_a40fbf82d24dc0e20031aef14dc4a8366}} 
+\index{Db\+Form@{Db\+Form}!ask\+For\+Save@{ask\+For\+Save}}
+\index{ask\+For\+Save@{ask\+For\+Save}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{ask\+For\+Save()}{askForSave()}}
+{\footnotesize\ttfamily bool Db\+Form\+::ask\+For\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ask\+For\+Save 
+
+\begin{DoxyReturn}{Возвращает}
+Возвращает значение типа boolean, указывающее на необходимость сохранения в базу данных
+\end{DoxyReturn}
+Если функция вернула true -\/ посылаем сигнал сохранения в базу данных \mbox{\Hypertarget{classDbForm_a3453aae86a90552e3e7dd84b38315cc0}\label{classDbForm_a3453aae86a90552e3e7dd84b38315cc0}} 
+\index{Db\+Form@{Db\+Form}!dump\+To\+Db@{dump\+To\+Db}}
+\index{dump\+To\+Db@{dump\+To\+Db}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{dump\+To\+Db()}{dumpToDb()}}
+{\footnotesize\ttfamily bool Db\+Form\+::dump\+To\+Db (\begin{DoxyParamCaption}\item[{Q\+String \&}]{name,  }\item[{Q\+Image \&}]{image,  }\item[{\hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&}]{dict,  }\item[{\hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+dump\+To\+Db 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Имя пациента \\
+\hline
+{\em image} & Медицинское изображение \\
+\hline
+{\em dict} & Словарь для хранения информации dicom \\
+\hline
+{\em map} & Словарь с дополнительными данных о запросе\textbackslash{}ответе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true -\/ если запись в базу прошла успешно
+\end{DoxyReturn}
+Функция для записи в базу информации о запросе\textbackslash{}ответе \mbox{\Hypertarget{classDbForm_a3877cc6e7b607e2999da50b5322615d4}\label{classDbForm_a3877cc6e7b607e2999da50b5322615d4}} 
+\index{Db\+Form@{Db\+Form}!init\+Footer\+Table@{init\+Footer\+Table}}
+\index{init\+Footer\+Table@{init\+Footer\+Table}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{init\+Footer\+Table()}{initFooterTable()}}
+{\footnotesize\ttfamily void Db\+Form\+::init\+Footer\+Table (\begin{DoxyParamCaption}\item[{Q\+Table\+Widget $\ast$}]{widget,  }\item[{const \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&}]{dict }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+init\+Footer\+Table 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em widget} & Ссылка на виджет типа таблицы \\
+\hline
+{\em dict} & Словарь содержащий информацию о dicom объекте \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDbForm_af79b6454611a052e4da31db0bac13ed1}\label{classDbForm_af79b6454611a052e4da31db0bac13ed1}} 
+\index{Db\+Form@{Db\+Form}!init\+Table\+Widget@{init\+Table\+Widget}}
+\index{init\+Table\+Widget@{init\+Table\+Widget}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{init\+Table\+Widget()}{initTableWidget()}}
+{\footnotesize\ttfamily bool Db\+Form\+::init\+Table\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+init\+Table\+Widget 
+
+\begin{DoxyReturn}{Возвращает}
+true, если таблица информации в базе данных успешно инициализировалась из базы данных
+\end{DoxyReturn}
+Функция для инициализации таблицы информацией из базы данных \mbox{\Hypertarget{classDbForm_ab375348c98051eea969574da00484c29}\label{classDbForm_ab375348c98051eea969574da00484c29}} 
+\index{Db\+Form@{Db\+Form}!insert\+Additional\+Info@{insert\+Additional\+Info}}
+\index{insert\+Additional\+Info@{insert\+Additional\+Info}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{insert\+Additional\+Info()}{insertAdditionalInfo()}}
+{\footnotesize\ttfamily void Db\+Form\+::insert\+Additional\+Info (\begin{DoxyParamCaption}\item[{Q\+Sql\+Query \&}]{query,  }\item[{const \hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+insert\+Additional\+Info 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em query} & Объект запроса в базу данных \\
+\hline
+{\em map} & Словарь с дополнительными данных о запросе\textbackslash{}ответе\\
+\hline
+\end{DoxyParams}
+Функция записывает информацию о запросе\textbackslash{}ответе в базу данных \mbox{\Hypertarget{classDbForm_ae26fa6d6d1be86e8fff9766d64392fdd}\label{classDbForm_ae26fa6d6d1be86e8fff9766d64392fdd}} 
+\index{Db\+Form@{Db\+Form}!on\+\_\+db\+Table\+Widget\+\_\+cell\+Clicked@{on\+\_\+db\+Table\+Widget\+\_\+cell\+Clicked}}
+\index{on\+\_\+db\+Table\+Widget\+\_\+cell\+Clicked@{on\+\_\+db\+Table\+Widget\+\_\+cell\+Clicked}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{on\+\_\+db\+Table\+Widget\+\_\+cell\+Clicked}{on\_dbTableWidget\_cellClicked}}
+{\footnotesize\ttfamily void Db\+Form\+::on\+\_\+db\+Table\+Widget\+\_\+cell\+Clicked (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+on\+\_\+db\+Table\+Widget\+\_\+cell\+Clicked 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em row} & Номер строки таблицы \\
+\hline
+{\em column} & Номер столбца таблицы\\
+\hline
+\end{DoxyParams}
+Слот для отображения информации в виджете при клике на соответсвующий объект из таблицы \mbox{\Hypertarget{classDbForm_aa1f2f6562e51324bb3dc453f9579380b}\label{classDbForm_aa1f2f6562e51324bb3dc453f9579380b}} 
+\index{Db\+Form@{Db\+Form}!on\+\_\+update\+Button\+\_\+clicked@{on\+\_\+update\+Button\+\_\+clicked}}
+\index{on\+\_\+update\+Button\+\_\+clicked@{on\+\_\+update\+Button\+\_\+clicked}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{on\+\_\+update\+Button\+\_\+clicked}{on\_updateButton\_clicked}}
+{\footnotesize\ttfamily void Db\+Form\+::on\+\_\+update\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+on\+\_\+update\+Button\+\_\+clicked 
+
+Слот для синхронизации таблицы в виджете и информации в базе данных \mbox{\Hypertarget{classDbForm_a56e109480a6bd4556baaf369bc79f99f}\label{classDbForm_a56e109480a6bd4556baaf369bc79f99f}} 
+\index{Db\+Form@{Db\+Form}!preview\+Image@{preview\+Image}}
+\index{preview\+Image@{preview\+Image}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{preview\+Image()}{previewImage()}}
+{\footnotesize\ttfamily void Db\+Form\+::preview\+Image (\begin{DoxyParamCaption}\item[{const int \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+preview\+Image 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em id} & Номер объекта в базе данных\\
+\hline
+\end{DoxyParams}
+Функция для отображения изображения в виджете, по выбранному номеру объекта 
+
+\subsection{Документация по друзьям класса и функциям, относящимся к классу}
+\mbox{\Hypertarget{classDbForm_a6f843022f5255cb942da23ecb29ae451}\label{classDbForm_a6f843022f5255cb942da23ecb29ae451}} 
+\index{Db\+Form@{Db\+Form}!Send\+Dialog@{Send\+Dialog}}
+\index{Send\+Dialog@{Send\+Dialog}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{Send\+Dialog}{SendDialog}}
+{\footnotesize\ttfamily friend class \hyperlink{classSendDialog}{Send\+Dialog}\hspace{0.3cm}{\ttfamily [friend]}}
+
+Объявления класса \hyperlink{classSendDialog}{Send\+Dialog} дружественным классом для предоставления форме \hyperlink{classSendDialog}{Send\+Dialog} доступа к БД средствами данного класса 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classDbForm_a8baa011f5fa0625622b5930977ae8492}\label{classDbForm_a8baa011f5fa0625622b5930977ae8492}} 
+\index{Db\+Form@{Db\+Form}!m\+\_\+db@{m\+\_\+db}}
+\index{m\+\_\+db@{m\+\_\+db}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+db}{m\_db}}
+{\footnotesize\ttfamily Q\+Sql\+Database Db\+Form\+::m\+\_\+db\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+db 
+
+Объект открытой программой базы данных \mbox{\Hypertarget{classDbForm_a8db1268928d78d414fd354cbc08c92c8}\label{classDbForm_a8db1268928d78d414fd354cbc08c92c8}} 
+\index{Db\+Form@{Db\+Form}!m\+\_\+db\+Path@{m\+\_\+db\+Path}}
+\index{m\+\_\+db\+Path@{m\+\_\+db\+Path}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+db\+Path}{m\_dbPath}}
+{\footnotesize\ttfamily const Q\+String Db\+Form\+::m\+\_\+db\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+db\+Path 
+
+Константа, хранящая путь до базы данных \mbox{\Hypertarget{classDbForm_a13a6b5d290951dfb001cfe34324c1634}\label{classDbForm_a13a6b5d290951dfb001cfe34324c1634}} 
+\index{Db\+Form@{Db\+Form}!m\+\_\+db\+Table@{m\+\_\+db\+Table}}
+\index{m\+\_\+db\+Table@{m\+\_\+db\+Table}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+db\+Table}{m\_dbTable}}
+{\footnotesize\ttfamily const Q\+String Db\+Form\+::m\+\_\+db\+Table\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+db\+Table 
+
+Константа, хранящая название таблицы \mbox{\Hypertarget{classDbForm_a8231b5e3687e61e8b3391040f99f33fe}\label{classDbForm_a8231b5e3687e61e8b3391040f99f33fe}} 
+\index{Db\+Form@{Db\+Form}!m\+\_\+ok\+Icon@{m\+\_\+ok\+Icon}}
+\index{m\+\_\+ok\+Icon@{m\+\_\+ok\+Icon}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+ok\+Icon}{m\_okIcon}}
+{\footnotesize\ttfamily const Q\+Icon Db\+Form\+::m\+\_\+ok\+Icon\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+ok\+Icon 
+
+Константа, хранящая иконку, отображающую наличие информации в базе данных \mbox{\Hypertarget{classDbForm_a2f5838603cedc772f92fc47cd484c93a}\label{classDbForm_a2f5838603cedc772f92fc47cd484c93a}} 
+\index{Db\+Form@{Db\+Form}!m\+\_\+preview\+Scene@{m\+\_\+preview\+Scene}}
+\index{m\+\_\+preview\+Scene@{m\+\_\+preview\+Scene}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+preview\+Scene}{m\_previewScene}}
+{\footnotesize\ttfamily Q\+Graphics\+Scene Db\+Form\+::m\+\_\+preview\+Scene\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+preview\+Scene 
+
+Сцена для демонстрации изображения в виджете из базы данных \mbox{\Hypertarget{classDbForm_a664eef6253a7345bd09b820346c0e3c9}\label{classDbForm_a664eef6253a7345bd09b820346c0e3c9}} 
+\index{Db\+Form@{Db\+Form}!m\+\_\+unavailable\+Icon@{m\+\_\+unavailable\+Icon}}
+\index{m\+\_\+unavailable\+Icon@{m\+\_\+unavailable\+Icon}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+unavailable\+Icon}{m\_unavailableIcon}}
+{\footnotesize\ttfamily const Q\+Icon Db\+Form\+::m\+\_\+unavailable\+Icon\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+unavailable\+Icon 
+
+Константа, хранящая иконку, отображающую отсутствие информации в базе данных \mbox{\Hypertarget{classDbForm_ac2f11a495462056b06da8e3d62a04c22}\label{classDbForm_ac2f11a495462056b06da8e3d62a04c22}} 
+\index{Db\+Form@{Db\+Form}!m\+\_\+update\+Icon@{m\+\_\+update\+Icon}}
+\index{m\+\_\+update\+Icon@{m\+\_\+update\+Icon}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+update\+Icon}{m\_updateIcon}}
+{\footnotesize\ttfamily const Q\+Icon Db\+Form\+::m\+\_\+update\+Icon\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+update\+Icon 
+
+Константа, хранящая иконку для обновления данных в виджете. Используется на кнопке обновления данных \mbox{\Hypertarget{classDbForm_a481b25bcbc8d2613cf09e786319e9559}\label{classDbForm_a481b25bcbc8d2613cf09e786319e9559}} 
+\index{Db\+Form@{Db\+Form}!ui@{ui}}
+\index{ui@{ui}!Db\+Form@{Db\+Form}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Db\+Form$\ast$ Db\+Form\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ui 
+
+Ссылка на объект интерфейса для данной формы 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dbform_8h}{dbform.\+h}\item 
+\hyperlink{dbform_8cpp}{dbform.\+cpp}\end{DoxyCompactItemize}

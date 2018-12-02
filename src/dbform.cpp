@@ -4,9 +4,11 @@
 DbForm::DbForm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::DbForm), m_dbPath("dicom.db"), m_dbTable("patient"),
-    m_okIcon(":/icons/ok"), m_unavailableIcon(":/icons/unavailable")
+    m_okIcon(":/icons/ok"),m_unavailableIcon(":/icons/unavailable"), m_updateIcon(":/icons/update")
 {
     ui->setupUi(this);
+    ui->updateButton->setIcon(m_updateIcon);
+    ui->updateButton->setIconSize(QSize(21,25));
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName(m_dbPath);
     if (!m_db.open()){
@@ -71,6 +73,18 @@ bool DbForm::initTableWidget(){
             exist->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
             ui->dbTableWidget->setItem(counter, static_cast<int>(columns::data), exist);
         }
+       QTableWidgetItem* request = new QTableWidgetItem(query.value(4).toString());
+       ui->dbTableWidget->setItem(counter, 4, request);
+       QTableWidgetItem* response = new QTableWidgetItem(query.value(5).toString());
+       ui->dbTableWidget->setItem(counter, 5, response);
+       QTableWidgetItem* request_date = new QTableWidgetItem(query.value(6).toString());
+       ui->dbTableWidget->setItem(counter, 6, request_date);
+       QTableWidgetItem* response_date = new QTableWidgetItem(query.value(7).toString());
+       ui->dbTableWidget->setItem(counter, 7, response_date);
+       QTableWidgetItem* requester = new QTableWidgetItem(query.value(8).toString());
+       ui->dbTableWidget->setItem(counter, 8, requester);
+       QTableWidgetItem* responser = new QTableWidgetItem(query.value(9).toString());
+       ui->dbTableWidget->setItem(counter, 9, responser);
 
     }
     return true;
@@ -213,27 +227,40 @@ void DbForm::on_dbTableWidget_cellClicked(int row, int column)
         return;
     }
     dict = Serialize::byteArrayToDict<dicomDict>(&dataByteArray);
-    int i = 0;
-    ui->dbBorderDicomTable->clear();
-    ui->dbBorderDicomTable->setColumnCount(3);
     qDebug(logDebug()) << "Query record count: " << query.record().count();
-    ui->dbBorderDicomTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    ui->dbBorderDicomTable->setHorizontalHeaderLabels(QStringList() << "Tag" << "Description" << "Value");
-    ui->dbBorderDicomTable->setRowCount(dict.size());
-    ui->dbBorderDicomTable->blockSignals(true);
+    initFooterTable(ui->dbBorderDicomTable, dict);
+
+    return;
+}
+
+void DbForm::initFooterTable(QTableWidget* widget, const dicomDict& dict){
+    widget->clear();
+    widget->setColumnCount(3);
+    widget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    widget->setHorizontalHeaderLabels(QStringList() << "Tag" << "Description" << "Value");
+    widget->setRowCount(dict.size());
+    widget->blockSignals(true);
+    int i =0;
     for(auto key: dict.keys()){
         QTableWidgetItem* tagItem = new QTableWidgetItem(key.toStdString().c_str());
         QTableWidgetItem* descriptionItem = new QTableWidgetItem(dict[key].first.toStdString().c_str());
         QTableWidgetItem* valueItem = new QTableWidgetItem(dict[key].second.toStdString().c_str());
-        ui->dbBorderDicomTable->setItem(i, dicomColumns::tag, tagItem);
+        widget->setItem(i, dicomColumns::tag, tagItem);
         tagItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-        ui->dbBorderDicomTable->setItem(i, dicomColumns::description, descriptionItem);
+        widget->setItem(i, dicomColumns::description, descriptionItem);
         descriptionItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-        ui->dbBorderDicomTable->setItem(i, dicomColumns::value, valueItem);
+        widget->setItem(i, dicomColumns::value, valueItem);
         valueItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
         i++;
     }
-    ui->dbBorderDicomTable->blockSignals(false);
-    ui->dbBorderDicomTable->update();
+    widget->blockSignals(false);
+    widget->update();
     return;
+}
+
+
+
+void DbForm::on_updateButton_clicked()
+{
+    initTableWidget();
 }

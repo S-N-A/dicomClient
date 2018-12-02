@@ -1,0 +1,144 @@
+\hypertarget{classServer}{}\section{Класс Server}
+\label{classServer}\index{Server@{Server}}
+
+
+Класс сервера  
+
+
+
+
+{\ttfamily \#include $<$server.\+h$>$}
+
+
+
+Граф наследования\+:Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classServer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classServer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classServer_a9ef1fd70a951bc612605f87b4540b308}{Get\+Data\+From\+Client} (Q\+Byte\+Array ba)
+\begin{DoxyCompactList}\small\item\em Get\+Data\+From\+Client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classServer_a3fddab101fd0c1b85570209fcad7155c}{transfer\+Data\+To\+Widget} (Q\+Byte\+Array ba)
+\begin{DoxyCompactList}\small\item\em transfer\+Data\+To\+Widget \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classServer_aaf98d5194faee831c6340cc736b9b879}{Server} (Q\+Object $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classServer}{Server}. \end{DoxyCompactList}\item 
+void \hyperlink{classServer_af59bb3a96b3311ed2b87e2d6899d9f79}{start\+Server} ()
+\begin{DoxyCompactList}\small\item\em start\+Server \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classServer_a3952d37b7bc53a4377f411d9ccaa9d62}{incoming\+Connection} (qintptr socket\+Descriptor)
+\begin{DoxyCompactList}\small\item\em incoming\+Connection \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс сервера 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018
+\end{DoxyDate}
+Класс сервера для приема запросов 
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classServer_aaf98d5194faee831c6340cc736b9b879}\label{classServer_aaf98d5194faee831c6340cc736b9b879}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\subsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{classServer}{Server}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский объект\\
+\hline
+\end{DoxyParams}
+Конструктор класса сервера 
+
+\subsection{Методы}
+\mbox{\Hypertarget{classServer_a9ef1fd70a951bc612605f87b4540b308}\label{classServer_a9ef1fd70a951bc612605f87b4540b308}} 
+\index{Server@{Server}!Get\+Data\+From\+Client@{Get\+Data\+From\+Client}}
+\index{Get\+Data\+From\+Client@{Get\+Data\+From\+Client}!Server@{Server}}
+\subsubsection{\texorpdfstring{Get\+Data\+From\+Client}{GetDataFromClient}}
+{\footnotesize\ttfamily void Server\+::\+Get\+Data\+From\+Client (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{ba }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Get\+Data\+From\+Client. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ba} & Набор байт\\
+\hline
+\end{DoxyParams}
+Слот для получения информации от потока обрабатывающего соединение \mbox{\Hypertarget{classServer_a3952d37b7bc53a4377f411d9ccaa9d62}\label{classServer_a3952d37b7bc53a4377f411d9ccaa9d62}} 
+\index{Server@{Server}!incoming\+Connection@{incoming\+Connection}}
+\index{incoming\+Connection@{incoming\+Connection}!Server@{Server}}
+\subsubsection{\texorpdfstring{incoming\+Connection()}{incomingConnection()}}
+{\footnotesize\ttfamily void Server\+::incoming\+Connection (\begin{DoxyParamCaption}\item[{qintptr}]{socket\+Descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+incoming\+Connection 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em socket\+Descriptor} & Дескриптор сокета при соединении\\
+\hline
+\end{DoxyParams}
+Функция для обработки входящего соединения и выделения необходимых системных ресурсов \mbox{\Hypertarget{classServer_af59bb3a96b3311ed2b87e2d6899d9f79}\label{classServer_af59bb3a96b3311ed2b87e2d6899d9f79}} 
+\index{Server@{Server}!start\+Server@{start\+Server}}
+\index{start\+Server@{start\+Server}!Server@{Server}}
+\subsubsection{\texorpdfstring{start\+Server()}{startServer()}}
+{\footnotesize\ttfamily void Server\+::start\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start\+Server 
+
+Функция для запуска сервера на порту 7808 \mbox{\Hypertarget{classServer_a3fddab101fd0c1b85570209fcad7155c}\label{classServer_a3fddab101fd0c1b85570209fcad7155c}} 
+\index{Server@{Server}!transfer\+Data\+To\+Widget@{transfer\+Data\+To\+Widget}}
+\index{transfer\+Data\+To\+Widget@{transfer\+Data\+To\+Widget}!Server@{Server}}
+\subsubsection{\texorpdfstring{transfer\+Data\+To\+Widget}{transferDataToWidget}}
+{\footnotesize\ttfamily void Server\+::transfer\+Data\+To\+Widget (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{ba }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+transfer\+Data\+To\+Widget 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ba} & Набор байт\\
+\hline
+\end{DoxyParams}
+Сигнал для передачи полученной информации в класс виджет для отображения 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{server_8h}{server.\+h}\item 
+\hyperlink{server_8cpp}{server.\+cpp}\end{DoxyCompactItemize}

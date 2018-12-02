@@ -1,0 +1,113 @@
+\hypertarget{classSceneZoom}{}\section{Класс Scene\+Zoom}
+\label{classSceneZoom}\index{Scene\+Zoom@{Scene\+Zoom}}
+
+
+Класс реализующий логику зумирования изображения в сцене на виджете  
+
+
+
+
+{\ttfamily \#include $<$scenezoom.\+h$>$}
+
+
+
+Граф наследования\+:Scene\+Zoom\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classSceneZoom__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Scene\+Zoom\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classSceneZoom__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSceneZoom_a4467d1e53eb8d2af1866f25759b0dbcd}{Scene\+Zoom} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSceneZoom}{Scene\+Zoom}. \end{DoxyCompactList}\item 
+void \hyperlink{classSceneZoom_a7d535a62dbc00e43b7daabaf6a61f553}{zoom\+In} ()
+\begin{DoxyCompactList}\small\item\em zoom\+In \end{DoxyCompactList}\item 
+void \hyperlink{classSceneZoom_a9907761406dc1a9f1664429b4004a592}{zoom\+Out} ()
+\begin{DoxyCompactList}\small\item\em zoom\+Out \end{DoxyCompactList}\item 
+void \hyperlink{classSceneZoom_a6ef95f5202dcc08251417074fbcf14b7}{wheel\+Event} (Q\+Wheel\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em wheel\+Event \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс реализующий логику зумирования изображения в сцене на виджете 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018
+\end{DoxyDate}
+Данный класс предназначен для реализации функции зумирования в сценах на виджете 
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classSceneZoom_a4467d1e53eb8d2af1866f25759b0dbcd}\label{classSceneZoom_a4467d1e53eb8d2af1866f25759b0dbcd}} 
+\index{Scene\+Zoom@{Scene\+Zoom}!Scene\+Zoom@{Scene\+Zoom}}
+\index{Scene\+Zoom@{Scene\+Zoom}!Scene\+Zoom@{Scene\+Zoom}}
+\subsubsection{\texorpdfstring{Scene\+Zoom()}{SceneZoom()}}
+{\footnotesize\ttfamily Scene\+Zoom\+::\+Scene\+Zoom (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classSceneZoom}{Scene\+Zoom}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский виджет\\
+\hline
+\end{DoxyParams}
+Конструктор класса сцены с зумированием 
+
+\subsection{Методы}
+\mbox{\Hypertarget{classSceneZoom_a6ef95f5202dcc08251417074fbcf14b7}\label{classSceneZoom_a6ef95f5202dcc08251417074fbcf14b7}} 
+\index{Scene\+Zoom@{Scene\+Zoom}!wheel\+Event@{wheel\+Event}}
+\index{wheel\+Event@{wheel\+Event}!Scene\+Zoom@{Scene\+Zoom}}
+\subsubsection{\texorpdfstring{wheel\+Event()}{wheelEvent()}}
+{\footnotesize\ttfamily void Scene\+Zoom\+::wheel\+Event (\begin{DoxyParamCaption}\item[{Q\+Wheel\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+wheel\+Event 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em event} & Событие прокрутки колеса мыши\\
+\hline
+\end{DoxyParams}
+Функция отлавливает события прокрутки колеса мыши для осуществления зумирования \mbox{\Hypertarget{classSceneZoom_a7d535a62dbc00e43b7daabaf6a61f553}\label{classSceneZoom_a7d535a62dbc00e43b7daabaf6a61f553}} 
+\index{Scene\+Zoom@{Scene\+Zoom}!zoom\+In@{zoom\+In}}
+\index{zoom\+In@{zoom\+In}!Scene\+Zoom@{Scene\+Zoom}}
+\subsubsection{\texorpdfstring{zoom\+In()}{zoomIn()}}
+{\footnotesize\ttfamily void Scene\+Zoom\+::zoom\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+zoom\+In 
+
+Функция для увеличения масштаба изображения в сцене \mbox{\Hypertarget{classSceneZoom_a9907761406dc1a9f1664429b4004a592}\label{classSceneZoom_a9907761406dc1a9f1664429b4004a592}} 
+\index{Scene\+Zoom@{Scene\+Zoom}!zoom\+Out@{zoom\+Out}}
+\index{zoom\+Out@{zoom\+Out}!Scene\+Zoom@{Scene\+Zoom}}
+\subsubsection{\texorpdfstring{zoom\+Out()}{zoomOut()}}
+{\footnotesize\ttfamily void Scene\+Zoom\+::zoom\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+zoom\+Out 
+
+Функция для уменьшения масштаба изображения в сцене 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{scenezoom_8h}{scenezoom.\+h}\item 
+\hyperlink{scenezoom_8cpp}{scenezoom.\+cpp}\end{DoxyCompactItemize}

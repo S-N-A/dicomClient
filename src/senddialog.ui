@@ -29,16 +29,6 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="ipLineEdit">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>40</y>
-     <width>113</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="ipLineLabel">
    <property name="geometry">
     <rect>
@@ -49,7 +39,10 @@
     </rect>
    </property>
    <property name="text">
-    <string>Ip адрес получателя</string>
+    <string>ФИО получателя</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="requestLable">
@@ -115,6 +108,16 @@
    </property>
    <property name="text">
     <string>Отправить</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="nameComboBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>131</width>
+     <height>25</height>
+    </rect>
    </property>
   </widget>
  </widget>

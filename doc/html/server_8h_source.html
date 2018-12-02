@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа по телемедицине: Исходный файл server.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Программа по телемедицине
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Программа для осуществления телемединского сеанса связи</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">server.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="server_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SERVER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SERVER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QTcpServer&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QTcpSocket&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QAbstractSocket&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="logger_8h.html">logger.h</a>&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="client_8h.html">client.h</a>&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classServer.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServer.html">Server</a> : <span class="keyword">public</span> QTcpServer</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Q_OBJECT</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classServer.html#aaf98d5194faee831c6340cc736b9b879">Server</a>(QObject* parent = <span class="keyword">nullptr</span>);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#af59bb3a96b3311ed2b87e2d6899d9f79">startServer</a>();</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">protected</span>:</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#a3952d37b7bc53a4377f411d9ccaa9d62">incomingConnection</a>(qintptr socketDescriptor);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;signals:</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#a3fddab101fd0c1b85570209fcad7155c">transferDataToWidget</a>(QByteArray ba);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span> slots:</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#a9ef1fd70a951bc612605f87b4540b308">GetDataFromClient</a>(QByteArray ba);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif // SERVER_H</span></div><div class="ttc" id="classServer_html"><div class="ttname"><a href="classServer.html">Server</a></div><div class="ttdoc">Класс сервера </div><div class="ttdef"><b>Definition:</b> server.h:18</div></div>
+<div class="ttc" id="classServer_html_af59bb3a96b3311ed2b87e2d6899d9f79"><div class="ttname"><a href="classServer.html#af59bb3a96b3311ed2b87e2d6899d9f79">Server::startServer</a></div><div class="ttdeci">void startServer()</div><div class="ttdoc">startServer </div><div class="ttdef"><b>Definition:</b> server.cpp:8</div></div>
+<div class="ttc" id="classServer_html_a3952d37b7bc53a4377f411d9ccaa9d62"><div class="ttname"><a href="classServer.html#a3952d37b7bc53a4377f411d9ccaa9d62">Server::incomingConnection</a></div><div class="ttdeci">void incomingConnection(qintptr socketDescriptor)</div><div class="ttdoc">incomingConnection </div><div class="ttdef"><b>Definition:</b> server.cpp:16</div></div>
+<div class="ttc" id="classServer_html_a3fddab101fd0c1b85570209fcad7155c"><div class="ttname"><a href="classServer.html#a3fddab101fd0c1b85570209fcad7155c">Server::transferDataToWidget</a></div><div class="ttdeci">void transferDataToWidget(QByteArray ba)</div><div class="ttdoc">transferDataToWidget </div></div>
+<div class="ttc" id="logger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div></div>
+<div class="ttc" id="classServer_html_a9ef1fd70a951bc612605f87b4540b308"><div class="ttname"><a href="classServer.html#a9ef1fd70a951bc612605f87b4540b308">Server::GetDataFromClient</a></div><div class="ttdeci">void GetDataFromClient(QByteArray ba)</div><div class="ttdoc">GetDataFromClient. </div><div class="ttdef"><b>Definition:</b> server.cpp:23</div></div>
+<div class="ttc" id="classServer_html_aaf98d5194faee831c6340cc736b9b879"><div class="ttname"><a href="classServer.html#aaf98d5194faee831c6340cc736b9b879">Server::Server</a></div><div class="ttdeci">Server(QObject *parent=nullptr)</div><div class="ttdoc">Server. </div><div class="ttdef"><b>Definition:</b> server.cpp:3</div></div>
+<div class="ttc" id="client_8h_html"><div class="ttname"><a href="client_8h.html">client.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

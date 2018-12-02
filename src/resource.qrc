@@ -8,5 +8,6 @@
 	<file alias="unavailable">icons/unavailable.png</file>
 	<file alias="send">icons/send.png</file>
 	<file alias="ref">icons/ref.png</file>
+	<file alias="update">icons/update.png</file>
     </qresource>
 </RCC>

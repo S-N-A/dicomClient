@@ -1,0 +1,291 @@
+\hypertarget{classViewerForm}{}\section{Класс Viewer\+Form}
+\label{classViewerForm}\index{Viewer\+Form@{Viewer\+Form}}
+
+
+Класс формы для отображения файлов dcm.  
+
+
+
+
+{\ttfamily \#include $<$viewerform.\+h$>$}
+
+
+
+Граф наследования\+:Viewer\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classViewerForm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Viewer\+Form\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classViewerForm__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classViewerForm_a5d3adb46be46748d665e38e47decdf2c}{send\+Insert\+Signal} (Q\+String \&name, Q\+Image \&image, \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&dict, \hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \&info\+Map)
+\begin{DoxyCompactList}\small\item\em send\+Insert\+Signal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classViewerForm_ae36251270d9db1b29cecb787876dfdc1}{show\+Event} (Q\+Show\+Event $\ast$)
+\begin{DoxyCompactList}\small\item\em show\+Event \end{DoxyCompactList}\item 
+\hyperlink{classViewerForm_ac64816c194730c3d825edbb7b7773dee}{Viewer\+Form} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classViewerForm}{Viewer\+Form}. \end{DoxyCompactList}\item 
+\hyperlink{classViewerForm_ac75f02831e65d75ef9b9843d9a180ee4}{$\sim$\+Viewer\+Form} ()
+\end{DoxyCompactItemize}
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \hyperlink{classViewerForm_ab2f0d1908098c723c3f52e89f69e46f4}{file\+Name}
+\begin{DoxyCompactList}\small\item\em file\+Name \end{DoxyCompactList}\item 
+Q\+Graphics\+Scene $\ast$ \hyperlink{classViewerForm_a65bd3ad0087e45497639bb3050084d0a}{scene}
+\begin{DoxyCompactList}\small\item\em scene \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые типы}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classViewerForm_adb304869a7f4e7573df0e018cd03a845}{m\+\_\+columns} \{ \hyperlink{classViewerForm_adb304869a7f4e7573df0e018cd03a845a530374d647e5499f1079a433971650fd}{Tag}, 
+\hyperlink{classViewerForm_adb304869a7f4e7573df0e018cd03a845a4106ad6b7649446b55c2fc0c9e546ca2}{Description}, 
+\hyperlink{classViewerForm_adb304869a7f4e7573df0e018cd03a845a36c75b35df69479c62b3a215e7c8bb64}{Value}
+ \}\begin{DoxyCompactList}\small\item\em The m\+\_\+columns enum. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classViewerForm_aebe4c92a2d951281558a7074347a7ec7}{on\+\_\+load\+Image\+Button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em on\+\_\+load\+Image\+Button\+\_\+clicked \end{DoxyCompactList}\item 
+void \hyperlink{classViewerForm_a298b0181b562b7521e62212db1976cdd}{on\+\_\+dicom\+Attribute\+Table\+Widget\+\_\+cell\+Changed} (int row, int column)
+\begin{DoxyCompactList}\small\item\em on\+\_\+dicom\+Attribute\+Table\+Widget\+\_\+cell\+Changed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classViewerForm_a8b7701ce8061967e519b691aa5a9ec93}{show\+Message\+Box\+Asking\+For\+Change} ()
+\begin{DoxyCompactList}\small\item\em show\+Message\+Box\+Asking\+For\+Change \end{DoxyCompactList}\item 
+void \hyperlink{classViewerForm_a2c109da65b355c5e9712a148b01ee7f3}{init\+Table} (const \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&dict)
+\begin{DoxyCompactList}\small\item\em init\+Table \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classViewerForm_a38c70bda1c65ed5a26e06eb73233ffb2}{m\+\_\+change\+Allowed}
+\begin{DoxyCompactList}\small\item\em m\+\_\+change\+Allowed \end{DoxyCompactList}\item 
+const int \hyperlink{classViewerForm_aec8417758835f4b71657413c06eec160}{m\+\_\+table\+\_\+columns\+\_\+count} = 3
+\begin{DoxyCompactList}\small\item\em m\+\_\+table\+\_\+columns\+\_\+count \end{DoxyCompactList}\item 
+Ui\+::\+Viewer\+Form $\ast$ \hyperlink{classViewerForm_a0e264f78c6535b2442b03629ebdc0347}{ui}
+\begin{DoxyCompactList}\small\item\em ui Указатель на объект интерфейса для данного класса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс формы для отображения файлов dcm. 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018 
+\end{DoxyDate}
+
+
+\subsection{Перечисления}
+\mbox{\Hypertarget{classViewerForm_adb304869a7f4e7573df0e018cd03a845}\label{classViewerForm_adb304869a7f4e7573df0e018cd03a845}} 
+\index{Viewer\+Form@{Viewer\+Form}!m\+\_\+columns@{m\+\_\+columns}}
+\index{m\+\_\+columns@{m\+\_\+columns}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+columns}{m\_columns}}
+{\footnotesize\ttfamily enum \hyperlink{classViewerForm_adb304869a7f4e7573df0e018cd03a845}{Viewer\+Form\+::m\+\_\+columns}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The m\+\_\+columns enum. 
+
+Отображение колонок таблицы на колонки в базе данных \begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tag@{Tag}!Viewer\+Form@{Viewer\+Form}}\index{Viewer\+Form@{Viewer\+Form}!Tag@{Tag}}}\mbox{\Hypertarget{classViewerForm_adb304869a7f4e7573df0e018cd03a845a530374d647e5499f1079a433971650fd}\label{classViewerForm_adb304869a7f4e7573df0e018cd03a845a530374d647e5499f1079a433971650fd}} 
+Tag&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Description@{Description}!Viewer\+Form@{Viewer\+Form}}\index{Viewer\+Form@{Viewer\+Form}!Description@{Description}}}\mbox{\Hypertarget{classViewerForm_adb304869a7f4e7573df0e018cd03a845a4106ad6b7649446b55c2fc0c9e546ca2}\label{classViewerForm_adb304869a7f4e7573df0e018cd03a845a4106ad6b7649446b55c2fc0c9e546ca2}} 
+Description&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Value@{Value}!Viewer\+Form@{Viewer\+Form}}\index{Viewer\+Form@{Viewer\+Form}!Value@{Value}}}\mbox{\Hypertarget{classViewerForm_adb304869a7f4e7573df0e018cd03a845a36c75b35df69479c62b3a215e7c8bb64}\label{classViewerForm_adb304869a7f4e7573df0e018cd03a845a36c75b35df69479c62b3a215e7c8bb64}} 
+Value&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classViewerForm_ac64816c194730c3d825edbb7b7773dee}\label{classViewerForm_ac64816c194730c3d825edbb7b7773dee}} 
+\index{Viewer\+Form@{Viewer\+Form}!Viewer\+Form@{Viewer\+Form}}
+\index{Viewer\+Form@{Viewer\+Form}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{Viewer\+Form()}{ViewerForm()}}
+{\footnotesize\ttfamily Viewer\+Form\+::\+Viewer\+Form (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{classViewerForm}{Viewer\+Form}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский виджет\\
+\hline
+\end{DoxyParams}
+Конструктор класса формы \mbox{\Hypertarget{classViewerForm_ac75f02831e65d75ef9b9843d9a180ee4}\label{classViewerForm_ac75f02831e65d75ef9b9843d9a180ee4}} 
+\index{Viewer\+Form@{Viewer\+Form}!````~Viewer\+Form@{$\sim$\+Viewer\+Form}}
+\index{````~Viewer\+Form@{$\sim$\+Viewer\+Form}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{$\sim$\+Viewer\+Form()}{~ViewerForm()}}
+{\footnotesize\ttfamily Viewer\+Form\+::$\sim$\+Viewer\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classViewerForm_a2c109da65b355c5e9712a148b01ee7f3}\label{classViewerForm_a2c109da65b355c5e9712a148b01ee7f3}} 
+\index{Viewer\+Form@{Viewer\+Form}!init\+Table@{init\+Table}}
+\index{init\+Table@{init\+Table}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{init\+Table()}{initTable()}}
+{\footnotesize\ttfamily void Viewer\+Form\+::init\+Table (\begin{DoxyParamCaption}\item[{const \hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&}]{dict }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+init\+Table 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em dict} & Словарь с данными об исследовании\\
+\hline
+\end{DoxyParams}
+Функция для инициализации таблицы данными из dcm файла \mbox{\Hypertarget{classViewerForm_a298b0181b562b7521e62212db1976cdd}\label{classViewerForm_a298b0181b562b7521e62212db1976cdd}} 
+\index{Viewer\+Form@{Viewer\+Form}!on\+\_\+dicom\+Attribute\+Table\+Widget\+\_\+cell\+Changed@{on\+\_\+dicom\+Attribute\+Table\+Widget\+\_\+cell\+Changed}}
+\index{on\+\_\+dicom\+Attribute\+Table\+Widget\+\_\+cell\+Changed@{on\+\_\+dicom\+Attribute\+Table\+Widget\+\_\+cell\+Changed}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{on\+\_\+dicom\+Attribute\+Table\+Widget\+\_\+cell\+Changed}{on\_dicomAttributeTableWidget\_cellChanged}}
+{\footnotesize\ttfamily void Viewer\+Form\+::on\+\_\+dicom\+Attribute\+Table\+Widget\+\_\+cell\+Changed (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+on\+\_\+dicom\+Attribute\+Table\+Widget\+\_\+cell\+Changed 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em row} & Строка \\
+\hline
+{\em column} & Столбец\\
+\hline
+\end{DoxyParams}
+Слот для предложения пользователю изменить значение тега в файле Действует при изменении пользователем тега в таблице \mbox{\Hypertarget{classViewerForm_aebe4c92a2d951281558a7074347a7ec7}\label{classViewerForm_aebe4c92a2d951281558a7074347a7ec7}} 
+\index{Viewer\+Form@{Viewer\+Form}!on\+\_\+load\+Image\+Button\+\_\+clicked@{on\+\_\+load\+Image\+Button\+\_\+clicked}}
+\index{on\+\_\+load\+Image\+Button\+\_\+clicked@{on\+\_\+load\+Image\+Button\+\_\+clicked}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{on\+\_\+load\+Image\+Button\+\_\+clicked}{on\_loadImageButton\_clicked}}
+{\footnotesize\ttfamily void Viewer\+Form\+::on\+\_\+load\+Image\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+on\+\_\+load\+Image\+Button\+\_\+clicked 
+
+Слот для показа диалогового окна выбора файла \mbox{\Hypertarget{classViewerForm_a5d3adb46be46748d665e38e47decdf2c}\label{classViewerForm_a5d3adb46be46748d665e38e47decdf2c}} 
+\index{Viewer\+Form@{Viewer\+Form}!send\+Insert\+Signal@{send\+Insert\+Signal}}
+\index{send\+Insert\+Signal@{send\+Insert\+Signal}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{send\+Insert\+Signal}{sendInsertSignal}}
+{\footnotesize\ttfamily void Viewer\+Form\+::send\+Insert\+Signal (\begin{DoxyParamCaption}\item[{Q\+String \&}]{name,  }\item[{Q\+Image \&}]{image,  }\item[{\hyperlink{tagshelpers_8h_ae25d30658f61420b88a380dc9e40bb74}{dicom\+Dict} \&}]{dict,  }\item[{\hyperlink{dbform_8h_a1ec1a645f41e1c6544d384ca863a936c}{add\+Info\+Map} \&}]{info\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+send\+Insert\+Signal 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Имя пациента \\
+\hline
+{\em image} & Изображение \\
+\hline
+{\em dict} & Словарь с данными об исследовании \\
+\hline
+{\em info\+Map} & Словарь с данными о запросе\textbackslash{}ответе \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classViewerForm_ae36251270d9db1b29cecb787876dfdc1}\label{classViewerForm_ae36251270d9db1b29cecb787876dfdc1}} 
+\index{Viewer\+Form@{Viewer\+Form}!show\+Event@{show\+Event}}
+\index{show\+Event@{show\+Event}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{show\+Event()}{showEvent()}}
+{\footnotesize\ttfamily void Viewer\+Form\+::show\+Event (\begin{DoxyParamCaption}\item[{Q\+Show\+Event $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+show\+Event 
+
+Событие отображения изображения в сцене, масштабирующее изображение по рамке сцены \mbox{\Hypertarget{classViewerForm_a8b7701ce8061967e519b691aa5a9ec93}\label{classViewerForm_a8b7701ce8061967e519b691aa5a9ec93}} 
+\index{Viewer\+Form@{Viewer\+Form}!show\+Message\+Box\+Asking\+For\+Change@{show\+Message\+Box\+Asking\+For\+Change}}
+\index{show\+Message\+Box\+Asking\+For\+Change@{show\+Message\+Box\+Asking\+For\+Change}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{show\+Message\+Box\+Asking\+For\+Change()}{showMessageBoxAskingForChange()}}
+{\footnotesize\ttfamily bool Viewer\+Form\+::show\+Message\+Box\+Asking\+For\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+show\+Message\+Box\+Asking\+For\+Change 
+
+\begin{DoxyReturn}{Возвращает}
+true -\/ если ползователь нажал OK
+\end{DoxyReturn}
+Функция для отображения диалога о необходимости сохранения информации из dcm фaйла в базу 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classViewerForm_ab2f0d1908098c723c3f52e89f69e46f4}\label{classViewerForm_ab2f0d1908098c723c3f52e89f69e46f4}} 
+\index{Viewer\+Form@{Viewer\+Form}!file\+Name@{file\+Name}}
+\index{file\+Name@{file\+Name}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{file\+Name}{fileName}}
+{\footnotesize\ttfamily Q\+String Viewer\+Form\+::file\+Name}
+
+
+
+file\+Name 
+
+Имя файла на файловой системе \mbox{\Hypertarget{classViewerForm_a38c70bda1c65ed5a26e06eb73233ffb2}\label{classViewerForm_a38c70bda1c65ed5a26e06eb73233ffb2}} 
+\index{Viewer\+Form@{Viewer\+Form}!m\+\_\+change\+Allowed@{m\+\_\+change\+Allowed}}
+\index{m\+\_\+change\+Allowed@{m\+\_\+change\+Allowed}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+change\+Allowed}{m\_changeAllowed}}
+{\footnotesize\ttfamily bool Viewer\+Form\+::m\+\_\+change\+Allowed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+change\+Allowed 
+
+Флажок отображающий возможность изменения тега в файле \mbox{\Hypertarget{classViewerForm_aec8417758835f4b71657413c06eec160}\label{classViewerForm_aec8417758835f4b71657413c06eec160}} 
+\index{Viewer\+Form@{Viewer\+Form}!m\+\_\+table\+\_\+columns\+\_\+count@{m\+\_\+table\+\_\+columns\+\_\+count}}
+\index{m\+\_\+table\+\_\+columns\+\_\+count@{m\+\_\+table\+\_\+columns\+\_\+count}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{m\+\_\+table\+\_\+columns\+\_\+count}{m\_table\_columns\_count}}
+{\footnotesize\ttfamily const int Viewer\+Form\+::m\+\_\+table\+\_\+columns\+\_\+count = 3\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+table\+\_\+columns\+\_\+count 
+
+Количество столбцов в таблице виджета \mbox{\Hypertarget{classViewerForm_a65bd3ad0087e45497639bb3050084d0a}\label{classViewerForm_a65bd3ad0087e45497639bb3050084d0a}} 
+\index{Viewer\+Form@{Viewer\+Form}!scene@{scene}}
+\index{scene@{scene}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily Q\+Graphics\+Scene$\ast$ Viewer\+Form\+::scene}
+
+
+
+scene 
+
+Сцена для показа изображения \mbox{\Hypertarget{classViewerForm_a0e264f78c6535b2442b03629ebdc0347}\label{classViewerForm_a0e264f78c6535b2442b03629ebdc0347}} 
+\index{Viewer\+Form@{Viewer\+Form}!ui@{ui}}
+\index{ui@{ui}!Viewer\+Form@{Viewer\+Form}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Viewer\+Form$\ast$ Viewer\+Form\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ui Указатель на объект интерфейса для данного класса 
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{viewerform_8h}{viewerform.\+h}\item 
+\hyperlink{viewerform_8cpp}{viewerform.\+cpp}\end{DoxyCompactItemize}

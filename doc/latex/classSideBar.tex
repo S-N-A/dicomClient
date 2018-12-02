@@ -1,0 +1,259 @@
+\hypertarget{classSideBar}{}\section{Класс Side\+Bar}
+\label{classSideBar}\index{Side\+Bar@{Side\+Bar}}
+
+
+Класс формы боковой панели выбора виджета  
+
+
+
+
+{\ttfamily \#include $<$sidebar.\+h$>$}
+
+
+
+Граф наследования\+:Side\+Bar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{classSideBar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Side\+Bar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{classSideBar__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSideBar_a2a5215a713fe300f8e7b2407017db411}{Side\+Bar} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSideBar}{Side\+Bar}. \end{DoxyCompactList}\item 
+void \hyperlink{classSideBar_abec6727f29e75af996bc71196c690eaa}{add\+Action} (Q\+Action $\ast$action)
+\begin{DoxyCompactList}\small\item\em add\+Action \end{DoxyCompactList}\item 
+Q\+Action $\ast$ \hyperlink{classSideBar_abcc7410af74a6e776a4d708a396f47ec}{add\+Action} (const Q\+String \&text, const Q\+Icon \&icon=Q\+Icon())
+\begin{DoxyCompactList}\small\item\em add\+Action \end{DoxyCompactList}\item 
+Q\+Size \hyperlink{classSideBar_a3b46466ef84c9f89677478f8b1f5bf36}{minimum\+Size\+Hint} () const
+\begin{DoxyCompactList}\small\item\em minimum\+Size\+Hint \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSideBar_a99c8319ee78b2197db5eda7b2cd232a1}{paint\+Event} (Q\+Paint\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em paint\+Event \end{DoxyCompactList}\item 
+void \hyperlink{classSideBar_ae3923b2d85345b3f7b899ce6becd21fb}{mouse\+Press\+Event} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse\+Press\+Event \end{DoxyCompactList}\item 
+void \hyperlink{classSideBar_a1c00fa33ba20510bf7d50dfa757a8515}{mouse\+Move\+Event} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse\+Move\+Event \end{DoxyCompactList}\item 
+void \hyperlink{classSideBar_a123dcd87817fecdfacd60fd967044908}{leave\+Event} (Q\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em leave\+Event \end{DoxyCompactList}\item 
+Q\+Action $\ast$ \hyperlink{classSideBar_a003659c2c40670c3f2bb31798ff87c3d}{action\+At} (const Q\+Point \&at)
+\begin{DoxyCompactList}\small\item\em action\+At \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Q\+List$<$ Q\+Action $\ast$ $>$ \hyperlink{classSideBar_aeb09886c01726197d79d417ce22322d4}{m\+Actions}
+\begin{DoxyCompactList}\small\item\em m\+Actions \end{DoxyCompactList}\item 
+Q\+Action $\ast$ \hyperlink{classSideBar_a2db27c5981c8f43be372af9bbbe8fa41}{m\+Checked\+Action}
+\begin{DoxyCompactList}\small\item\em m\+Checked\+Action \end{DoxyCompactList}\item 
+Q\+Action $\ast$ \hyperlink{classSideBar_a51fcdf6ce60fba976982b2ef06bec853}{m\+Over\+Action}
+\begin{DoxyCompactList}\small\item\em m\+Over\+Action \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Класс формы боковой панели выбора виджета 
+
+\begin{DoxyAuthor}{Автор}
+Илья Трефилов 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+01.\+12.\+2018
+\end{DoxyDate}
+Класс формы боковой панели выбора виджета 
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classSideBar_a2a5215a713fe300f8e7b2407017db411}\label{classSideBar_a2a5215a713fe300f8e7b2407017db411}} 
+\index{Side\+Bar@{Side\+Bar}!Side\+Bar@{Side\+Bar}}
+\index{Side\+Bar@{Side\+Bar}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{Side\+Bar()}{SideBar()}}
+{\footnotesize\ttfamily Side\+Bar\+::\+Side\+Bar (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{classSideBar}{Side\+Bar}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Указатель на родительский виджет\\
+\hline
+\end{DoxyParams}
+Конструктор класса боковой панели 
+
+\subsection{Методы}
+\mbox{\Hypertarget{classSideBar_a003659c2c40670c3f2bb31798ff87c3d}\label{classSideBar_a003659c2c40670c3f2bb31798ff87c3d}} 
+\index{Side\+Bar@{Side\+Bar}!action\+At@{action\+At}}
+\index{action\+At@{action\+At}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{action\+At()}{actionAt()}}
+{\footnotesize\ttfamily Q\+Action $\ast$ Side\+Bar\+::action\+At (\begin{DoxyParamCaption}\item[{const Q\+Point \&}]{at }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+action\+At 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em at} & Координаты расположения курсора \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Объект действия при нажатии на выбранный виджет
+\end{DoxyReturn}
+Функция возвращающая объект поля по заданным координатам \mbox{\Hypertarget{classSideBar_abec6727f29e75af996bc71196c690eaa}\label{classSideBar_abec6727f29e75af996bc71196c690eaa}} 
+\index{Side\+Bar@{Side\+Bar}!add\+Action@{add\+Action}}
+\index{add\+Action@{add\+Action}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{add\+Action()}{addAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Side\+Bar\+::add\+Action (\begin{DoxyParamCaption}\item[{Q\+Action $\ast$}]{action }\end{DoxyParamCaption})}
+
+
+
+add\+Action 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em action} & Объект действия при нажатии на выбранный виджет\\
+\hline
+\end{DoxyParams}
+Функция добавляет поле в боковую панель \mbox{\Hypertarget{classSideBar_abcc7410af74a6e776a4d708a396f47ec}\label{classSideBar_abcc7410af74a6e776a4d708a396f47ec}} 
+\index{Side\+Bar@{Side\+Bar}!add\+Action@{add\+Action}}
+\index{add\+Action@{add\+Action}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{add\+Action()}{addAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Q\+Action $\ast$ Side\+Bar\+::add\+Action (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{text,  }\item[{const Q\+Icon \&}]{icon = {\ttfamily QIcon()} }\end{DoxyParamCaption})}
+
+
+
+add\+Action 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em text} & Текст в поле боковой панели \\
+\hline
+{\em icon} & Иконка в поле боковой панели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Объект действия при нажатии на выбранный виджет 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSideBar_a123dcd87817fecdfacd60fd967044908}\label{classSideBar_a123dcd87817fecdfacd60fd967044908}} 
+\index{Side\+Bar@{Side\+Bar}!leave\+Event@{leave\+Event}}
+\index{leave\+Event@{leave\+Event}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{leave\+Event()}{leaveEvent()}}
+{\footnotesize\ttfamily void Side\+Bar\+::leave\+Event (\begin{DoxyParamCaption}\item[{Q\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+leave\+Event 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em event} & Событие увода курсора с поля\\
+\hline
+\end{DoxyParams}
+Событие отменяет подсветку, если курсор больше не находится на выбранном поле \mbox{\Hypertarget{classSideBar_a3b46466ef84c9f89677478f8b1f5bf36}\label{classSideBar_a3b46466ef84c9f89677478f8b1f5bf36}} 
+\index{Side\+Bar@{Side\+Bar}!minimum\+Size\+Hint@{minimum\+Size\+Hint}}
+\index{minimum\+Size\+Hint@{minimum\+Size\+Hint}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{minimum\+Size\+Hint()}{minimumSizeHint()}}
+{\footnotesize\ttfamily Q\+Size Side\+Bar\+::minimum\+Size\+Hint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+minimum\+Size\+Hint 
+
+\begin{DoxyReturn}{Возвращает}
+Размер поля
+\end{DoxyReturn}
+Функция для получения валидного размера поля в боковой панели \mbox{\Hypertarget{classSideBar_a1c00fa33ba20510bf7d50dfa757a8515}\label{classSideBar_a1c00fa33ba20510bf7d50dfa757a8515}} 
+\index{Side\+Bar@{Side\+Bar}!mouse\+Move\+Event@{mouse\+Move\+Event}}
+\index{mouse\+Move\+Event@{mouse\+Move\+Event}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{mouse\+Move\+Event()}{mouseMoveEvent()}}
+{\footnotesize\ttfamily void Side\+Bar\+::mouse\+Move\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+mouse\+Move\+Event 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em event} & Событие наведение мыши\\
+\hline
+\end{DoxyParams}
+Событие подсвечивает поле, на котором расположен курсор \mbox{\Hypertarget{classSideBar_ae3923b2d85345b3f7b899ce6becd21fb}\label{classSideBar_ae3923b2d85345b3f7b899ce6becd21fb}} 
+\index{Side\+Bar@{Side\+Bar}!mouse\+Press\+Event@{mouse\+Press\+Event}}
+\index{mouse\+Press\+Event@{mouse\+Press\+Event}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{mouse\+Press\+Event()}{mousePressEvent()}}
+{\footnotesize\ttfamily void Side\+Bar\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+mouse\+Press\+Event 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em event} & Событие нажатия мыши\\
+\hline
+\end{DoxyParams}
+Событие при нажатии кнопкой мыши на поле, посылает сигнал в главное окно для отображения выбранного виджета \mbox{\Hypertarget{classSideBar_a99c8319ee78b2197db5eda7b2cd232a1}\label{classSideBar_a99c8319ee78b2197db5eda7b2cd232a1}} 
+\index{Side\+Bar@{Side\+Bar}!paint\+Event@{paint\+Event}}
+\index{paint\+Event@{paint\+Event}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{paint\+Event()}{paintEvent()}}
+{\footnotesize\ttfamily void Side\+Bar\+::paint\+Event (\begin{DoxyParamCaption}\item[{Q\+Paint\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+paint\+Event 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em event} & Событие отрисовки\\
+\hline
+\end{DoxyParams}
+Событие для отрисовки поля в боковой панели при его добавлении 
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{classSideBar_aeb09886c01726197d79d417ce22322d4}\label{classSideBar_aeb09886c01726197d79d417ce22322d4}} 
+\index{Side\+Bar@{Side\+Bar}!m\+Actions@{m\+Actions}}
+\index{m\+Actions@{m\+Actions}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{m\+Actions}{mActions}}
+{\footnotesize\ttfamily Q\+List$<$Q\+Action $\ast$$>$ Side\+Bar\+::m\+Actions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+Actions 
+
+Список полей в боковой панели \mbox{\Hypertarget{classSideBar_a2db27c5981c8f43be372af9bbbe8fa41}\label{classSideBar_a2db27c5981c8f43be372af9bbbe8fa41}} 
+\index{Side\+Bar@{Side\+Bar}!m\+Checked\+Action@{m\+Checked\+Action}}
+\index{m\+Checked\+Action@{m\+Checked\+Action}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{m\+Checked\+Action}{mCheckedAction}}
+{\footnotesize\ttfamily Q\+Action$\ast$ Side\+Bar\+::m\+Checked\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+Checked\+Action 
+
+Выбранное поле \mbox{\Hypertarget{classSideBar_a51fcdf6ce60fba976982b2ef06bec853}\label{classSideBar_a51fcdf6ce60fba976982b2ef06bec853}} 
+\index{Side\+Bar@{Side\+Bar}!m\+Over\+Action@{m\+Over\+Action}}
+\index{m\+Over\+Action@{m\+Over\+Action}!Side\+Bar@{Side\+Bar}}
+\subsubsection{\texorpdfstring{m\+Over\+Action}{mOverAction}}
+{\footnotesize\ttfamily Q\+Action$\ast$ Side\+Bar\+::m\+Over\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+Over\+Action 
+
+Поле на котором расположен курсор 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sidebar_8h}{sidebar.\+h}\item 
+\hyperlink{sidebar_8cpp}{sidebar.\+cpp}\end{DoxyCompactItemize}

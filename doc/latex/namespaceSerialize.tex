@@ -1,0 +1,128 @@
+\hypertarget{namespaceSerialize}{}\section{Пространство имен Serialize}
+\label{namespaceSerialize}\index{Serialize@{Serialize}}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Byte\+Array \hyperlink{namespaceSerialize_a11412877176c667f31a331bfac95d7e1}{image\+To\+Byte\+Array} (const Q\+Image \&image)
+\begin{DoxyCompactList}\small\item\em image\+To\+Byte\+Array \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{namespaceSerialize_ad70935346b9a0522990d0ff87e963a26}{byte\+Array\+To\+Image} (const Q\+Byte\+Array \&ba)
+\begin{DoxyCompactList}\small\item\em byte\+Array\+To\+Image \end{DoxyCompactList}\item 
+Q\+Json\+Value \hyperlink{namespaceSerialize_a794b837e3f9323b238c5b4d115f5c78b}{json\+Val\+From\+Image} (const Q\+Image \&p)
+\begin{DoxyCompactList}\small\item\em json\+Val\+From\+Image \end{DoxyCompactList}\item 
+Q\+Image \hyperlink{namespaceSerialize_a966ed9963741cb19a07f8b057faae920}{image\+From} (const Q\+Json\+Value \&val)
+\begin{DoxyCompactList}\small\item\em image\+From \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\auto \hyperlink{namespaceSerialize_a5318048e43f2cacc610f177d093283f8}{dict\+To\+Byte\+Array} (const T \&dict) -\/$>$ Q\+Byte\+Array
+\begin{DoxyCompactList}\small\item\em dict\+To\+Byte\+Array \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{namespaceSerialize_aac818c4b807e223e916bbe829e0d86ea}{byte\+Array\+To\+Dict} (Q\+Byte\+Array $\ast$ba)
+\begin{DoxyCompactList}\small\item\em byte\+Array\+To\+Dict \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{namespaceSerialize_ac2bf64c91d863df6a6c6149c7a482af0}{dict\+From\+Base64} (const Q\+Json\+Value \&value)
+\begin{DoxyCompactList}\small\item\em dict\+From\+Base64 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{namespaceSerialize_aac818c4b807e223e916bbe829e0d86ea}\label{namespaceSerialize_aac818c4b807e223e916bbe829e0d86ea}} 
+\index{Serialize@{Serialize}!byte\+Array\+To\+Dict@{byte\+Array\+To\+Dict}}
+\index{byte\+Array\+To\+Dict@{byte\+Array\+To\+Dict}!Serialize@{Serialize}}
+\subsubsection{\texorpdfstring{byte\+Array\+To\+Dict()}{byteArrayToDict()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Serialize\+::byte\+Array\+To\+Dict (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array $\ast$}]{ba }\end{DoxyParamCaption})}
+
+
+
+byte\+Array\+To\+Dict 
+
+Шаблон для сериализации бинарных данных в словарь \mbox{\Hypertarget{namespaceSerialize_ad70935346b9a0522990d0ff87e963a26}\label{namespaceSerialize_ad70935346b9a0522990d0ff87e963a26}} 
+\index{Serialize@{Serialize}!byte\+Array\+To\+Image@{byte\+Array\+To\+Image}}
+\index{byte\+Array\+To\+Image@{byte\+Array\+To\+Image}!Serialize@{Serialize}}
+\subsubsection{\texorpdfstring{byte\+Array\+To\+Image()}{byteArrayToImage()}}
+{\footnotesize\ttfamily Q\+Image Serialize\+::byte\+Array\+To\+Image (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{ba }\end{DoxyParamCaption})}
+
+
+
+byte\+Array\+To\+Image 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ba} & Набор байт \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Изображение
+\end{DoxyReturn}
+Функция конвертирует бинарные данные в изображение \mbox{\Hypertarget{namespaceSerialize_ac2bf64c91d863df6a6c6149c7a482af0}\label{namespaceSerialize_ac2bf64c91d863df6a6c6149c7a482af0}} 
+\index{Serialize@{Serialize}!dict\+From\+Base64@{dict\+From\+Base64}}
+\index{dict\+From\+Base64@{dict\+From\+Base64}!Serialize@{Serialize}}
+\subsubsection{\texorpdfstring{dict\+From\+Base64()}{dictFromBase64()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Serialize\+::dict\+From\+Base64 (\begin{DoxyParamCaption}\item[{const Q\+Json\+Value \&}]{value }\end{DoxyParamCaption})}
+
+
+
+dict\+From\+Base64 
+
+Шаблон для сериализации бинарных данных в кодировке basе64 в словарь \mbox{\Hypertarget{namespaceSerialize_a5318048e43f2cacc610f177d093283f8}\label{namespaceSerialize_a5318048e43f2cacc610f177d093283f8}} 
+\index{Serialize@{Serialize}!dict\+To\+Byte\+Array@{dict\+To\+Byte\+Array}}
+\index{dict\+To\+Byte\+Array@{dict\+To\+Byte\+Array}!Serialize@{Serialize}}
+\subsubsection{\texorpdfstring{dict\+To\+Byte\+Array()}{dictToByteArray()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+auto Serialize\+::dict\+To\+Byte\+Array (\begin{DoxyParamCaption}\item[{const T \&}]{dict }\end{DoxyParamCaption}) -\/$>$ Q\+Byte\+Array}
+
+
+
+dict\+To\+Byte\+Array 
+
+Шаблон для сериализации типа словарь в бинарные данные \mbox{\Hypertarget{namespaceSerialize_a966ed9963741cb19a07f8b057faae920}\label{namespaceSerialize_a966ed9963741cb19a07f8b057faae920}} 
+\index{Serialize@{Serialize}!image\+From@{image\+From}}
+\index{image\+From@{image\+From}!Serialize@{Serialize}}
+\subsubsection{\texorpdfstring{image\+From()}{imageFrom()}}
+{\footnotesize\ttfamily Q\+Image Serialize\+::image\+From (\begin{DoxyParamCaption}\item[{const Q\+Json\+Value \&}]{val }\end{DoxyParamCaption})}
+
+
+
+image\+From 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em val} & Ключ -\/ значение с изображение \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Объект изображения
+\end{DoxyReturn}
+Функция тип ключ значение, где ключ -\/ image, значение -\/ бинарные данные в объект изображения \mbox{\Hypertarget{namespaceSerialize_a11412877176c667f31a331bfac95d7e1}\label{namespaceSerialize_a11412877176c667f31a331bfac95d7e1}} 
+\index{Serialize@{Serialize}!image\+To\+Byte\+Array@{image\+To\+Byte\+Array}}
+\index{image\+To\+Byte\+Array@{image\+To\+Byte\+Array}!Serialize@{Serialize}}
+\subsubsection{\texorpdfstring{image\+To\+Byte\+Array()}{imageToByteArray()}}
+{\footnotesize\ttfamily Q\+Byte\+Array Serialize\+::image\+To\+Byte\+Array (\begin{DoxyParamCaption}\item[{const Q\+Image \&}]{image }\end{DoxyParamCaption})}
+
+
+
+image\+To\+Byte\+Array 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em image} & Изображение \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Набор байт
+\end{DoxyReturn}
+Функция сериализует объект изображения в бинарные данные \mbox{\Hypertarget{namespaceSerialize_a794b837e3f9323b238c5b4d115f5c78b}\label{namespaceSerialize_a794b837e3f9323b238c5b4d115f5c78b}} 
+\index{Serialize@{Serialize}!json\+Val\+From\+Image@{json\+Val\+From\+Image}}
+\index{json\+Val\+From\+Image@{json\+Val\+From\+Image}!Serialize@{Serialize}}
+\subsubsection{\texorpdfstring{json\+Val\+From\+Image()}{jsonValFromImage()}}
+{\footnotesize\ttfamily Q\+Json\+Value Serialize\+::json\+Val\+From\+Image (\begin{DoxyParamCaption}\item[{const Q\+Image \&}]{p }\end{DoxyParamCaption})}
+
+
+
+json\+Val\+From\+Image 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em p} & Изображение \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Объект типа ключ в структуре json
+\end{DoxyReturn}
+Функция конвертирует изображение в тип ключ значение, где ключ -\/ image, значение -\/ бинарные данные 
